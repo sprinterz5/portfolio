@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aidar Begotayev | Portfolio</title>
+    <meta
+      name="description"
+      content="Pixel cyberpunk portfolio for Aidar Begotayev."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="v-1.css" />
+    <script src="v-1.js" defer></script>
+  </head>
+  <body>
+    <div class="pixel-frame">
+      <header class="topbar">
+        <div class="topbar-copy">
+          <p class="topbar-name">SYS.NODE : aidar.runtime // STATUS : active</p>
+        </div>
+        <div class="lang-switcher" aria-label="Language switcher">
+          <button class="lang-btn is-active" type="button" data-lang="en">EN</button>
+          <button class="lang-btn" type="button" data-lang="ru">RU</button>
+          <button class="lang-btn" type="button" data-lang="kz">KZ</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="boot-block">
+              <p class="sys-line">SYS.NAME : AIDAR_BEGOTAYEV</p>
+              <p class="sys-line">SYS.AUTH : GUEST_ACCESS_GRANTED</p>
+              <p class="sys-line">SYS.ZONE : ASTANA / KAZAKHSTAN</p>
+              <p class="sys-line">SYS.MODE : ENGINEER / SYSTEMS_CURIOUS / COMPETITOR / ORGANIZER</p>
+              <p class="sys-line">SYS.INTEREST : RING0_TO_RISCV // WHY_SYSTEMS_WORK</p>
+            </div>
+
+            <div class="hero-main-copy">
+              <p class="command">$ whoami</p>
+              <p class="eyebrow" data-i18n="hero_eyebrow">Aidar Begotayev // systems_curious:on</p>
+              <h1 data-i18n="hero_title">Code. Reverse-Engineer. Compete. Ship.</h1>
+              <p class="lead" data-i18n="hero_lead">
+                Backend systems, AI prototypes, spatial research, and a
+                growing systems/hardware curiosity -- from ISA design to
+                kernel boundaries -- pushed into one high-signal portfolio.
+              </p>
+            </div>
+
+            <div class="stat-grid">
+              <button
+                class="stat-card modal-trigger"
+                type="button"
+                data-modal="achievements"
+              >
+                <p class="stat-value">20+</p>
+                <p class="stat-label" data-i18n="stat_one">
+                  hackathons and competitions. click for wins, finalists, and
+                  selected builds
+                </p>
+                <p class="card-action" data-i18n="card_action">
+                  open breakdown
+                </p>
+              </button>
+              <button
+                class="stat-card modal-trigger"
+                type="button"
+                data-modal="organizing"
+              >
+                <p class="stat-value">700+</p>
+                <p class="stat-label" data-i18n="stat_two">
+                  participants across EcoHackathon and Bright Future Hackathon
+                  that I organized
+                </p>
+                <p class="card-action" data-i18n="card_action">
+                  open breakdown
+                </p>
+              </button>
+              <button
+                class="stat-card modal-trigger"
+                type="button"
+                data-modal="stack"
+              >
+                <p class="stat-value" data-i18n="stat_three_value">
+                  Tech Stack
+                </p>
+                <p class="stat-label" data-i18n="stat_three">
+                  Python, APIs, SQL, GIS, automation core
+                </p>
+                <p class="card-action" data-i18n="card_action">
+                  open breakdown
+                </p>
+              </button>
+              <a class="stat-card" href="#deep-dives">
+                <p class="stat-value" data-i18n="stat_four_value">6 notes</p>
+                <p class="stat-label" data-i18n="stat_four">
+                  self-directed field notes on ISA design, kernel boundaries,
+                  and systems trade-offs
+                </p>
+                <p class="card-action" data-i18n="stat_four_action">
+                  read deep dives
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero-side">
+            <div class="portrait-card">
+              <img
+                class="portrait-image"
+                src="aidar.jpg"
+                alt="Portrait of Aidar Begotayev"
+              />
+            </div>
+
+            <div class="terminal-card">
+              <p class="command">$ cat status.txt</p>
+              <p class="terminal-line" data-i18n="focus_one">focus:: ai workflows + automation</p>
+              <p class="terminal-line" data-i18n="focus_two">focus:: backend systems + product builds</p>
+              <p class="terminal-line" data-i18n="focus_three">focus:: spatial economics + urban data</p>
+              <p class="terminal-line" data-i18n="focus_four">focus:: competition prototypes under pressure</p>
+            </div>
+
+            <div class="signal-card">
+              <p class="command">$ cat signal.log</p>
+              <p class="card-kicker" data-i18n="signal_kicker">Current signal</p>
+              <p data-i18n="signal_copy">
+                From a locomotive digital twin platform to library automation
+                and university systems, I like building tools that actually get
+                used.
+              </p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section" id="deep-dives">
+          <div class="section-terminal">
+            <p class="command">$ cat /deep_dives/</p>
+            <p class="section-note" data-i18n="deepdives_note">
+              6 entries -- self-directed research, not coursework
+            </p>
+          </div>
+
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="deepdives_kicker">What I dig into</p>
+            <h2 data-i18n="deepdives_title">Systems questions I don't let go of.</h2>
+            <p class="section-intro" data-i18n="deepdives_intro">
+              I keep pulling on a thread until the whole causal chain closes --
+              then I go looking for the strongest counter-argument and try to
+              break my own conclusion before I trust it. The question is
+              rarely "why did the winner win," it's "what did the alternative
+              actually lose, and who paid for it."
+            </p>
+          </div>
+
+          <div class="deepdive-grid">
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">x86_vs_arm.compare</p>
+                <p class="file-status">isa trade-offs / not just "arm won"</p>
+              </div>
+              <h3 data-i18n="deepdive_one_title">Why ARM, not just why not x86-64</h3>
+              <p data-i18n="deepdive_one_copy">
+                "ARM is more efficient" is a conclusion, not an argument, so I
+                went after what x86-64 actually loses: a CISC decoder tax and
+                forty years of legacy instructions Intel and AMD can never
+                drop without breaking existing software. Then I looked for
+                the counter-case -- x86-64's real moat is exactly that legacy
+                software, which is why Windows RT shipped with zero emulation
+                in 2012 and ate a $900M write-off, and why it took until
+                Prism's AVX/AVX2 support in the 2020s for Windows-on-ARM to
+                actually work. ARM doesn't win in general, it wins
+                specifically where forty years of x86 compatibility isn't the
+                constraint, and loses hard everywhere it is.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">anticheat.ring0</p>
+                <p class="file-status">kernel boundaries / who pays for it</p>
+              </div>
+              <h3 data-i18n="deepdive_two_title">Why anti-cheat lives in Ring 0 -- and what that costs everyone else</h3>
+              <p data-i18n="deepdive_two_copy">
+                I didn't accept "anti-cheat just needs kernel access" at face
+                value, so I looked at what user-space anti-cheat actually
+                can't see: cheats that hook below the OS's own visibility.
+                That gap is exactly why Vanguard-style anti-cheat runs in
+                Ring 0, why a single bug there is a whole-system
+                vulnerability and not a game bug, and why Prism, a
+                user-space emulator, physically can't translate a
+                kernel-mode x64 driver. The part I kept circling back to:
+                studios get a real security win, and every player on that
+                machine inherits a kernel-level attack surface they never
+                agreed to.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">sel4.verified</p>
+                <p class="file-status">proof vs. testing / what proof costs</p>
+              </div>
+              <h3 data-i18n="deepdive_three_title">seL4: proof over testing, and what that actually costs</h3>
+              <p data-i18n="deepdive_three_copy">
+                The obvious alternative to formal verification is what
+                everyone already does -- test until nothing breaks -- so I
+                wanted to know what that approach can never actually claim:
+                that no untested input exists. seL4 is formally verified,
+                mathematically proven correct against its spec, not just
+                battle-tested. What I keep chewing on is the price of that
+                guarantee: every line has to be provably correct, which is
+                exactly why almost nothing outside safety-critical systems
+                gets built this way -- proof doesn't scale the way "ship and
+                patch" does.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">apple_silicon.memory</p>
+                <p class="file-status">efficiency vs. upgradability</p>
+              </div>
+              <h3 data-i18n="deepdive_four_title">Unified memory's real trade: performance-per-watt for upgradability</h3>
+              <p data-i18n="deepdive_four_copy">
+                The standard architecture gives the CPU and GPU their own
+                memory and copies data across a bus between them. Apple's
+                M-series skips that with one shared pool of unified memory,
+                plus tile-based deferred rendering and a wide, low-clock
+                decode pipeline -- roughly how it reaches RTX-4060-class GPU
+                performance in a single package. I don't think that's a free
+                win: the same soldered, shared memory that makes it
+                efficient is also why you can't upgrade the RAM later --
+                performance-per-watt and right-to-repair point in opposite
+                directions, and Apple picked one.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">ibm.retreat</p>
+                <p class="file-status">competitive strategy / depth over share</p>
+              </div>
+              <h3 data-i18n="deepdive_five_title">Why IBM walked out of the race it started</h3>
+              <p data-i18n="deepdive_five_copy">
+                IBM basically invented the commercial computer industry, then
+                sold its PC business to Lenovo in 2005 and its x86 server
+                line in 2014, and kept pushing into mainframes, Power, and
+                later services and quantum instead of fighting for the
+                commodity market it created. I wanted to know why a company
+                retreats from a race it's still winning on name alone:
+                commodity x86 hardware was collapsing into razor-thin margins
+                as everyone converged on the same components, while
+                mainframes stayed a small, high-margin niche competitors
+                couldn't easily enter. It reads less like losing and more
+                like choosing depth over share -- though it also meant giving
+                up the mindshare that comes with being in every consumer's
+                hands.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">amd_zen.revolution</p>
+                <p class="file-status">manufacturing bet vs. process stall</p>
+              </div>
+              <h3 data-i18n="deepdive_six_title">AMD's chiplet bet vs. Intel stuck on 14nm</h3>
+              <p data-i18n="deepdive_six_copy">
+                AMD was nearly bankrupt after the Bulldozer years, spun its
+                fabs off into GlobalFoundries, went fabless, and bet Zen
+                (2017) on chiplets built on TSMC's process instead of one
+                large monolithic die -- while Intel kept re-spinning 14nm for
+                years after its 10nm node slipped. I wanted to know how much
+                of this was AMD's architecture being smarter versus Intel's
+                manufacturing simply failing to deliver, and it's mostly the
+                second: a better design on a stalled process wouldn't have
+                mattered without TSMC actually shipping smaller nodes on
+                schedule. The chiplet approach isn't free either -- splitting
+                the die adds real interconnect latency across Infinity
+                Fabric that a monolithic die never has to pay.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="systems-env">
+          <div class="section-terminal">
+            <p class="command">$ uname -a</p>
+            <p class="section-note" data-i18n="sysenv_note">
+              environment / diagnostics -- factual, not decorative
+            </p>
+          </div>
+
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="sysenv_kicker">Systems environment</p>
+            <h2 data-i18n="sysenv_title">Linux, dual-boot, and the debugging that came with it.</h2>
+          </div>
+
+          <div class="env-grid">
+            <article class="panel">
+              <p class="file-name">os.dualboot</p>
+              <p data-i18n="sysenv_one">
+                Fedora 44 KDE dual-boot on an ASUS TUF A15, including
+                resolving NVIDIA Secure Boot / MOK enrollment and configuring
+                asusctl / supergfxctl for GPU and power management.
+              </p>
+            </article>
+            <article class="panel">
+              <p class="file-name">input.evsieve</p>
+              <p data-i18n="sysenv_two">
+                Compiled evsieve from source to fix a Y-axis drift bug on a
+                Bloody W95 mouse via input remapping.
+              </p>
+            </article>
+            <article class="panel">
+              <p class="file-name">infra.vps</p>
+              <p data-i18n="sysenv_three">
+                ArchLinux + Ubuntu 22.04 / 24.04 across machines, plus VPS
+                management for deployed services.
+              </p>
+            </article>
+            <article class="panel">
+              <p class="file-name">diag.thermal</p>
+              <p data-i18n="sysenv_four">
+                Repasted the A15 and read HWiNFO logs to correctly diagnose a
+                CPU-bound game bottleneck instead of assuming thermal
+                throttling.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-terminal">
+            <p class="command">$ ls /highlight_cases/</p>
+            <p class="section-note">4 entries -- curated for strongest signal</p>
+          </div>
+
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="highlights_kicker">Selected stages</p>
+            <h2 data-i18n="highlights_title">The events that matter most.</h2>
+          </div>
+
+          <div class="highlight-grid">
+            <article class="panel panel-accent">
+              <div class="file-meta">
+                <p class="file-name">amanattech.top20</p>
+                <p class="file-status">social impact / product concept</p>
+              </div>
+              <p class="project-tag" data-i18n="highlight_one_tag">AmanatTech</p>
+              <h3 data-i18n="highlight_one_title">Top 20 out of 400 teams</h3>
+              <p data-i18n="highlight_one_copy">
+                Built a platform concept focused on helping people with drug
+                addiction, combining social impact with product thinking.
+              </p>
+            </article>
+
+            <article class="panel panel-accent">
+              <div class="file-meta">
+                <p class="file-name">hacknu26.ktz</p>
+                <p class="file-status">telemetry / diagnostics / dashboard</p>
+              </div>
+              <p class="project-tag" data-i18n="highlight_two_tag">HackNU 2026</p>
+              <h3 data-i18n="highlight_two_title">Kazakhstan Temir Zholy case</h3>
+              <p data-i18n="highlight_two_copy">
+                Built a locomotive digital twin platform for telemetry,
+                diagnostics, and monitoring in a high-pressure engineering
+                sprint.
+              </p>
+            </article>
+
+            <article class="panel panel-accent">
+              <div class="file-meta">
+                <p class="file-name">bicap.first</p>
+                <p class="file-status">text-to-sql / ai audit / smb</p>
+              </div>
+              <p class="project-tag" data-i18n="highlight_three_tag">BiCAP Hackathon</p>
+              <h3 data-i18n="highlight_three_title">1st place out of 200 teams</h3>
+              <p data-i18n="highlight_three_copy">
+                Built text-to-SQL, SQL-to-text, and AI-assisted audit ideas for
+                small and medium businesses.
+              </p>
+            </article>
+
+            <article class="panel panel-accent">
+              <div class="file-meta">
+                <p class="file-name">decentrathon.series</p>
+                <p class="file-status">telegram mini apps / ai systems</p>
+              </div>
+              <p class="project-tag" data-i18n="highlight_four_tag">Decentrathon 2.0-5.0</p>
+              <h3 data-i18n="highlight_four_title">Four iterations, evolving scope</h3>
+              <p data-i18n="highlight_four_copy">
+                Worked on Telegram mini apps, AI assistants, rule-based
+                screening for InVision University, and model experiments with
+                PyTorch.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-terminal">
+            <p class="command">$ ls /projects/</p>
+            <p class="section-note" data-i18n="projects_note">
+              6 entries -- click to inspect, preview slot ready for future PNG
+            </p>
+          </div>
+
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="projects_kicker">Selected builds</p>
+            <h2 data-i18n="projects_title">Projects behind the signal.</h2>
+          </div>
+
+          <div class="project-grid">
+            <button
+              class="project-card modal-trigger project-trigger featured-project"
+              type="button"
+              data-modal="project-debounce"
+            >
+              <div class="file-meta">
+                <p class="file-name">keyboard_debounce.sys</p>
+                <p class="file-status">signal filtering / input remapping</p>
+              </div>
+              <p class="project-tag" data-i18n="project_debounce_tag">Builder Story</p>
+              <h3 data-i18n="project_debounce_title">
+                Tea-Damaged Keyboard -&gt; Software Debounce Layer
+              </h3>
+              <p data-i18n="project_debounce_copy">
+                A friend spilled tea on his keyboard and the damaged contacts
+                fired multiple ghost keypresses per press. Instead of
+                replacing the hardware, I studied the failure pattern and
+                wrote a software layer that reads the messy multi-fire signal
+                and normalizes it into a single correct character.
+              </p>
+              <p class="project-open" data-i18n="project_open">open project file</p>
+            </button>
+
+            <button
+              class="project-card modal-trigger project-trigger"
+              type="button"
+              data-modal="project-elibra"
+            >
+              <div class="file-meta">
+                <p class="file-name">library_qr.middleware</p>
+                <p class="file-status">fastapi / playwright / sqlite</p>
+              </div>
+              <p class="project-tag" data-i18n="project_one_tag">Library Automation Intern</p>
+              <h3 data-i18n="project_one_title">eLibra QR Middleware</h3>
+              <p data-i18n="project_one_copy">
+                Built a QR-based self-service issuance flow with FastAPI,
+                Playwright RPA, SQLite, and a web interface that reduced
+                librarian bottlenecks.
+              </p>
+              <p class="project-open" data-i18n="project_open">open project file</p>
+            </button>
+
+            <button
+              class="project-card modal-trigger project-trigger"
+              type="button"
+              data-modal="project-roomly"
+            >
+              <div class="file-meta">
+                <p class="file-name">roomly.app</p>
+                <p class="file-status">campus ops / telegram / scheduling</p>
+              </div>
+              <p class="project-tag" data-i18n="project_two_tag">University Product</p>
+              <h3 data-i18n="project_two_title">Roomly</h3>
+              <p data-i18n="project_two_copy">
+                Built a room reservation system with role-based flows, approval
+                logic, calendar management, and Telegram onboarding.
+              </p>
+              <p class="project-open" data-i18n="project_open">open project file</p>
+            </button>
+
+            <button
+              class="project-card modal-trigger project-trigger"
+              type="button"
+              data-modal="project-research"
+            >
+              <div class="file-meta">
+                <p class="file-name">astana_housing.research</p>
+                <p class="file-status">spatial economics / lomonosov-2026</p>
+              </div>
+              <p class="project-tag" data-i18n="project_three_tag">Research</p>
+              <h3 data-i18n="project_three_title">Spatial Factors of Housing Prices in Astana</h3>
+              <p data-i18n="project_three_copy">
+                Earned 3rd place at Lomonosov-2026 with research on how
+                location-linked variables shape housing prices in Astana.
+              </p>
+              <p class="project-open" data-i18n="project_open">open project file</p>
+            </button>
+
+            <button
+              class="project-card modal-trigger project-trigger"
+              type="button"
+              data-modal="project-rag"
+            >
+              <div class="file-meta">
+                <p class="file-name">rag_automation.stack</p>
+                <p class="file-status">backend integrations / ai workflows</p>
+              </div>
+              <p class="project-tag" data-i18n="project_four_tag">Applied AI</p>
+              <h3 data-i18n="project_four_title">RAG and automation workflows</h3>
+              <p data-i18n="project_four_copy">
+                Built AI-assisted workflows around RAG, backend integrations,
+                and operational automation for real institutional use cases.
+              </p>
+              <p class="project-open" data-i18n="project_open">open project file</p>
+            </button>
+
+            <button
+              class="project-card modal-trigger project-trigger"
+              type="button"
+              data-modal="project-autism"
+            >
+              <div class="file-meta">
+                <p class="file-name">childinfo.app</p>
+                <p class="file-status">ui/ux / postgresql / deployed</p>
+              </div>
+              <p class="project-tag" data-i18n="project_autism_tag">Anisa Spectrum</p>
+              <h3 data-i18n="project_autism_title">Autism Spectrum (ChildInfo)</h3>
+              <p data-i18n="project_autism_copy">
+                Built the UI/UX and PostgreSQL-backed data layer for an early
+                autism-diagnosis app now deployed and postered in a local
+                hospital.
+              </p>
+              <p class="project-open" data-i18n="project_open">open project file</p>
+            </button>
+          </div>
+        </section>
+
+        <section class="section" id="study">
+          <div class="section-terminal">
+            <p class="command">$ ls /self_study/</p>
+            <p class="section-note" data-i18n="study_note">
+              notes and independent coursework -- photos to be added
+            </p>
+          </div>
+
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="study_kicker">Study log</p>
+            <h2 data-i18n="study_title">Building the math underneath the code.</h2>
+          </div>
+
+          <div class="study-grid">
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">mit_ocw.notes</p>
+                <p class="file-status">self-paced coursework</p>
+              </div>
+              <h3 data-i18n="study_one_title">MIT OpenCourseWare</h3>
+              <p data-i18n="study_one_copy">
+                Follow OCW lectures -- Linear Algebra with Prof. Strang,
+                Multivariable Calculus, Differential Equations -- and keep
+                handwritten notes alongside them.
+              </p>
+              <img
+                class="study-photo"
+                alt="Notebook photo slot: MIT OCW notes"
+                hidden
+              />
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">discrete_math.notes</p>
+                <p class="file-status">voluntary freshman coursework</p>
+              </div>
+              <h3 data-i18n="study_two_title">Discrete Mathematics</h3>
+              <p data-i18n="study_two_copy">
+                Sit in on Prof. Sanzhar Kusdavletov's course and work
+                problems by hand -- null space, set theory, truth tables.
+              </p>
+              <img
+                class="study-photo"
+                alt="Notebook photo slot: Discrete Math notes"
+                hidden
+              />
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">linear_algebra.selfstudy</p>
+                <p class="file-status">independent study</p>
+              </div>
+              <h3 data-i18n="study_three_title">Linear algebra, one level deeper</h3>
+              <p data-i18n="study_three_copy">
+                Quadratic forms, QR / Gram-Schmidt, and LU decomposition
+                worked through outside of class requirements.
+              </p>
+              <img
+                class="study-photo"
+                alt="Notebook photo slot: linear algebra notes"
+                hidden
+              />
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-terminal">
+            <p class="command">$ cat /trajectory.log</p>
+            <p class="section-note">3 records -- foundation, leadership, creative range</p>
+          </div>
+
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="trajectory_kicker">Trajectory</p>
+            <h2 data-i18n="trajectory_title">Signal beyond competitions.</h2>
+          </div>
+
+          <div class="timeline-grid">
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">early_route.sys</p>
+                <p class="file-status">c++ olympiads / python bots / django</p>
+              </div>
+              <h3 data-i18n="trajectory_one_title">Early route</h3>
+              <p data-i18n="trajectory_one_copy">
+                Started with C++ olympiad problem solving in 5th grade,
+                switched to Python in 7th grade for Discord and Telegram bots,
+                and built a Django site in 8th grade.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">leadership.service</p>
+                <p class="file-status">wecare / unicef / unesco / hackathons</p>
+              </div>
+              <h3 data-i18n="trajectory_two_title">Leadership and service</h3>
+              <p data-i18n="trajectory_two_copy">
+                One of two leaders of WeCare, volunteer teacher through UNICEF
+                Kazakhstan and UNESCO club initiatives, and organizer of
+                hackathons across 14 cities.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="file-meta">
+                <p class="file-name">creative.product_range</p>
+                <p class="file-status">figma / marketing / smm / drama</p>
+              </div>
+              <h3 data-i18n="trajectory_three_title">Creative and product range</h3>
+              <p data-i18n="trajectory_three_copy">
+                Studied web design at Young Profi School, worked in digital
+                marketing at inUniGlobal, handled SMM roles, and performed in
+                drama club.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p class="footer-copy" data-i18n="footer_one">GitHub: sprinterz5</p>
+          <p class="footer-copy" data-i18n="footer_two">Astana / backend systems / AI workflows / research</p>
+        </footer>
+      </main>
+    </div>
+
+    <div class="modal-shell" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <section
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <div class="modal-topbar">
+          <p class="command" id="modal-command">$ open /records/summary.log</p>
+          <button class="modal-close" type="button" data-close-modal>
+            close
+          </button>
+        </div>
+        <div class="modal-head">
+          <p class="card-kicker" id="modal-kicker">Detail view</p>
+          <h2 id="modal-title">Archive</h2>
+          <p class="modal-intro" id="modal-intro"></p>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+        <div class="modal-preview" id="modal-preview" hidden>
+          <p class="modal-preview-label" data-i18n="modal_preview_label">
+            Preview slot
+          </p>
+          <p class="modal-preview-copy" id="modal-preview-copy">
+            Drop a future project PNG here and this window can become a richer
+            case study view.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
