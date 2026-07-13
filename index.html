@@ -30,6 +30,16 @@
         </div>
       </header>
 
+      <nav class="section-nav" aria-label="Section navigation">
+        <span class="nav-prompt" aria-hidden="true">$ cd</span>
+        <a class="nav-link" href="#deep-dives" data-i18n="nav_deepdives">deep_dives</a>
+        <a class="nav-link" href="#systems-env" data-i18n="nav_systems">systems</a>
+        <a class="nav-link" href="#highlights" data-i18n="nav_highlights">wins</a>
+        <a class="nav-link" href="#projects" data-i18n="nav_projects">projects</a>
+        <a class="nav-link" href="#study" data-i18n="nav_study">study</a>
+        <a class="nav-link" href="#trajectory" data-i18n="nav_trajectory">trajectory</a>
+      </nav>
+
       <main>
         <section class="hero">
           <div class="hero-copy">
@@ -159,131 +169,155 @@
           </div>
 
           <div class="deepdive-grid">
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">x86_vs_arm.compare</p>
-                <p class="file-status">isa trade-offs / not just "arm won"</p>
-              </div>
-              <h3 data-i18n="deepdive_one_title">Why ARM, not just why not x86-64</h3>
-              <p data-i18n="deepdive_one_copy">
-                "ARM is more efficient" is a conclusion, not an argument, so I
-                went after what x86-64 actually loses: a CISC decoder tax and
-                forty years of legacy instructions Intel and AMD can never
-                drop without breaking existing software. Then I looked for
-                the counter-case -- x86-64's real moat is exactly that legacy
-                software, which is why Windows RT shipped with zero emulation
-                in 2012 and ate a $900M write-off, and why it took until
-                Prism's AVX/AVX2 support in the 2020s for Windows-on-ARM to
-                actually work. ARM doesn't win in general, it wins
-                specifically where forty years of x86 compatibility isn't the
-                constraint, and loses hard everywhere it is.
-              </p>
+            <article class="panel deepdive">
+              <details class="deepdive-fold">
+                <summary class="deepdive-summary">
+                  <div class="file-meta">
+                    <p class="file-name">x86_vs_arm.compare</p>
+                    <p class="file-status">isa trade-offs / not just "arm won"</p>
+                  </div>
+                  <h3 data-i18n="deepdive_one_title">Why ARM, not just why not x86-64</h3>
+                </summary>
+                <p data-i18n="deepdive_one_copy">
+                  "ARM is more efficient" is a conclusion, not an argument, so I
+                  went after what x86-64 actually loses: a CISC decoder tax and
+                  forty years of legacy instructions Intel and AMD can never
+                  drop without breaking existing software. Then I looked for
+                  the counter-case -- x86-64's real moat is exactly that legacy
+                  software, which is why Windows RT shipped with zero emulation
+                  in 2012 and ate a $900M write-off, and why it took until
+                  Prism's AVX/AVX2 support in the 2020s for Windows-on-ARM to
+                  actually work. ARM doesn't win in general, it wins
+                  specifically where forty years of x86 compatibility isn't the
+                  constraint, and loses hard everywhere it is.
+                </p>
+              </details>
             </article>
 
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">anticheat.ring0</p>
-                <p class="file-status">kernel boundaries / who pays for it</p>
-              </div>
-              <h3 data-i18n="deepdive_two_title">Why anti-cheat lives in Ring 0 -- and what that costs everyone else</h3>
-              <p data-i18n="deepdive_two_copy">
-                I didn't accept "anti-cheat just needs kernel access" at face
-                value, so I looked at what user-space anti-cheat actually
-                can't see: cheats that hook below the OS's own visibility.
-                That gap is exactly why Vanguard-style anti-cheat runs in
-                Ring 0, why a single bug there is a whole-system
-                vulnerability and not a game bug, and why Prism, a
-                user-space emulator, physically can't translate a
-                kernel-mode x64 driver. The part I kept circling back to:
-                studios get a real security win, and every player on that
-                machine inherits a kernel-level attack surface they never
-                agreed to.
-              </p>
+            <article class="panel deepdive">
+              <details class="deepdive-fold">
+                <summary class="deepdive-summary">
+                  <div class="file-meta">
+                    <p class="file-name">anticheat.ring0</p>
+                    <p class="file-status">kernel boundaries / who pays for it</p>
+                  </div>
+                  <h3 data-i18n="deepdive_two_title">Why anti-cheat lives in Ring 0 -- and what that costs everyone else</h3>
+                </summary>
+                <p data-i18n="deepdive_two_copy">
+                  I didn't accept "anti-cheat just needs kernel access" at face
+                  value, so I looked at what user-space anti-cheat actually
+                  can't see: cheats that hook below the OS's own visibility.
+                  That gap is exactly why Vanguard-style anti-cheat runs in
+                  Ring 0, why a single bug there is a whole-system
+                  vulnerability and not a game bug, and why Prism, a
+                  user-space emulator, physically can't translate a
+                  kernel-mode x64 driver. The part I kept circling back to:
+                  studios get a real security win, and every player on that
+                  machine inherits a kernel-level attack surface they never
+                  agreed to.
+                </p>
+              </details>
             </article>
 
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">sel4.verified</p>
-                <p class="file-status">proof vs. testing / what proof costs</p>
-              </div>
-              <h3 data-i18n="deepdive_three_title">seL4: proof over testing, and what that actually costs</h3>
-              <p data-i18n="deepdive_three_copy">
-                The obvious alternative to formal verification is what
-                everyone already does -- test until nothing breaks -- so I
-                wanted to know what that approach can never actually claim:
-                that no untested input exists. seL4 is formally verified,
-                mathematically proven correct against its spec, not just
-                battle-tested. What I keep chewing on is the price of that
-                guarantee: every line has to be provably correct, which is
-                exactly why almost nothing outside safety-critical systems
-                gets built this way -- proof doesn't scale the way "ship and
-                patch" does.
-              </p>
+            <article class="panel deepdive">
+              <details class="deepdive-fold">
+                <summary class="deepdive-summary">
+                  <div class="file-meta">
+                    <p class="file-name">sel4.verified</p>
+                    <p class="file-status">proof vs. testing / what proof costs</p>
+                  </div>
+                  <h3 data-i18n="deepdive_three_title">seL4: proof over testing, and what that actually costs</h3>
+                </summary>
+                <p data-i18n="deepdive_three_copy">
+                  The obvious alternative to formal verification is what
+                  everyone already does -- test until nothing breaks -- so I
+                  wanted to know what that approach can never actually claim:
+                  that no untested input exists. seL4 is formally verified,
+                  mathematically proven correct against its spec, not just
+                  battle-tested. What I keep chewing on is the price of that
+                  guarantee: every line has to be provably correct, which is
+                  exactly why almost nothing outside safety-critical systems
+                  gets built this way -- proof doesn't scale the way "ship and
+                  patch" does.
+                </p>
+              </details>
             </article>
 
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">apple_silicon.memory</p>
-                <p class="file-status">efficiency vs. upgradability</p>
-              </div>
-              <h3 data-i18n="deepdive_four_title">Unified memory's real trade: performance-per-watt for upgradability</h3>
-              <p data-i18n="deepdive_four_copy">
-                The standard architecture gives the CPU and GPU their own
-                memory and copies data across a bus between them. Apple's
-                M-series skips that with one shared pool of unified memory,
-                plus tile-based deferred rendering and a wide, low-clock
-                decode pipeline -- roughly how it reaches RTX-4060-class GPU
-                performance in a single package. I don't think that's a free
-                win: the same soldered, shared memory that makes it
-                efficient is also why you can't upgrade the RAM later --
-                performance-per-watt and right-to-repair point in opposite
-                directions, and Apple picked one.
-              </p>
+            <article class="panel deepdive">
+              <details class="deepdive-fold">
+                <summary class="deepdive-summary">
+                  <div class="file-meta">
+                    <p class="file-name">apple_silicon.memory</p>
+                    <p class="file-status">efficiency vs. upgradability</p>
+                  </div>
+                  <h3 data-i18n="deepdive_four_title">Unified memory's real trade: performance-per-watt for upgradability</h3>
+                </summary>
+                <p data-i18n="deepdive_four_copy">
+                  The standard architecture gives the CPU and GPU their own
+                  memory and copies data across a bus between them. Apple's
+                  M-series skips that with one shared pool of unified memory,
+                  plus tile-based deferred rendering and a wide, low-clock
+                  decode pipeline -- roughly how it reaches RTX-4060-class GPU
+                  performance in a single package. I don't think that's a free
+                  win: the same soldered, shared memory that makes it
+                  efficient is also why you can't upgrade the RAM later --
+                  performance-per-watt and right-to-repair point in opposite
+                  directions, and Apple picked one.
+                </p>
+              </details>
             </article>
 
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">ibm.retreat</p>
-                <p class="file-status">competitive strategy / depth over share</p>
-              </div>
-              <h3 data-i18n="deepdive_five_title">Why IBM walked out of the race it started</h3>
-              <p data-i18n="deepdive_five_copy">
-                IBM basically invented the commercial computer industry, then
-                sold its PC business to Lenovo in 2005 and its x86 server
-                line in 2014, and kept pushing into mainframes, Power, and
-                later services and quantum instead of fighting for the
-                commodity market it created. I wanted to know why a company
-                retreats from a race it's still winning on name alone:
-                commodity x86 hardware was collapsing into razor-thin margins
-                as everyone converged on the same components, while
-                mainframes stayed a small, high-margin niche competitors
-                couldn't easily enter. It reads less like losing and more
-                like choosing depth over share -- though it also meant giving
-                up the mindshare that comes with being in every consumer's
-                hands.
-              </p>
+            <article class="panel deepdive">
+              <details class="deepdive-fold">
+                <summary class="deepdive-summary">
+                  <div class="file-meta">
+                    <p class="file-name">ibm.retreat</p>
+                    <p class="file-status">competitive strategy / depth over share</p>
+                  </div>
+                  <h3 data-i18n="deepdive_five_title">Why IBM walked out of the race it started</h3>
+                </summary>
+                <p data-i18n="deepdive_five_copy">
+                  IBM basically invented the commercial computer industry, then
+                  sold its PC business to Lenovo in 2005 and its x86 server
+                  line in 2014, and kept pushing into mainframes, Power, and
+                  later services and quantum instead of fighting for the
+                  commodity market it created. I wanted to know why a company
+                  retreats from a race it's still winning on name alone:
+                  commodity x86 hardware was collapsing into razor-thin margins
+                  as everyone converged on the same components, while
+                  mainframes stayed a small, high-margin niche competitors
+                  couldn't easily enter. It reads less like losing and more
+                  like choosing depth over share -- though it also meant giving
+                  up the mindshare that comes with being in every consumer's
+                  hands.
+                </p>
+              </details>
             </article>
 
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">amd_zen.revolution</p>
-                <p class="file-status">manufacturing bet vs. process stall</p>
-              </div>
-              <h3 data-i18n="deepdive_six_title">AMD's chiplet bet vs. Intel stuck on 14nm</h3>
-              <p data-i18n="deepdive_six_copy">
-                AMD was nearly bankrupt after the Bulldozer years, spun its
-                fabs off into GlobalFoundries, went fabless, and bet Zen
-                (2017) on chiplets built on TSMC's process instead of one
-                large monolithic die -- while Intel kept re-spinning 14nm for
-                years after its 10nm node slipped. I wanted to know how much
-                of this was AMD's architecture being smarter versus Intel's
-                manufacturing simply failing to deliver, and it's mostly the
-                second: a better design on a stalled process wouldn't have
-                mattered without TSMC actually shipping smaller nodes on
-                schedule. The chiplet approach isn't free either -- splitting
-                the die adds real interconnect latency across Infinity
-                Fabric that a monolithic die never has to pay.
-              </p>
+            <article class="panel deepdive">
+              <details class="deepdive-fold">
+                <summary class="deepdive-summary">
+                  <div class="file-meta">
+                    <p class="file-name">amd_zen.revolution</p>
+                    <p class="file-status">manufacturing bet vs. process stall</p>
+                  </div>
+                  <h3 data-i18n="deepdive_six_title">AMD's chiplet bet vs. Intel stuck on 14nm</h3>
+                </summary>
+                <p data-i18n="deepdive_six_copy">
+                  AMD was nearly bankrupt after the Bulldozer years, spun its
+                  fabs off into GlobalFoundries, went fabless, and bet Zen
+                  (2017) on chiplets built on TSMC's process instead of one
+                  large monolithic die -- while Intel kept re-spinning 14nm for
+                  years after its 10nm node slipped. I wanted to know how much
+                  of this was AMD's architecture being smarter versus Intel's
+                  manufacturing simply failing to deliver, and it's mostly the
+                  second: a better design on a stalled process wouldn't have
+                  mattered without TSMC actually shipping smaller nodes on
+                  schedule. The chiplet approach isn't free either -- splitting
+                  the die adds real interconnect latency across Infinity
+                  Fabric that a monolithic die never has to pay.
+                </p>
+              </details>
             </article>
           </div>
         </section>
@@ -335,7 +369,7 @@
           </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="highlights">
           <div class="section-terminal">
             <p class="command">$ ls /highlight_cases/</p>
             <p class="section-note">4 entries -- curated for strongest signal</p>
@@ -403,7 +437,7 @@
           </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="projects">
           <div class="section-terminal">
             <p class="command">$ ls /projects/</p>
             <p class="section-note" data-i18n="projects_note">
@@ -602,7 +636,7 @@
           </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="trajectory">
           <div class="section-terminal">
             <p class="command">$ cat /trajectory.log</p>
             <p class="section-note">3 records -- foundation, leadership, creative range</p>

@@ -24,6 +24,12 @@ const translations = {
     signal_kicker: "Current signal",
     signal_copy:
       "From a locomotive digital twin platform to library automation and university systems, I like building tools that actually get used.",
+    nav_deepdives: "deep_dives",
+    nav_systems: "systems",
+    nav_highlights: "wins",
+    nav_projects: "projects",
+    nav_study: "study",
+    nav_trajectory: "trajectory",
     deepdives_note: "6 entries -- self-directed research, not coursework",
     deepdives_kicker: "What I dig into",
     deepdives_title: "Systems questions I don't let go of.",
@@ -155,6 +161,12 @@ const translations = {
     signal_kicker: "Текущий сигнал",
     signal_copy:
       "От цифрового двойника локомотива до библиотечной автоматизации и университетских систем: мне нравится делать инструменты, которыми реально пользуются.",
+    nav_deepdives: "deep_dives",
+    nav_systems: "системы",
+    nav_highlights: "победы",
+    nav_projects: "проекты",
+    nav_study: "учёба",
+    nav_trajectory: "траектория",
     deepdives_note: "6 записей -- самостоятельные исследования, не учебная программа",
     deepdives_kicker: "Во что я закапываюсь",
     deepdives_title: "Системные вопросы, которые я не бросаю на полпути.",
@@ -282,6 +294,12 @@ const translations = {
     signal_kicker: "Kasirgi signal",
     signal_copy:
       "Локомотивтин цифрлык егизинен китапхана автоматтандыруына жане университет жуйелерине дейин мен накты колданылатын куралдар жасауды унатамын.",
+    nav_deepdives: "deep_dives",
+    nav_systems: "juieler",
+    nav_highlights: "jenister",
+    nav_projects: "jobalar",
+    nav_study: "oku",
+    nav_trajectory: "traektoriya",
     deepdives_note: "6 жазба -- озимнин зерттеуим, оку багдарламасы емес",
     deepdives_kicker: "Не туралы терен ойланамын",
     deepdives_title: "Толык тусингенше койып кетпейтин systems суракдары.",
@@ -964,5 +982,20 @@ document.addEventListener("keydown", (event) => {
     closeModal();
   }
 });
+
+// Deep-dive notes: collapsed by default on narrow screens to save space,
+// expanded on wider screens. Re-applied only when the breakpoint is crossed,
+// so a manual toggle within one viewport size is preserved.
+const deepdiveFolds = document.querySelectorAll(".deepdive-fold");
+const compactQuery = window.matchMedia("(max-width: 700px)");
+
+function syncDeepdiveFolds(isCompact) {
+  deepdiveFolds.forEach((fold) => {
+    fold.open = !isCompact;
+  });
+}
+
+syncDeepdiveFolds(compactQuery.matches);
+compactQuery.addEventListener("change", (event) => syncDeepdiveFolds(event.matches));
 
 applyLanguage(currentLanguage);
