@@ -41,7 +41,7 @@ const translations = {
     project_primeteens_tag: "Summer school platform",
     project_primeteens_title: "PrimeTeens mentor bot and platform",
     project_primeteens_copy:
-      "A Telegram bot and web platform for a summer intensive for grades 7-9: lesson reminders, a short survey after each lesson with voice answers, online workbooks and homework review.",
+      "A Telegram bot and web platform for a summer intensive for grades 7-11: lesson reminders, a short survey after each lesson with voice answers, online workbooks and homework review.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
@@ -201,7 +201,7 @@ const translations = {
     project_primeteens_tag: "Платформа летней школы",
     project_primeteens_title: "Бот и платформа для менторов PrimeTeens",
     project_primeteens_copy:
-      "Telegram-бот и веб-платформа для летнего интенсива 7-9 классов: напоминания о занятиях, короткий опрос после каждого урока с голосовыми ответами, онлайн-тетради и проверка домашки.",
+      "Telegram-бот и веб-платформа для летнего интенсива 7-11 классов: напоминания о занятиях, короткий опрос после каждого урока с голосовыми ответами, онлайн-тетради и проверка домашки.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
@@ -359,7 +359,7 @@ const translations = {
     project_primeteens_tag: "Жазғы мектеп платформасы",
     project_primeteens_title: "PrimeTeens менторларына арналған бот пен платформа",
     project_primeteens_copy:
-      "7-9 сыныптарға арналған жазғы интенсивтің Telegram-боты мен веб-платформасы: сабақ туралы еске салғыштар, әр сабақтан кейін дауыспен жауап беруге болатын қысқа сауалнама, онлайн дәптерлер және үй тапсырмасын тексеру.",
+      "7-11 сыныптарға арналған жазғы интенсивтің Telegram-боты мен веб-платформасы: сабақ туралы еске салғыштар, әр сабақтан кейін дауыспен жауап беруге болатын қысқа сауалнама, онлайн дәптерлер және үй тапсырмасын тексеру.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
@@ -531,9 +531,9 @@ const modalContent = {
           items: [
             { title: "BiCAP Hackathon", meta: "1st place out of 200 teams", copy: "Text-to-SQL, SQL-to-text, and AI-assisted audit for SMBs." },
             { title: "NIS Valley", meta: "1st place out of 13 teams", copy: "Fast product framing and delivery in a short sprint." },
-            { title: "DEM Championship", meta: "2nd place out of 33 teams", copy: "Marketing campaign strategy for CITIX." },
-            { title: "National Economic Challenge", meta: "3rd place out of 150 teams", copy: "AI test generation product for SAT and IELTS prep." },
-            { title: "InsureTechHackathon", meta: "3rd place out of 100 teams", copy: "AI assistant concept around usability and accessibility." },
+            { title: "DEM Championship", meta: "2nd place out of 34 teams", copy: "Marketing campaign strategy for CITIX." },
+            { title: "National Economic Challenge", meta: "3rd place out of 125 teams", copy: "AI test generation product for SAT and IELTS prep." },
+            { title: "InsureTechHackathon", meta: "3rd place out of 150 teams", copy: "AI assistant concept around usability and accessibility." },
             { title: "Lomonosov-2026", meta: "3rd place, scientific conference", copy: "Research on spatial factors of housing prices in Astana." },
           ],
         },
@@ -550,7 +550,7 @@ const modalContent = {
     },
     organizing: {
       kicker: "Organizer archive",
-      title: "700+ participants across 2 hackathons",
+      title: "650+ participants across 2 hackathons",
       intro: "I organized both events, not just helped: structure, partners, prizes and operations.",
       groups: [
         {
@@ -563,7 +563,7 @@ const modalContent = {
         {
           title: "Scale and logistics",
           items: [
-            { title: "Reach", meta: "700+ participants total", copy: "Combined attendance across both hackathons." },
+            { title: "Reach", meta: "650+ participants total", copy: "Combined attendance across both hackathons." },
             { title: "Geography", meta: "14 cities", copy: "Participants came from across the country, not one campus." },
             { title: "Partners", meta: "5 sponsors", copy: "Sponsor coordination was part of the organizing work." },
             { title: "Responsibility scope", meta: "Documents / negotiations / design / marketing / ops", copy: "Handled the full stack of organizing work: documents, partner negotiations, posters, marketing assets, forms, regulations, and operational structure." },
@@ -627,7 +627,7 @@ const modalContent = {
     "project-primeteens": {
       kicker: "Project file",
       title: "PrimeTeens mentor bot and platform",
-      intro: "PrimeTeens runs a summer intensive for grades 7-9 in Astana. Mentors needed to track every student without spending evenings on paperwork, so I built the bot and the platform behind it.",
+      intro: "PrimeTeens runs a summer intensive for grades 7-11 in Astana. Mentors needed to track every student without spending evenings on paperwork, so I built the bot and the platform behind it.",
       groups: [
         {
           title: "Mentor bot",
@@ -800,9 +800,9 @@ const modalContent = {
           items: [
             { title: "BiCAP Hackathon", meta: "1-е место из 200 команд", copy: "Text-to-SQL, SQL-to-text и AI-аудит для малого и среднего бизнеса." },
             { title: "NIS Valley", meta: "1-е место из 13 команд", copy: "Быстрая постановка продукта и сдача за короткий спринт." },
-            { title: "DEM Championship", meta: "2-е место из 33 команд", copy: "Стратегия маркетинговой кампании для CITIX." },
-            { title: "National Economic Challenge", meta: "3-е место из 150 команд", copy: "AI-генерация тестов для подготовки к SAT и IELTS." },
-            { title: "InsureTechHackathon", meta: "3-е место из 100 команд", copy: "Концепция AI-ассистента с упором на удобство и доступность." },
+            { title: "DEM Championship", meta: "2-е место из 34 команд", copy: "Стратегия маркетинговой кампании для CITIX." },
+            { title: "National Economic Challenge", meta: "3-е место из 125 команд", copy: "AI-генерация тестов для подготовки к SAT и IELTS." },
+            { title: "InsureTechHackathon", meta: "3-е место из 150 команд", copy: "Концепция AI-ассистента с упором на удобство и доступность." },
             { title: "Ломоносов-2026", meta: "3-е место, научная конференция", copy: "Исследование пространственных факторов цен на жильё в Астане." },
           ],
         },
@@ -819,7 +819,7 @@ const modalContent = {
     },
     organizing: {
       kicker: "Организаторский архив",
-      title: "700+ участников на 2 хакатонах",
+      title: "650+ участников на 2 хакатонах",
       intro: "Я организовал оба события, а не просто помогал: структура, партнёры, призы и операционка.",
       groups: [
         {
@@ -832,7 +832,7 @@ const modalContent = {
         {
           title: "Масштаб и логистика",
           items: [
-            { title: "Охват", meta: "700+ участников всего", copy: "Суммарно на обоих хакатонах." },
+            { title: "Охват", meta: "650+ участников всего", copy: "Суммарно на обоих хакатонах." },
             { title: "География", meta: "14 городов", copy: "Участники со всей страны, а не с одного кампуса." },
             { title: "Партнёры", meta: "5 спонсоров", copy: "Работа со спонсорами была частью организации." },
             { title: "Зона ответственности", meta: "Документы / переговоры / дизайн / маркетинг / операционка", copy: "Вся организаторская работа: документы, переговоры с партнёрами, постеры, маркетинг, формы, положение и операционная структура." },
@@ -896,7 +896,7 @@ const modalContent = {
     "project-primeteens": {
       kicker: "Проект",
       title: "Бот и платформа для менторов PrimeTeens",
-      intro: "PrimeTeens проводит летний интенсив для 7-9 классов в Астане. Менторам нужно было следить за каждым учеником, не тратя вечера на бумажки, поэтому я сделал бота и платформу.",
+      intro: "PrimeTeens проводит летний интенсив для 7-11 классов в Астане. Менторам нужно было следить за каждым учеником, не тратя вечера на бумажки, поэтому я сделал бота и платформу.",
       groups: [
         {
           title: "Бот для менторов",
@@ -1069,9 +1069,9 @@ const modalContent = {
           items: [
             { title: "BiCAP Hackathon", meta: "200 команданың ішінде 1-орын", copy: "Шағын және орта бизнеске арналған text-to-SQL, SQL-to-text және AI аудит." },
             { title: "NIS Valley", meta: "13 команданың ішінде 1-орын", copy: "Қысқа спринтте өнімді тез құрастырып, тапсыру." },
-            { title: "DEM Championship", meta: "33 команданың ішінде 2-орын", copy: "CITIX үшін маркетингтік науқан стратегиясы." },
-            { title: "National Economic Challenge", meta: "150 команданың ішінде 3-орын", copy: "SAT және IELTS дайындығына арналған AI тест генерациясы." },
-            { title: "InsureTechHackathon", meta: "100 команданың ішінде 3-орын", copy: "Ыңғайлылық пен қолжетімділікке бағытталған AI көмекші идеясы." },
+            { title: "DEM Championship", meta: "34 команданың ішінде 2-орын", copy: "CITIX үшін маркетингтік науқан стратегиясы." },
+            { title: "National Economic Challenge", meta: "125 команданың ішінде 3-орын", copy: "SAT және IELTS дайындығына арналған AI тест генерациясы." },
+            { title: "InsureTechHackathon", meta: "150 команданың ішінде 3-орын", copy: "Ыңғайлылық пен қолжетімділікке бағытталған AI көмекші идеясы." },
             { title: "Ломоносов-2026", meta: "3-орын, ғылыми конференция", copy: "Астанадағы тұрғын үй бағасының кеңістіктік факторлары туралы зерттеу." },
           ],
         },
@@ -1088,7 +1088,7 @@ const modalContent = {
     },
     organizing: {
       kicker: "Ұйымдастыру мұрағаты",
-      title: "2 хакатонда 700+ қатысушы",
+      title: "2 хакатонда 650+ қатысушы",
       intro: "Екі іс-шараны да жай көмектесіп қана қоймай, өзім ұйымдастырдым: құрылымы, серіктестері, жүлделері және жұмыс барысы.",
       groups: [
         {
@@ -1101,7 +1101,7 @@ const modalContent = {
         {
           title: "Ауқым және логистика",
           items: [
-            { title: "Қамту", meta: "Барлығы 700+ қатысушы", copy: "Екі хакатонда жиынтығы." },
+            { title: "Қамту", meta: "Барлығы 650+ қатысушы", copy: "Екі хакатонда жиынтығы." },
             { title: "География", meta: "14 қала", copy: "Қатысушылар бір кампустан емес, бүкіл елден келді." },
             { title: "Серіктестер", meta: "5 демеуші", copy: "Демеушілермен жұмыс ұйымдастырудың бір бөлігі болды." },
             { title: "Жауапкершілік аймағы", meta: "Құжаттар / келіссөздер / дизайн / маркетинг / жұмыс барысы", copy: "Ұйымдастырудың барлық жұмысы: құжаттар, серіктестермен келіссөздер, постерлер, маркетинг, формалар, ереже және жұмыс құрылымы." },
@@ -1165,7 +1165,7 @@ const modalContent = {
     "project-primeteens": {
       kicker: "Жоба",
       title: "PrimeTeens менторларына арналған бот пен платформа",
-      intro: "PrimeTeens Астанада 7-9 сыныптарға арналған жазғы интенсив өткізеді. Менторларға кешкі уақытын қағазбастылыққа жұмсамай, әр оқушыны бақылау керек болды, сондықтан мен бот пен платформа жасадым.",
+      intro: "PrimeTeens Астанада 7-11 сыныптарға арналған жазғы интенсив өткізеді. Менторларға кешкі уақытын қағазбастылыққа жұмсамай, әр оқушыны бақылау керек болды, сондықтан мен бот пен платформа жасадым.",
       groups: [
         {
           title: "Менторларға арналған бот",
