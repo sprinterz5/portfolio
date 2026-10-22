@@ -1,91 +1,76 @@
 const translations = {
   en: {
-    back_link: "Back to selector",
-    version_label: "Pixel Cyberpunk Portfolio",
     hero_eyebrow: "Aidar Begotayev // systems_curious:on",
-    hero_title: "Code. Reverse-Engineer. Compete. Ship.",
+    hero_title: "Build. Debug. Compete. Ship.",
     hero_lead:
-      "Backend systems, AI prototypes, spatial research, and a growing systems/hardware curiosity -- from ISA design to kernel boundaries -- pushed into one high-signal portfolio.",
+      "Backend systems, Linux tools for real hardware, AI workflows, and a growing curiosity for how computers work underneath -- from ISA design to kernel boundaries.",
+    contact_cv: "CV (PDF)",
     stat_one:
       "hackathons and competitions. click for wins, finalists, and selected builds",
     stat_two:
       "participants across EcoHackathon and Bright Future Hackathon that I organized",
     stat_three_value: "Tech Stack",
-    stat_three: "Python, APIs, SQL, GIS, automation core",
+    stat_three: "Python, SQL, Next.js, Linux, Docker, automation",
     stat_four_value: "6 notes",
     stat_four:
-      "self-directed field notes on ISA design, kernel boundaries, and systems trade-offs",
-    stat_four_action: "read deep dives",
+      "short personal notes on ISA design, kernel boundaries, and systems trade-offs",
+    stat_four_action: "read the notes",
     card_action: "open breakdown",
-    focus_one: "focus:: ai workflows + automation",
+    focus_one: "focus:: linux tools for real hardware",
     focus_two: "focus:: backend systems + product builds",
-    focus_three: "focus:: spatial economics + urban data",
+    focus_three: "focus:: ai workflows + automation",
     focus_four: "focus:: competition prototypes under pressure",
     signal_kicker: "Current signal",
     signal_copy:
-      "From a locomotive digital twin platform to library automation and university systems, I like building tools that actually get used.",
-    nav_deepdives: "deep_dives",
-    nav_systems: "systems",
-    nav_highlights: "wins",
+      "From a Linux control app for ASUS laptops to a mentor platform for a summer school and library automation, I like building tools that actually get used.",
     nav_projects: "projects",
+    nav_highlights: "wins",
+    nav_deepdives: "notes",
     nav_study: "study",
     nav_trajectory: "trajectory",
-    deepdives_note: "6 entries -- self-directed research, not coursework",
-    deepdives_kicker: "What I dig into",
-    deepdives_title: "Systems questions I don't let go of.",
-    deepdives_intro:
-      'I keep pulling on a thread until the whole causal chain closes -- then I go looking for the strongest counter-argument and try to break my own conclusion before I trust it. The question is rarely "why did the winner win," it\'s "what did the alternative actually lose, and who paid for it."',
-    deepdive_one_title: "Why ARM, not just why not x86-64",
-    deepdive_one_copy:
-      '"ARM is more efficient" is a conclusion, not an argument, so I went after what x86-64 actually loses: a CISC decoder tax and forty years of legacy instructions Intel and AMD can never drop without breaking existing software. Then I looked for the counter-case -- x86-64\'s real moat is exactly that legacy software, which is why Windows RT shipped with zero emulation in 2012 and ate a $900M write-off, and why it took until Prism\'s AVX/AVX2 support in the 2020s for Windows-on-ARM to actually work. ARM doesn\'t win in general, it wins specifically where forty years of x86 compatibility isn\'t the constraint, and loses hard everywhere it is.',
-    deepdive_two_title:
-      "Why anti-cheat lives in Ring 0 -- and what that costs everyone else",
-    deepdive_two_copy:
-      "I didn't accept \"anti-cheat just needs kernel access\" at face value, so I looked at what user-space anti-cheat actually can't see: cheats that hook below the OS's own visibility. That gap is exactly why Vanguard-style anti-cheat runs in Ring 0, why a single bug there is a whole-system vulnerability and not a game bug, and why Prism, a user-space emulator, physically can't translate a kernel-mode x64 driver. The part I kept circling back to: studios get a real security win, and every player on that machine inherits a kernel-level attack surface they never agreed to.",
-    deepdive_three_title: "seL4: proof over testing, and what that actually costs",
-    deepdive_three_copy:
-      'The obvious alternative to formal verification is what everyone already does -- test until nothing breaks -- so I wanted to know what that approach can never actually claim: that no untested input exists. seL4 is formally verified, mathematically proven correct against its spec, not just battle-tested. What I keep chewing on is the price of that guarantee: every line has to be provably correct, which is exactly why almost nothing outside safety-critical systems gets built this way -- proof doesn\'t scale the way "ship and patch" does.',
-    deepdive_four_title:
-      "Unified memory's real trade: performance-per-watt for upgradability",
-    deepdive_four_copy:
-      "The standard architecture gives the CPU and GPU their own memory and copies data across a bus between them. Apple's M-series skips that with one shared pool of unified memory, plus tile-based deferred rendering and a wide, low-clock decode pipeline -- roughly how it reaches RTX-4060-class GPU performance in a single package. I don't think that's a free win: the same soldered, shared memory that makes it efficient is also why you can't upgrade the RAM later -- performance-per-watt and right-to-repair point in opposite directions, and Apple picked one.",
-    deepdive_five_title: "Why IBM walked out of the race it started",
-    deepdive_five_copy:
-      "IBM basically invented the commercial computer industry, then sold its PC business to Lenovo in 2005 and its x86 server line in 2014, and kept pushing into mainframes, Power, and later services and quantum instead of fighting for the commodity market it created. I wanted to know why a company retreats from a race it's still winning on name alone: commodity x86 hardware was collapsing into razor-thin margins as everyone converged on the same components, while mainframes stayed a small, high-margin niche competitors couldn't easily enter. It reads less like losing and more like choosing depth over share -- though it also meant giving up the mindshare that comes with being in every consumer's hands.",
-    deepdive_six_title: "AMD's chiplet bet vs. Intel stuck on 14nm",
-    deepdive_six_copy:
-      "AMD was nearly bankrupt after the Bulldozer years, spun its fabs off into GlobalFoundries, went fabless, and bet Zen (2017) on chiplets built on TSMC's process instead of one large monolithic die -- while Intel kept re-spinning 14nm for years after its 10nm node slipped. I wanted to know how much of this was AMD's architecture being smarter versus Intel's manufacturing simply failing to deliver, and it's mostly the second: a better design on a stalled process wouldn't have mattered without TSMC actually shipping smaller nodes on schedule. The chiplet approach isn't free either -- splitting the die adds real interconnect latency across Infinity Fabric that a monolithic die never has to pay.",
-    sysenv_note: "environment / diagnostics -- factual, not decorative",
-    sysenv_kicker: "Systems environment",
-    sysenv_title: "Linux, dual-boot, and the debugging that came with it.",
-    sysenv_one:
-      "Fedora 44 KDE dual-boot on an ASUS TUF A15, including resolving NVIDIA Secure Boot / MOK enrollment and configuring asusctl / supergfxctl for GPU and power management.",
-    sysenv_two:
-      "Compiled evsieve from source to fix a Y-axis drift bug on a Bloody W95 mouse via input remapping.",
-    sysenv_three:
-      "ArchLinux + Ubuntu 22.04 / 24.04 across machines, plus VPS management for deployed services.",
-    sysenv_four:
-      "Repasted the A15 and read HWiNFO logs to correctly diagnose a CPU-bound game bottleneck instead of assuming thermal throttling.",
-    project_debounce_tag: "Builder Story",
-    project_debounce_title: "Tea-Damaged Keyboard -> Software Debounce Layer",
-    project_debounce_copy:
-      "A friend spilled tea on his keyboard and the damaged contacts fired multiple ghost keypresses per press. Instead of replacing the hardware, I studied the failure pattern and wrote a software layer that reads the messy multi-fire signal and normalizes it into a single correct character.",
+    nav_systems: "linux",
+    nav_contact: "contact",
+    projects_note: "9 entries -- open a card for details and links",
+    projects_kicker: "Selected builds",
+    projects_title: "Projects behind the signal.",
+    project_open: "open project file",
+    project_shiftray_tag: "Open source / Linux",
+    project_shiftray_title: "Shiftray",
+    project_shiftray_copy:
+      "A tray app for ASUS laptops on Linux: power modes, fan curves, GPU switching, keyboard lighting, battery limits and the Fn keys in one small window. Released as an AppImage and as Fedora and Arch packages, translated into 7 languages.",
+    project_primeteens_tag: "Summer school platform",
+    project_primeteens_title: "PrimeTeens mentor bot and platform",
+    project_primeteens_copy:
+      "A Telegram bot and web platform for a summer intensive for grades 7-9: lesson reminders, a short survey after each lesson with voice answers, online workbooks and homework review.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
       "Built the UI/UX and PostgreSQL-backed data layer for an early autism-diagnosis app now deployed and postered in a local hospital.",
-    study_note: "notes and independent coursework -- photos to be added",
-    study_kicker: "Study log",
-    study_title: "Building the math underneath the code.",
-    study_one_title: "MIT OpenCourseWare",
-    study_one_copy:
-      "Follow OCW lectures -- Linear Algebra with Prof. Strang, Multivariable Calculus, Differential Equations -- and keep handwritten notes alongside them.",
-    study_two_title: "Discrete Mathematics",
-    study_two_copy:
-      "Sit in on Prof. Sanzhar Kusdavletov's course and work problems by hand -- null space, set theory, truth tables.",
-    study_three_title: "Linear algebra, one level deeper",
-    study_three_copy:
-      "Quadratic forms, QR / Gram-Schmidt, and LU decomposition worked through outside of class requirements.",
+    project_one_tag: "Library Automation Intern",
+    project_one_title: "eLibra QR Middleware",
+    project_one_copy:
+      "Built a QR-based self-service issuance flow with FastAPI, Playwright RPA, SQLite, and a web interface that reduced librarian bottlenecks.",
+    project_two_tag: "University Product",
+    project_two_title: "Roomly",
+    project_two_copy:
+      "Built a room reservation system with role-based flows, approval logic, calendar management, and Telegram onboarding.",
+    project_bloody_tag: "Hardware on Linux",
+    project_bloody_title: "Bloody W95 mouse on Linux",
+    project_bloody_copy:
+      "The mouse ships with Windows-only software, so I decoded its USB protocol and wrote a Python tool that sets RGB and DPI over hidraw.",
+    project_debounce_tag: "Builder Story",
+    project_debounce_title: "Tea-Damaged Keyboard -> Software Debounce Layer",
+    project_debounce_copy:
+      "A friend spilled tea on his keyboard and the damaged contacts fired multiple ghost keypresses per press. Instead of replacing the hardware, I studied the failure pattern and wrote a software layer that reads the messy multi-fire signal and normalizes it into a single correct character.",
+    project_three_tag: "Research",
+    project_three_title: "Spatial Factors of Housing Prices in Astana",
+    project_three_copy:
+      "Earned 3rd place at Lomonosov-2026 with research on how location-linked variables shape housing prices in Astana.",
+    project_four_tag: "Applied AI",
+    project_four_title: "RAG and automation workflows",
+    project_four_copy:
+      "Built AI-assisted workflows around RAG, backend integrations, and operational automation for real institutional use cases.",
+    highlights_note: "4 entries -- the strongest results",
     highlights_kicker: "Selected stages",
     highlights_title: "The events that matter most.",
     highlight_one_tag: "AmanatTech",
@@ -104,27 +89,49 @@ const translations = {
     highlight_four_title: "Four iterations, evolving scope",
     highlight_four_copy:
       "Worked on Telegram mini apps, AI assistants, rule-based screening for InVision University, and model experiments with PyTorch.",
-    projects_note:
-      "6 entries -- click to inspect, preview slot ready for future PNG",
-    projects_kicker: "Selected builds",
-    projects_title: "Projects behind the signal.",
-    project_one_tag: "Library Automation Intern",
-    project_one_title: "eLibra QR Middleware",
-    project_one_copy:
-      "Built a QR-based self-service issuance flow with FastAPI, Playwright RPA, SQLite, and a web interface that reduced librarian bottlenecks.",
-    project_two_tag: "University Product",
-    project_two_title: "Roomly",
-    project_two_copy:
-      "Built a room reservation system with role-based flows, approval logic, calendar management, and Telegram onboarding.",
-    project_three_tag: "Research",
-    project_three_title: "Spatial Factors of Housing Prices in Astana",
-    project_three_copy:
-      "Earned 3rd place at Lomonosov-2026 with research on how location-linked variables shape housing prices in Astana.",
-    project_four_tag: "Applied AI",
-    project_four_title: "RAG and automation workflows",
-    project_four_copy:
-      "Built AI-assisted workflows around RAG, backend integrations, and operational automation for real institutional use cases.",
-    project_open: "open project file",
+    link_code: "source code",
+    deepdives_note: "6 entries -- personal notes, not coursework",
+    deepdives_kicker: "What I dig into",
+    deepdives_title: "Systems questions I keep coming back to.",
+    deepdives_intro:
+      'I keep pulling on a thread until the causal chain closes, then look for the strongest counter-argument before I trust my own conclusion. The question is rarely "why did the winner win", it is "what did the alternative actually lose, and who paid for it".',
+    deepdive_one_title: "Why ARM, not just why not x86-64",
+    deepdive_one_copy:
+      '"ARM is more efficient" is a conclusion, not an argument, so I went after what x86-64 actually loses: a more complex decoder for variable-length instructions and decades of legacy behaviour Intel and AMD cannot drop without breaking existing software. Then I looked for the counter-case: x86-64\'s real moat is exactly that software. Windows RT in 2012 could not run existing x86 desktop apps at all, and Microsoft wrote down $900M on Surface RT. Windows on ARM only became usable once x86 emulation and the chips got good enough. ARM does not win in general; it wins where x86 compatibility is not the constraint, and loses hard where it is.',
+    deepdive_two_title:
+      "Why anti-cheat lives in Ring 0 -- and what that costs everyone else",
+    deepdive_two_copy:
+      'I didn\'t accept "anti-cheat just needs kernel access" at face value, so I looked at what user-space anti-cheat actually can\'t see: cheats that hook below the OS\'s own visibility. That gap is why Vanguard-style anti-cheat runs in Ring 0, why a single bug there is a whole-system vulnerability and not a game bug, and why a user-space emulator like Prism can\'t run a kernel-mode x64 driver at all. The part I kept circling back to: studios get a real security win, and every player on that machine inherits a kernel-level attack surface they never agreed to.',
+    deepdive_three_title: "seL4: proof over testing, and what that actually costs",
+    deepdive_three_copy:
+      'The obvious alternative to formal verification is what everyone already does -- test until nothing breaks -- so I wanted to know what that approach can never claim: that no untested input exists. seL4 is formally verified, mathematically proven correct against its spec, not just battle-tested. What I keep chewing on is the price of that guarantee: every line has to be provably correct, which is why almost nothing outside safety-critical systems gets built this way. Proof doesn\'t scale the way "ship and patch" does.',
+    deepdive_four_title:
+      "Unified memory's real trade: performance-per-watt for upgradability",
+    deepdive_four_copy:
+      "The usual PC design gives the CPU and the discrete GPU separate memory and copies data between them over PCIe. Apple's M-series puts the CPU and GPU on one shared pool of memory in the same package, so both read the same data without the copy. I don't think that's a free win: the same soldered, shared memory that makes it efficient is also why you can't upgrade the RAM later. Performance-per-watt and right-to-repair point in opposite directions, and Apple picked one.",
+    deepdive_five_title: "Why IBM walked out of the race it started",
+    deepdive_five_copy:
+      "IBM basically invented the commercial computer industry, then sold its PC business to Lenovo in 2005 and its x86 server line in 2014, and kept pushing into mainframes, Power, and later services and quantum instead of fighting for the commodity market it created. I wanted to know why a company retreats from a race it's still winning on name alone: commodity x86 hardware was collapsing into razor-thin margins as everyone converged on the same components, while mainframes stayed a small, high-margin niche competitors couldn't easily enter. It reads less like losing and more like choosing depth over share -- though it also meant giving up the mindshare that comes with being in every consumer's hands.",
+    deepdive_six_title: "AMD's chiplet bet vs. Intel stuck on 14nm",
+    deepdive_six_copy:
+      "AMD was nearly bankrupt after the Bulldozer years and had already spun its fabs off into GlobalFoundries. It launched Zen in 2017, then with Zen 2 in 2019 split the CPU into chiplets built on TSMC's 7nm process, while Intel kept re-spinning 14nm for years after its 10nm node slipped. I wanted to know how much of this was AMD's design being smarter versus Intel's manufacturing failing to deliver, and I think it's mostly the second: a better design wouldn't have mattered without TSMC shipping smaller nodes on schedule. Chiplets aren't free either: splitting the die adds interconnect latency across Infinity Fabric that a monolithic die never pays.",
+    study_note: "independent coursework -- handwritten notes in the PDF",
+    study_kicker: "Study log",
+    study_title: "Building the math underneath the code.",
+    study_one_title: "MIT OpenCourseWare",
+    study_one_copy:
+      "Follow OCW lectures -- Linear Algebra with Prof. Strang, Multivariable Calculus, Differential Equations -- and keep handwritten notes alongside them.",
+    study_two_title: "Discrete Mathematics",
+    study_two_copy:
+      "Sit in on Prof. Sanzhar Kusdavletov's course and work problems by hand -- null space, set theory, truth tables.",
+    study_three_title: "Linear algebra, one level deeper",
+    study_three_copy:
+      "Quadratic forms, QR / Gram-Schmidt, and LU decomposition worked through outside of class requirements.",
+    study_four_title: "The notes themselves",
+    study_four_copy:
+      "Pages from my OCW and discrete math notebooks, plus photos of the ChildInfo poster in the hospital and screenshots of the library and Roomly interfaces.",
+    link_pdf: "open the PDF",
+    trajectory_note: "3 records -- foundation, leadership, creative range",
     trajectory_kicker: "Trajectory",
     trajectory_title: "Signal beyond competitions.",
     trajectory_one_title: "Early route",
@@ -136,739 +143,1216 @@ const translations = {
     trajectory_three_title: "Creative and product range",
     trajectory_three_copy:
       "Studied web design at Young Profi School, worked in digital marketing at inUniGlobal, handled SMM roles, and performed in drama club.",
-    modal_preview_label: "Preview slot",
-    footer_one: "GitHub: sprinterz5",
-    footer_two: "Astana / backend systems / AI workflows / research",
+    sysenv_note: "where the linux projects come from",
+    sysenv_kicker: "Linux daily driver",
+    sysenv_title: "The machine I debug on every day.",
+    sysenv_one:
+      "Fedora 44 KDE on an ASUS TUF A15 next to Windows, including NVIDIA drivers under Secure Boot. The gaps I hit on this laptop turned into Shiftray.",
+    sysenv_two:
+      "Run my own services on a VPS: Docker, nginx, systemd units, backups and monitoring for the PrimeTeens bots and platform.",
+    sysenv_three:
+      "Measure before guessing: sensor logs showed a game was CPU-bound, not thermal throttling, and a sleep log showed what kept waking the laptop in a closed bag.",
+    footer_one: "Open to internships, research and project work.",
+    modal_close: "close",
+    modal_links: "Links",
+    link_repo: "GitHub repository",
+    link_download: "Download the AppImage",
+    link_poster: "Hospital poster (PDF)",
   },
   ru: {
-    back_link: "Назад к выбору",
-    version_label: "Pixel Cyberpunk Portfolio",
     hero_eyebrow: "Aidar Begotayev // systems_curious:on",
-    hero_title: "Кодить. Разбирать системы. Соревноваться. Делать.",
+    hero_title: "Строю. Отлаживаю. Соревнуюсь. Выпускаю.",
     hero_lead:
-      "Бэкенд-системы, AI-прототипы, пространственные исследования и растущий интерес к системам и железу -- от архитектуры ISA до границ ядра ОС -- собранные в одно high-signal портфолио.",
-    stat_one: "хакатоны и соревнования, включая 6+ побед и призовых мест",
-    stat_two: "участников на 2 хакатонах, которые я организовал",
-    stat_three: "Docker, Playwright, PyTorch, Next.js, Figma",
+      "Бэкенд-системы, Linux-инструменты для реального железа, AI-автоматизация и растущий интерес к тому, как компьютер устроен внутри -- от архитектуры ISA до границ ядра ОС.",
+    contact_cv: "Резюме (PDF)",
+    stat_one:
+      "хакатонов и соревнований. нажмите, чтобы увидеть победы, финалы и избранные работы",
+    stat_two:
+      "участников на EcoHackathon и Bright Future Hackathon, которые я организовал",
+    stat_three_value: "Стек",
+    stat_three: "Python, SQL, Next.js, Linux, Docker, автоматизация",
     stat_four_value: "6 заметок",
     stat_four:
-      "самостоятельные заметки об архитектуре ISA, границах ядра ОС и системных компромиссах",
-    stat_four_action: "читать deep dives",
-    focus_one: "focus:: ai workflows + automation",
-    focus_two: "focus:: backend systems + product builds",
-    focus_three: "focus:: spatial economics + urban data",
-    focus_four: "focus:: competition prototypes under pressure",
-    signal_kicker: "Текущий сигнал",
+      "короткие личные заметки об архитектуре ISA, границах ядра и компромиссах в системах",
+    stat_four_action: "читать заметки",
+    card_action: "подробнее",
+    focus_one: "focus:: linux-инструменты для реального железа",
+    focus_two: "focus:: бэкенд-системы + продукты",
+    focus_three: "focus:: ai-процессы + автоматизация",
+    focus_four: "focus:: прототипы на соревнованиях под давлением",
+    signal_kicker: "Сейчас",
     signal_copy:
-      "От цифрового двойника локомотива до библиотечной автоматизации и университетских систем: мне нравится делать инструменты, которыми реально пользуются.",
-    nav_deepdives: "deep_dives",
-    nav_systems: "системы",
-    nav_highlights: "победы",
+      "От Linux-приложения для управления ноутбуками ASUS до платформы для менторов летней школы и автоматизации библиотеки -- мне нравится делать инструменты, которыми реально пользуются.",
     nav_projects: "проекты",
+    nav_highlights: "победы",
+    nav_deepdives: "заметки",
     nav_study: "учёба",
-    nav_trajectory: "траектория",
-    deepdives_note: "6 записей -- самостоятельные исследования, не учебная программа",
-    deepdives_kicker: "Во что я закапываюсь",
-    deepdives_title: "Системные вопросы, которые я не бросаю на полпути.",
-    deepdives_intro:
-      "Я тяну за ниточку, пока не замкнётся вся причинно-следственная цепочка -- а потом иду искать самый сильный контраргумент и пытаюсь сломать собственный вывод, прежде чем ему поверить. Вопрос редко звучит как «почему победитель победил», чаще -- «что именно потеряла альтернатива и кто за это заплатил».",
-    deepdive_one_title: "Почему ARM, а не просто «почему не x86-64»",
-    deepdive_one_copy:
-      '«ARM эффективнее» -- это вывод, а не аргумент, поэтому я разбирался, что именно теряет x86-64: decoder tax из-за CISC и сорок лет legacy-инструкций, от которых Intel и AMD не могут отказаться, не сломав существующий софт. Дальше я искал контраргумент -- настоящее преимущество x86-64 именно в этом legacy-софте, поэтому Windows RT в 2012 вышла без какой-либо эмуляции и получила списание в $900M, и поэтому только с поддержкой AVX/AVX2 в Prism в 2020-х Windows-on-ARM реально заработал. ARM не побеждает вообще -- он побеждает именно там, где сорок лет x86-совместимости не являются ограничением, и жёстко проигрывает везде, где являются.',
-    deepdive_two_title:
-      "Почему анти-чит живёт в Ring 0 -- и во что это обходится всем остальным",
-    deepdive_two_copy:
-      'Я не принял на веру "анти-читу просто нужен доступ к ядру" и разобрался, чего именно не видит анти-чит в user-space: читы, которые ставят крючки ниже видимости самой ОС. Именно этот разрыв -- причина, почему анти-чит вроде Vanguard работает в Ring 0, почему любой баг там -- уязвимость всей системы, а не игровой баг, и почему Prism, эмулятор уровня пользователя, физически не может транслировать kernel-mode x64 драйвер. Что меня зацепило: студии получают реальный выигрыш в безопасности, а каждый игрок на этой машине наследует kernel-level поверхность атаки, на которую он не соглашался.',
-    deepdive_three_title: "seL4: доказательство вместо тестирования, и чего это стоит",
-    deepdive_three_copy:
-      'Очевидная альтернатива формальной верификации -- то, что делают все: тестировать, пока не перестанет ломаться, -- поэтому я хотел понять, чего этот подход никогда не может утверждать: что не существует непротестированного входа. seL4 формально верифицирован -- математически доказан корректным относительно спецификации, а не просто протестирован до отказа. Что меня не отпускает -- цена этой гарантии: каждая строка должна быть доказуемо корректной, именно поэтому почти ничего за пределами safety-critical систем так не строят -- доказательство не масштабируется так, как "выпустил и запатчил".',
-    deepdive_four_title:
-      "Реальный обмен unified memory: производительность на ватт против апгрейда",
-    deepdive_four_copy:
-      "Стандартная архитектура даёт CPU и GPU отдельную память и копирует данные между ними по шине. M-серия Apple обходит это одним общим пулом unified memory, плюс tile-based deferred rendering и широкий low-clock decode pipeline -- примерно так она выходит на уровень производительности GPU около RTX-4060 в одном корпусе. Не думаю, что это бесплатный выигрыш: та же самая распаянная общая память, которая даёт эффективность, -- причина, почему память нельзя апгрейдить позже. Производительность на ватт и право на ремонт смотрят в разные стороны, и Apple выбрала одну из них.",
-    deepdive_five_title: "Почему IBM вышла из гонки, которую сама и начала",
-    deepdive_five_copy:
-      "IBM фактически изобрела индустрию коммерческих компьютеров, затем продала бизнес ПК Lenovo в 2005 и линейку x86-серверов в 2014, и дальше делала ставку на мейнфреймы, Power, а позже на сервисы и квантовые вычисления вместо борьбы за commodity-рынок, который сама и создала. Мне было интересно, почему компания отступает из гонки, которую всё ещё выигрывает по узнаваемости имени: commodity x86-железо схлопывалось в мизерную маржу по мере того, как все сходились к одинаковым компонентам, а мейнфреймы оставались небольшой, но высокомаржинальной нишей, куда конкурентам было сложно зайти. Это больше похоже не на проигрыш, а на выбор глубины вместо доли рынка -- хотя это также означало отказ от того mindshare, который даёт присутствие в руках у каждого потребителя.",
-    deepdive_six_title: "Ставка AMD на чиплеты против застрявшего на 14nm Intel",
-    deepdive_six_copy:
-      "AMD была почти банкротом после эпохи Bulldozer, вывела фабрики в отдельный GlobalFoundries, ушла в fabless-модель и поставила на Zen (2017) с чиплетами на процессе TSMC вместо одного большого монолитного кристалла -- пока Intel годами перевыпускала 14nm после того, как сорвался переход на 10nm. Мне было интересно, насколько это заслуга архитектуры AMD, а насколько -- провал производства у Intel, и по факту это в основном второе: даже более умный дизайн на застрявшем техпроцессе ничего бы не решил без того, что TSMC реально поставляла младшие нормы вовремя. Chiplet-подход тоже не бесплатен -- разделение кристалла добавляет реальную задержку на межсоединениях Infinity Fabric, которую монолитному кристаллу платить не нужно.",
-    sysenv_note: "окружение / диагностика -- фактура, без прикрас",
-    sysenv_kicker: "Системное окружение",
-    sysenv_title: "Linux, dual-boot и отладка, которая с ним пришла.",
-    sysenv_one:
-      "Fedora 44 KDE в dual-boot на ASUS TUF A15, включая настройку NVIDIA Secure Boot / MOK enrollment и конфигурацию asusctl / supergfxctl для управления GPU и питанием.",
-    sysenv_two:
-      "Скомпилировал evsieve из исходников, чтобы исправить дрейф по Y-оси у мыши Bloody W95 через input remapping.",
-    sysenv_three:
-      "ArchLinux + Ubuntu 22.04 / 24.04 на разных машинах, плюс управление VPS для развёрнутых сервисов.",
-    sysenv_four:
-      "Заменил термопасту на A15 и по логам HWiNFO правильно диагностировал CPU-bound bottleneck в игре вместо предполагаемого троттлинга по температуре.",
-    project_debounce_tag: "История билдера",
-    project_debounce_title: "Клавиатура, залитая чаем -> программный debounce-слой",
-    project_debounce_copy:
-      "Друг залил клавиатуру чаем, и повреждённые контакты выдавали несколько ghost-нажатий на одно реальное. Вместо замены железа я изучил паттерн сбоя и написал программный слой, который читает этот шумный multi-fire сигнал и нормализует его в один корректный символ.",
+    nav_trajectory: "путь",
+    nav_systems: "linux",
+    nav_contact: "контакты",
+    projects_note: "9 записей -- откройте карточку, там подробности и ссылки",
+    projects_kicker: "Избранные проекты",
+    projects_title: "Проекты за цифрами.",
+    project_open: "открыть проект",
+    project_shiftray_tag: "Open source / Linux",
+    project_shiftray_title: "Shiftray",
+    project_shiftray_copy:
+      "Приложение в трее для ноутбуков ASUS на Linux: режимы питания, кривые вентиляторов, переключение видеокарты, подсветка клавиатуры, лимит заряда и клавиши Fn в одном маленьком окне. Выходит как AppImage и как пакеты для Fedora и Arch, переведено на 7 языков.",
+    project_primeteens_tag: "Платформа летней школы",
+    project_primeteens_title: "Бот и платформа для менторов PrimeTeens",
+    project_primeteens_copy:
+      "Telegram-бот и веб-платформа для летнего интенсива 7-9 классов: напоминания о занятиях, короткий опрос после каждого урока с голосовыми ответами, онлайн-тетради и проверка домашки.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
-      "Сделал UI/UX и слой данных на PostgreSQL для приложения ранней диагностики аутизма, которое сейчас развёрнуто и используется в местной больнице.",
-    study_note: "заметки и самостоятельный курс -- фото будут добавлены",
-    study_kicker: "Журнал обучения",
-    study_title: "Математика под капотом кода.",
+      "Сделал UI/UX и слой данных на PostgreSQL для приложения ранней диагностики аутизма. Приложение работает, его постер висит в местной больнице.",
+    project_one_tag: "Стажировка в библиотеке",
+    project_one_title: "eLibra QR Middleware",
+    project_one_copy:
+      "Сделал самостоятельную выдачу книг по QR на FastAPI, Playwright RPA, SQLite и веб-интерфейсе, которая разгрузила библиотекарей.",
+    project_two_tag: "Университетский продукт",
+    project_two_title: "Roomly",
+    project_two_copy:
+      "Сделал систему бронирования аудиторий с ролями, согласованием, календарём и входом через Telegram.",
+    project_bloody_tag: "Железо на Linux",
+    project_bloody_title: "Мышь Bloody W95 на Linux",
+    project_bloody_copy:
+      "Программа для мыши есть только под Windows, поэтому я разобрал её USB-протокол и написал утилиту на Python, которая меняет подсветку и DPI через hidraw.",
+    project_debounce_tag: "История",
+    project_debounce_title: "Залитая чаем клавиатура -> программный антидребезг",
+    project_debounce_copy:
+      "Друг пролил чай на клавиатуру, и повреждённые контакты давали несколько ложных нажатий на одно. Вместо замены железа я изучил, как именно они срабатывают, и написал программный слой, который превращает этот шумный сигнал в одно правильное нажатие.",
+    project_three_tag: "Исследование",
+    project_three_title: "Пространственные факторы цен на жильё в Астане",
+    project_three_copy:
+      "3-е место на Ломоносов-2026 с исследованием о том, как переменные, связанные с местоположением, влияют на цены на жильё в Астане.",
+    project_four_tag: "Прикладной AI",
+    project_four_title: "RAG и автоматизация",
+    project_four_copy:
+      "AI-процессы вокруг RAG, интеграций с бэкендом и автоматизации для реальных задач учреждений.",
+    highlights_note: "4 записи -- самые сильные результаты",
+    highlights_kicker: "Главное",
+    highlights_title: "События, которые важнее всего.",
+    highlight_one_tag: "AmanatTech",
+    highlight_one_title: "Топ-20 из 400 команд",
+    highlight_one_copy:
+      "Концепция платформы для помощи людям с наркозависимостью: социальная польза плюс продуктовое мышление.",
+    highlight_two_tag: "HackNU 2026",
+    highlight_two_title: "Кейс Қазақстан Темір Жолы",
+    highlight_two_copy:
+      "Платформа цифрового двойника локомотива для телеметрии, диагностики и мониторинга за один напряжённый инженерный спринт.",
+    highlight_three_tag: "BiCAP Hackathon",
+    highlight_three_title: "1-е место из 200 команд",
+    highlight_three_copy:
+      "Text-to-SQL, SQL-to-text и AI-аудит для малого и среднего бизнеса.",
+    highlight_four_tag: "Decentrathon 2.0-5.0",
+    highlight_four_title: "Четыре сезона, растущий масштаб",
+    highlight_four_copy:
+      "Telegram mini apps, AI-ассистенты, скрининг по правилам для InVision University и эксперименты с моделями на PyTorch.",
+    link_code: "исходный код",
+    deepdives_note: "6 записей -- личные заметки, не учебные задания",
+    deepdives_kicker: "В чём я копаюсь",
+    deepdives_title: "Вопросы о системах, к которым я возвращаюсь.",
+    deepdives_intro:
+      "Я тяну за нить, пока причинная цепочка не замкнётся, а потом ищу самый сильный контраргумент, прежде чем поверить своему выводу. Вопрос обычно не «почему победитель победил», а «что на самом деле потеряла альтернатива и кто за это заплатил».",
+    deepdive_one_title: "Почему ARM, а не просто почему не x86-64",
+    deepdive_one_copy:
+      "«ARM эффективнее» -- это вывод, а не аргумент, поэтому я искал, что x86-64 реально теряет: более сложный декодер для команд переменной длины и десятилетия наследия, которое Intel и AMD не могут выбросить, не сломав существующие программы. Потом я искал контраргумент: настоящая защита x86-64 -- как раз эти программы. Windows RT в 2012 году вообще не запускала обычные x86-приложения, и Microsoft списала $900 млн на Surface RT. Windows на ARM стала пригодной, только когда эмуляция x86 и сами чипы стали достаточно хорошими. ARM не выигрывает вообще: он выигрывает там, где совместимость с x86 не ограничение, и сильно проигрывает там, где ограничение.",
+    deepdive_two_title: "Почему античит живёт в Ring 0 и чего это стоит остальным",
+    deepdive_two_copy:
+      "Я не принял на веру «античиту просто нужен доступ к ядру» и проверил, чего античит в пространстве пользователя не видит: читы, которые цепляются ниже того, что видит сама ОС. Из-за этого пробела античиты вроде Vanguard работают в Ring 0, одна ошибка там -- уязвимость всей системы, а не баг игры, а эмулятор уровня пользователя вроде Prism вообще не может запустить x64-драйвер ядра. К чему я всё время возвращался: студии получают реальный выигрыш в защите, а каждый игрок на этом компьютере получает поверхность атаки на уровне ядра, на которую не соглашался.",
+    deepdive_three_title: "seL4: доказательство вместо тестов и его настоящая цена",
+    deepdive_three_copy:
+      "Очевидная альтернатива формальной верификации -- то, что делают все: тестировать, пока ничего не ломается. Поэтому мне было интересно, чего этот подход никогда не может утверждать: что непроверенных входных данных не существует. seL4 формально верифицирован, его корректность относительно спецификации доказана математически, а не просто проверена в бою. Думаю я о цене этой гарантии: каждая строка должна быть доказуемо верной, поэтому вне критичных к безопасности систем так почти ничего не строят. Доказательство не масштабируется так, как «выпусти и допатчи».",
+    deepdive_four_title: "Настоящий размен unified memory: производительность на ватт против апгрейда",
+    deepdive_four_copy:
+      "В обычном ПК у процессора и дискретной видеокарты своя память, и данные копируются между ними по PCIe. В Apple M-серии процессор и видеоядро сидят на одном общем пуле памяти в одном корпусе, и оба читают одни и те же данные без копирования. Не думаю, что это бесплатный выигрыш: та же распаянная общая память, которая даёт эффективность, -- причина, почему память нельзя нарастить потом. Производительность на ватт и право на ремонт смотрят в разные стороны, и Apple выбрала одно.",
+    deepdive_five_title: "Почему IBM ушла из гонки, которую сама начала",
+    deepdive_five_copy:
+      "IBM по сути создала коммерческую компьютерную индустрию, а потом продала бизнес ПК компании Lenovo в 2005 году и x86-серверы в 2014-м, и ушла в мейнфреймы, Power, а позже в сервисы и квантовые вычисления вместо борьбы за массовый рынок, который сама создала. Мне было интересно, почему компания уходит из гонки, в которой всё ещё выигрывает хотя бы именем: массовое x86-железо скатывалось в мизерную маржу, потому что все перешли на одинаковые компоненты, а мейнфреймы оставались маленькой, но очень прибыльной нишей, куда конкурентам трудно зайти. Это похоже не на поражение, а на выбор глубины вместо доли рынка -- хотя это значило и отказ от узнаваемости, которая приходит, когда ты в руках у каждого покупателя.",
+    deepdive_six_title: "Ставка AMD на чиплеты против Intel, застрявшей на 14 нм",
+    deepdive_six_copy:
+      "После лет Bulldozer AMD была на грани банкротства и уже выделила свои фабрики в GlobalFoundries. В 2017 году она выпустила Zen, а в 2019-м с Zen 2 разделила процессор на чиплеты на 7-нм техпроцессе TSMC, пока Intel годами перевыпускала 14 нм после срыва 10 нм. Мне было интересно, сколько здесь от умного дизайна AMD, а сколько от провала производства Intel, и я думаю, что в основном второе: лучший дизайн не помог бы, если бы TSMC не выпускала меньшие техпроцессы вовремя. Чиплеты тоже не бесплатны: разделение кристалла добавляет задержку на Infinity Fabric, которой у монолитного кристалла нет.",
+    study_note: "самостоятельная учёба -- рукописные конспекты в PDF",
+    study_kicker: "Учёба",
+    study_title: "Строю математику под кодом.",
     study_one_title: "MIT OpenCourseWare",
     study_one_copy:
-      "Прохожу лекции OCW -- Linear Algebra профессора Стрэнга, Multivariable Calculus, Differential Equations -- и веду рукописные конспекты параллельно.",
+      "Смотрю лекции OCW -- линейная алгебра у профессора Стрэнга, анализ функций многих переменных, дифференциальные уравнения -- и веду рукописные конспекты.",
     study_two_title: "Дискретная математика",
     study_two_copy:
-      "Хожу на курс профессора Санжара Кусдавлетова и решаю задачи руками -- null space, теория множеств, таблицы истинности.",
-    study_three_title: "Линейная алгебра чуть глубже",
+      "Хожу на курс профессора Санжара Кусдавлетова и решаю задачи руками -- ядро матрицы, теория множеств, таблицы истинности.",
+    study_three_title: "Линейная алгебра глубже",
     study_three_copy:
-      "Квадратичные формы, QR / Gram-Schmidt и LU-разложение -- разобрал самостоятельно, сверх программы.",
-    highlights_kicker: "Главные этапы",
-    highlights_title: "Те события, которые действительно важны.",
-    highlight_one_tag: "AmanatTech",
-    highlight_one_title: "Top 20 из 400 команд",
-    highlight_one_copy:
-      "Делали платформенную концепцию для помощи людям с наркотической зависимостью, сочетая social impact и product thinking.",
-    highlight_two_tag: "HackNU 2026",
-    highlight_two_title: "Кейс Казахстан Темир Жолы",
-    highlight_two_copy:
-      "Сделали платформу цифрового двойника локомотива для телеметрии, диагностики и мониторинга в условиях жесткого инженерного спринта.",
-    highlight_three_tag: "BiCAP Hackathon",
-    highlight_three_title: "1 место из 200 команд",
-    highlight_three_copy:
-      "Сделали text-to-SQL, SQL-to-text и AI-assisted audit идеи для малого и среднего бизнеса.",
-    highlight_four_tag: "Decentrathon 2.0-5.0",
-    highlight_four_title: "Четыре итерации, растущий масштаб",
-    highlight_four_copy:
-      "Работал над Telegram mini apps, AI assistants, rule-based screening для InVision University и экспериментами с моделями на PyTorch.",
-    projects_kicker: "Избранные проекты",
-    projects_title: "Проекты за этим сигналом.",
-    project_one_tag: "Library Automation Intern",
-    project_one_title: "eLibra QR Middleware",
-    project_one_copy:
-      "Сделал QR-систему самообслуживания для выдачи книг на FastAPI, Playwright RPA, SQLite и с веб-интерфейсом, который уменьшал нагрузку на библиотекарей.",
-    project_two_tag: "University Product",
-    project_two_title: "Roomly",
-    project_two_copy:
-      "Сделал систему бронирования аудиторий с role-based логикой, approval flow, календарным управлением и Telegram onboarding.",
-    project_three_tag: "Исследование",
-    project_three_title: "Пространственные факторы цены жилой недвижимости в Астане",
-    project_three_copy:
-      "Получил 3 место на Lomonosov-2026 за исследование того, как пространственные факторы влияют на цены жилья в Астане.",
-    project_four_tag: "Applied AI",
-    project_four_title: "RAG и automation workflows",
-    project_four_copy:
-      "Строил AI-assisted workflows вокруг RAG, backend integrations и операционной автоматизации для реальных институциональных кейсов.",
-    trajectory_kicker: "Траектория",
-    trajectory_title: "Сигнал за пределами соревнований.",
-    trajectory_one_title: "Ранний старт",
+      "Квадратичные формы, QR / Грам-Шмидт и LU-разложение сверх учебной программы.",
+    study_four_title: "Сами конспекты",
+    study_four_copy:
+      "Страницы из тетрадей по OCW и дискретной математике, фото постера ChildInfo в больнице и скриншоты интерфейсов библиотеки и Roomly.",
+    link_pdf: "открыть PDF",
+    trajectory_note: "3 записи -- основа, лидерство, творчество",
+    trajectory_kicker: "Путь",
+    trajectory_title: "Не только соревнования.",
+    trajectory_one_title: "Начало",
     trajectory_one_copy:
-      "Начал с олимпиадных задач на C++ в 5 классе, в 7 классе переключился на Python для Discord и Telegram ботов, а в 8 классе сделал сайт на Django.",
-    trajectory_two_title: "Лидерство и служение",
+      "Начал с олимпиадных задач на C++ в 5 классе, в 7 классе перешёл на Python ради ботов для Discord и Telegram, в 8 классе сделал сайт на Django.",
+    trajectory_two_title: "Лидерство и волонтёрство",
     trajectory_two_copy:
-      "Один из двух лидеров WeCare, преподаватель-волонтер через UNICEF Kazakhstan и инициативы UNESCO clubs, а также организатор хакатонов в 14 городах.",
-    trajectory_three_title: "Креатив и продуктовый диапазон",
+      "Один из двух лидеров WeCare, волонтёр-преподаватель в проектах UNICEF Kazakhstan и клубов ЮНЕСКО, организатор хакатонов с участниками из 14 городов.",
+    trajectory_three_title: "Дизайн и продукт",
     trajectory_three_copy:
-      "Учился web design в Young Profi School, работал в digital marketing в inUniGlobal, вел SMM-роли и выступал в drama club.",
-    footer_one: "GitHub: sprinterz5",
-    footer_two: "Астана / бэкенд-системы / AI workflows / research",
+      "Учился веб-дизайну в Young Profi School, работал в digital-маркетинге в inUniGlobal, вёл SMM и играл в театральном кружке.",
+    sysenv_note: "откуда берутся linux-проекты",
+    sysenv_kicker: "Linux каждый день",
+    sysenv_title: "Машина, на которой я отлаживаю всё.",
+    sysenv_one:
+      "Fedora 44 KDE на ASUS TUF A15 рядом с Windows, включая драйверы NVIDIA с Secure Boot. Из того, чего мне не хватало на этом ноутбуке, вырос Shiftray.",
+    sysenv_two:
+      "Держу свои сервисы на VPS: Docker, nginx, systemd, бэкапы и мониторинг для ботов и платформы PrimeTeens.",
+    sysenv_three:
+      "Сначала измеряю, потом делаю выводы: по логам датчиков игра упиралась в процессор, а не в перегрев, а по журналу сна было видно, что будило ноутбук в закрытом рюкзаке.",
+    footer_one: "Открыт к стажировкам, исследованиям и проектной работе.",
+    modal_close: "закрыть",
+    modal_links: "Ссылки",
+    link_repo: "Репозиторий на GitHub",
+    link_download: "Скачать AppImage",
+    link_poster: "Постер в больнице (PDF)",
   },
   kz: {
-    back_link: "Тандауга оралу",
-    version_label: "Pixel Cyberpunk Portfolio",
     hero_eyebrow: "Aidar Begotayev // systems_curious:on",
-    hero_title: "Код жазу. Жуйелерди талдау. Бэсекеге тусу. Жасау.",
+    hero_title: "Жасаймын. Түзетемін. Жарысамын. Шығарамын.",
     hero_lead:
-      "Backend жуйелер, AI прототиптер, кенистик зерттеу жане ISA дизайнынан kernel шекараларына дейінгі өсіп келе жатқан systems/hardware қызығушылығы бір high-signal портфолиога жиналды.",
-    stat_one: "hackathonдар мен competitions, сонын ишинде 6+ женис пен жулделі орын",
-    stat_two: "мен уйымдастырган 2 hackathonдагы катысушылар саны",
-    stat_three: "Docker, Playwright, PyTorch, Next.js, Figma",
+      "Backend жүйелер, нақты құрылғыларға арналған Linux құралдары, AI автоматтандыру және компьютердің ішкі құрылымына деген қызығушылық -- ISA архитектурасынан ОЖ ядросының шекараларына дейін.",
+    contact_cv: "Түйіндеме (PDF)",
+    stat_one:
+      "хакатон мен жарыс. жеңістерді, финалдарды және таңдаулы жобаларды көру үшін басыңыз",
+    stat_two:
+      "мен ұйымдастырған EcoHackathon және Bright Future Hackathon қатысушылары",
+    stat_three_value: "Стек",
+    stat_three: "Python, SQL, Next.js, Linux, Docker, автоматтандыру",
     stat_four_value: "6 жазба",
     stat_four:
-      "ISA дизайны, kernel шекаралары және systems trade-off-тар туралы озимнин зерттеу жазбаларым",
-    stat_four_action: "deep dives окы",
-    focus_one: "focus:: ai workflows + automation",
-    focus_two: "focus:: backend systems + product builds",
-    focus_three: "focus:: spatial economics + urban data",
-    focus_four: "focus:: competition prototypes under pressure",
-    signal_kicker: "Kasirgi signal",
+      "ISA архитектурасы, ядро шекаралары және жүйелердегі ымыралар туралы қысқа жеке жазбалар",
+    stat_four_action: "жазбаларды оқу",
+    card_action: "толығырақ",
+    focus_one: "focus:: нақты құрылғыларға арналған linux құралдары",
+    focus_two: "focus:: backend жүйелер + өнімдер",
+    focus_three: "focus:: ai процестері + автоматтандыру",
+    focus_four: "focus:: жарыстағы прототиптер",
+    signal_kicker: "Қазір",
     signal_copy:
-      "Локомотивтин цифрлык егизинен китапхана автоматтандыруына жане университет жуйелерине дейин мен накты колданылатын куралдар жасауды унатамын.",
-    nav_deepdives: "deep_dives",
-    nav_systems: "juieler",
-    nav_highlights: "jenister",
-    nav_projects: "jobalar",
-    nav_study: "oku",
-    nav_trajectory: "traektoriya",
-    deepdives_note: "6 жазба -- озимнин зерттеуим, оку багдарламасы емес",
-    deepdives_kicker: "Не туралы терен ойланамын",
-    deepdives_title: "Толык тусингенше койып кетпейтин systems суракдары.",
-    deepdives_intro:
-      "Себеп-салдар тизбеги толык жабылганша жипти тартамын -- содан кейин ен куатты контраргументти издеймин жане озимнин корытындымды сенимнен бурын сындауга тырысамын. Сурак сирек \"неге женимпаз женди\" болады, жии \"альтернатива нени жоготты жане онын багасын ким теледи\" болады.",
-    deepdive_one_title: 'Non ARM, tek "x86-64 emes" gana emes',
-    deepdive_one_copy:
-      '"ARM tиimdirek" - bul korytyndy, argument emes, sondyktan men x86-64 nakty ne jogaltatynyn karastyrdym: CISC sebepti decoder tax jane Intel men AMD tastai almaytyn kyryk jyldyk legacy nusqaular, olardy tastau bar softty buzady. Odan keyin men karsy-argumentti izdedim - x86-64-tin nakty artykshylygy dal osy legacy softta, sondyktan 2012 jyly Windows RT emulyatsiyasyz shygyp, $900M shygynga alyp keldi, jane tek 2020-shy jyldardagy Prism-nin AVX/AVX2 koldauymen Windows-on-ARM nakty istey bastady. ARM jalpy jenbeidi - ol dal kyryk jyldyk x86 uilesimdiligi shektew bolmagan jerde jenedi, jane ol shektew bolgan jerde katty utyladi.',
-    deepdive_two_title: "Non anti-cheat Ring 0-de journingu -- jane bul basqalarga nege turady",
-    deepdive_two_copy:
-      '"Anti-cheat-ka jai gana kernel access kerek" degendi seрtsiz kabyldamadym, sondyktan user-space anti-cheat nakty ne kore almaityndygyn tekseredim: OS-tin ozinin korinuinen tomen kryuchok koyatyn cheat-terdi. Dal osy sayqylik - Vanguard tarizdi anti-cheat-tin Ring 0-de jumys isteitininin sebebi, ondagy kez-kelgen bag - butin juienin osaldygy, jai gana oyin bagi emes, jane Prism, user-space emulyator, kernel-mode x64 draiverdi audara almaityndygynyn sebebi. Meni tostagan narse: studiyalar nakty security utys alady, al sol mashinadagy arbir oyinshy ozi kelispegen kernel-level shabuyl betin muraga alady.',
-    deepdive_three_title: "seL4: testtennen gori dalel, jane bul neshe turady",
-    deepdive_three_copy:
-      'Formaldy verifikatsiyaga adette argument - barlyk adam isteitin narse: bag bolmaganga deyin test istau, sondyktan men bul adis eshkashan aita almaityn narseni bilgim keldi: testtelmegen kiris bolmaytynyn. seL4 formaldy turde verifikatsiyalangan - spetsifikatsiyaga karsy matematikalyk turde durys ekeni daleldengen, jai gana synaktan otken emes. Meni koibeitin narse - bul kepildiktin bagasy: arbir jol dalelduи durys bolu kerek, dal osy sebepten safety-critical juielerden tys derlik hesh narse bylai salynbaidy - dalel "shygar jane patch koi" siyakty masshtabtalmaidy.',
-    deepdive_four_title: "Unified memory-din nakty aisy: performance-per-watt upgrade-ke karsy",
-    deepdive_four_copy:
-      'Standartty arhitektura CPU men GPU-ga bolek jad beredi jane olardyn arasynda shina arkyly maglumat koshiredi. Apple-din M-seriyasy munu bir ortak unified memory poolymen, tile-based deferred rendering jane keng, low-clock decode pipeline-men aynyp otedi - shamamen osylaisha ol bir paketpen RTX-4060 dennheiindegi GPU onimdiligine jetedi. Munyn tegin utys ekenine senbeimin: sol bir dattalgan ortak jad, ol тиимдilikti beredi, sonymen katar keinnen jaddy upgrade-tei almauynyn sebebi. Performance-per-watt jane repair kukygy karama-karsy bagytka karaidy, jane Apple birin tandady.',
-    deepdive_five_title: "Non IBM ozi bastagan jaristan shykty",
-    deepdive_five_copy:
-      "IBM negizinen kommertsiyalyk kompyuter industriyasyn oyiap shygardy, sodan keyin 2005 jyly PC biznesin Lenovo-ga, 2014 jyly x86-server liniyasyn satty, jane odan ari mainframe, Power, keinirek qyzmetter men kvanttyk esepteuge basa nazar audardy, ozi kurgan commodity naryk ushin kures ornyna. Magan attak boiynsha ali de jenip zhurgen jaristan kompaniya nege shegineytini kyzyktyrdy: commodity x86 jabdyktar bar kompaniya bir tektes komponentterge zhinalgan sayin ote az margaga tusip zhatyr, al mainframe-ter baseki ushin kiru kyin nishe bolyp kaldy. Bul jenilis emes, kobirek terendikti ulesten tandau siyakty korinedi - biraq bul sonymen katar arbir tutynushynyn kolynda bolu mindshare-inen bas tartu degendi bildiredi.",
-    deepdive_six_title: "AMD-nin chiplet-ke tikken betsi 14nm-de kalgan Intel-ge karsy",
-    deepdive_six_copy:
-      "AMD Bulldozer jyldarynan keiin dерлik bankrott bolyp kaldy, zauyttaryn bolek GlobalFoundries-ka boldi, fabless modelge kosti jane Zen-ge (2017) bir ulken monolitti kristall ornina TSMC protsesindegi chiplet-terge tikti - al Intel 10nm normasy sorvался bolgannan keiin jyldar boiy 14nm-di kaita shygardy. Magan bul AMD arhitekturasynyn akyldylygy ma, alde Intel-din onndirisinin jai gana tapsyrmany orindai almaganу ma ekeni kyzyktyrdy, jane ol negizinen ekinshisi: turgan protsesste akyldy dizain da TSMC nakty kishirek normalardy uaqytynda shygarmasa hesh narseni oz-getmes edi. Chiplet adisi de tegin emes - kristaldy bolu Infinity Fabric arkyly monolitti kristallga tolenbeitin nakty interconnect keshiguin kosady.",
-    sysenv_note: "ortasy / diagnostika -- factual, bezendirusiz",
-    sysenv_kicker: "Systems ortasy",
-    sysenv_title: "Linux, dual-boot жане онымен бирге келген debugging.",
-    sysenv_one:
-      "ASUS TUF A15-те Fedora 44 KDE dual-boot, соның ишинде NVIDIA Secure Boot / MOK enrollment-ти шешу жане GPU/куат баскару ушин asusctl / supergfxctl конфигурациясы.",
-    sysenv_two:
-      "Bloody W95 тышканындагы Y-осі drift багын input remapping аркылы туземеу ушин evsieve-ди исходниктен компиляцияладым.",
-    sysenv_three:
-      "Ар турли машиналарда ArchLinux + Ubuntu 22.04 / 24.04, косымша деплойленген сервистер ушин VPS баскару.",
-    sysenv_four:
-      "A15-ти repaste истеп, HWiNFO логтарын окып, ойында thermal throttling деп ойламай, CPU-bound bottleneck-ти дурыс диагностикаладым.",
-    project_debounce_tag: "Builder Story",
-    project_debounce_title: "Шаймен закымдалган пернетакта -> Software Debounce Layer",
-    project_debounce_copy:
-      "Досым пернетактага шай токти, жане закымдалган контакттар бир басу сайын бирнеше ghost-басуды тудырды. Хардвейрди ауыстырудын орнына мен сбой паттернин зерттеп, осы шулы multi-fire сигналды бир дурыс символга нормализациялайтын software layer жаздым.",
+      "ASUS ноутбуктеріне арналған Linux қосымшасынан бастап жазғы мектеп менторларына арналған платформа мен кітапхананы автоматтандыруға дейін -- адамдар шынымен қолданатын құралдар жасағанды ұнатамын.",
+    nav_projects: "жобалар",
+    nav_highlights: "жеңістер",
+    nav_deepdives: "жазбалар",
+    nav_study: "оқу",
+    nav_trajectory: "жол",
+    nav_systems: "linux",
+    nav_contact: "байланыс",
+    projects_note: "9 жазба -- толығырақ ақпарат пен сілтемелер карточканың ішінде",
+    projects_kicker: "Таңдаулы жобалар",
+    projects_title: "Сандардың артындағы жобалар.",
+    project_open: "жобаны ашу",
+    project_shiftray_tag: "Open source / Linux",
+    project_shiftray_title: "Shiftray",
+    project_shiftray_copy:
+      "Linux-тағы ASUS ноутбуктеріне арналған трей қосымшасы: қуат режимдері, желдеткіш қисықтары, бейнекартаны ауыстыру, пернетақта жарығы, заряд шегі және Fn пернелері бір шағын терезеде. AppImage және Fedora мен Arch пакеттері ретінде шығады, 7 тілге аударылған.",
+    project_primeteens_tag: "Жазғы мектеп платформасы",
+    project_primeteens_title: "PrimeTeens менторларына арналған бот пен платформа",
+    project_primeteens_copy:
+      "7-9 сыныптарға арналған жазғы интенсивтің Telegram-боты мен веб-платформасы: сабақ туралы еске салғыштар, әр сабақтан кейін дауыспен жауап беруге болатын қысқа сауалнама, онлайн дәптерлер және үй тапсырмасын тексеру.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
-      "Казир жергиликти ауруханада колданылатын жане плакатта корсетилген ерте аутизм диагностикасы қосымшасы ушин UI/UX жане PostgreSQL негизинде мәлимет катпарын жасадым.",
-    study_note: "жазбалар жане озбетинше оку -- фотолар кейин косылады",
-    study_kicker: "Study log",
-    study_title: "Код астындагы математиканы куру.",
-    study_one_title: "MIT OpenCourseWare",
-    study_one_copy:
-      "OCW дэрислерин - Prof. Strang-тын Linear Algebra, Multivariable Calculus, Differential Equations - окимын жане катар колжазба жазбалар жургизимин.",
-    study_two_title: "Discrete Mathematics",
-    study_two_copy:
-      "Prof. Sanzhar Kusdavletov-тын курсына катысамын жане есептерди колмен шешемин - null space, жиындар теориясы, ак чикалдык кестелери.",
-    study_three_title: "Сызыктык алгебра тереннирек",
-    study_three_copy:
-      "Квадраттык формалар, QR / Gram-Schmidt жане LU-жіктелу - сабак талабынан тыс озим карастырдым.",
-    highlights_kicker: "Negizgi kezender",
-    highlights_title: "En manyzdy okigalar.",
-    highlight_one_tag: "AmanatTech",
-    highlight_one_title: "400 команданын ишинен top 20",
-    highlight_one_copy:
-      "Aleumettik impact пен product thinking-ті біріктіріп, есірткіге тәуелді адамдарга көмектесуге арналган платформа концепциясын жасадық.",
-    highlight_two_tag: "HackNU 2026",
-    highlight_two_title: "Kazakhstan Temir Zholy кейси",
-    highlight_two_copy:
-      "Қысқа инженерлік спринтте телеметрия, диагностика және мониторингке арналған локомотивтің цифрлық егіз платформасын жасадық.",
-    highlight_three_tag: "BiCAP Hackathon",
-    highlight_three_title: "200 команданын ишинен 1 орын",
-    highlight_three_copy:
-      "Шағын және орта бизнеске арналған text-to-SQL, SQL-to-text және AI-assisted audit идеяларын жасадық.",
-    highlight_four_tag: "Decentrathon 2.0-5.0",
-    highlight_four_title: "Tort iteratsiya, ulgaiğan aukym",
-    highlight_four_copy:
-      "Telegram mini apps, AI assistants, InVision University ушин rule-based screening жане PyTorch модельдерімен эксперименттер жасадым.",
-    projects_kicker: "Tandaly jobalar",
-    projects_title: "Os y signaldyn artındagy jobalar.",
-    project_one_tag: "Library Automation Intern",
+      "Аутизмді ерте анықтауға арналған қосымшаның UI/UX бөлігін және PostgreSQL негізіндегі деректер қабатын жасадым. Қосымша іске қосылған, оның постері жергілікті ауруханада ілулі тұр.",
+    project_one_tag: "Кітапханадағы тағылымдама",
     project_one_title: "eLibra QR Middleware",
     project_one_copy:
-      "FastAPI, Playwright RPA, SQLite жане веб-интерфейс аркылы китап беруді женилдететин QR озин-ози кызmet korsetu juyesin jasadym.",
-    project_two_tag: "University Product",
+      "FastAPI, Playwright RPA, SQLite және веб-интерфейс арқылы QR бойынша кітапты өз бетінше алу жүйесін жасадым, ол кітапханашылардың жүктемесін азайтты.",
+    project_two_tag: "Университет өнімі",
     project_two_title: "Roomly",
     project_two_copy:
-      "Role-based логикасы, approval flow, календарь жуйесі жане Telegram onboarding-і бар аудитория брондау жуйесін жасадым.",
-    project_three_tag: "Zertteu",
-    project_three_title: "Астанадагы тургын уй багасына кенистик факторлардын асери",
+      "Рөлдері, келісу логикасы, күнтізбесі және Telegram арқылы кіруі бар аудиторияларды брондау жүйесін жасадым.",
+    project_bloody_tag: "Linux-тағы құрылғы",
+    project_bloody_title: "Linux-тағы Bloody W95 тінтуірі",
+    project_bloody_copy:
+      "Тінтуірдің бағдарламасы тек Windows-қа арналған, сондықтан мен оның USB протоколын талдап, hidraw арқылы жарық пен DPI-ды өзгертетін Python құралын жаздым.",
+    project_debounce_tag: "Оқиға",
+    project_debounce_title: "Шай төгілген пернетақта -> бағдарламалық debounce",
+    project_debounce_copy:
+      "Досым пернетақтасына шай төгіп алды, зақымдалған түйіспелер бір басқанда бірнеше жалған басу берді. Құрылғыны ауыстырудың орнына мен ақаудың қалай пайда болатынын зерттеп, осы шулы сигналды бір дұрыс таңбаға айналдыратын бағдарламалық қабат жаздым.",
+    project_three_tag: "Зерттеу",
+    project_three_title: "Астанадағы тұрғын үй бағасының кеңістіктік факторлары",
     project_three_copy:
-      "Lomonosov-2026-та Астанадағы тұрғын үй бағасына кеңістіктік факторлардың әсері туралы зерттеуім үшін 3 орын алдым.",
-    project_four_tag: "Applied AI",
-    project_four_title: "RAG jane automation workflows",
+      "Орналасуға байланысты айнымалылардың Астанадағы тұрғын үй бағасына әсері туралы зерттеуіммен Ломоносов-2026-да 3-орын алдым.",
+    project_four_tag: "Қолданбалы AI",
+    project_four_title: "RAG және автоматтандыру",
     project_four_copy:
-      "RAG, backend integrations және нақты институционалдық кейстерге арналған операциялық автоматтандыру төңірегінде AI-assisted workflows жасадым.",
-    trajectory_kicker: "Traektoriya",
-    trajectory_title: "Competition-nen tys signal.",
-    trajectory_one_title: "Erte bastau",
+      "Мекемелердің нақты міндеттері үшін RAG, backend интеграциялары және автоматтандыру негізіндегі AI процестерін жасадым.",
+    highlights_note: "4 жазба -- ең мықты нәтижелер",
+    highlights_kicker: "Басты кезеңдер",
+    highlights_title: "Ең маңызды оқиғалар.",
+    highlight_one_tag: "AmanatTech",
+    highlight_one_title: "400 команданың ішінде үздік 20",
+    highlight_one_copy:
+      "Нашақорлыққа тәуелді адамдарға көмектесуге арналған платформа идеясы: әлеуметтік пайда мен өнімдік ойлау бірге.",
+    highlight_two_tag: "HackNU 2026",
+    highlight_two_title: "Қазақстан Темір Жолы кейсі",
+    highlight_two_copy:
+      "Бір қарқынды инженерлік спринтте телеметрия, диагностика және мониторингке арналған локомотивтің цифрлық егізі платформасын жасадық.",
+    highlight_three_tag: "BiCAP Hackathon",
+    highlight_three_title: "200 команданың ішінде 1-орын",
+    highlight_three_copy:
+      "Шағын және орта бизнеске арналған text-to-SQL, SQL-to-text және AI көмегімен аудит.",
+    highlight_four_tag: "Decentrathon 2.0-5.0",
+    highlight_four_title: "Төрт маусым, өсіп келе жатқан ауқым",
+    highlight_four_copy:
+      "Telegram mini apps, AI көмекшілері, InVision University үшін ережеге негізделген іріктеу және PyTorch-пен модель тәжірибелері.",
+    link_code: "бастапқы код",
+    deepdives_note: "6 жазба -- жеке жазбалар, оқу тапсырмасы емес",
+    deepdives_kicker: "Мені не қызықтырады",
+    deepdives_title: "Үнемі оралатын жүйелер туралы сұрақтар.",
+    deepdives_intro:
+      "Себеп-салдар тізбегі толық жабылғанша жіпті тарта беремін, содан кейін өз қорытындыма сенбес бұрын ең күшті қарсы дәлелді іздеймін. Сұрақ әдетте «жеңімпаз неге жеңді» емес, «балама шын мәнінде неден айырылды және оның бағасын кім төледі».",
+    deepdive_one_title: "Неге ARM: тек x86-64 неге емес деген сұрақ емес",
+    deepdive_one_copy:
+      "«ARM тиімдірек» -- бұл дәлел емес, қорытынды. Сондықтан мен x86-64 нақты неден ұтылатынын іздедім: ұзындығы әртүрлі командаларға арналған күрделірек декодер және Intel мен AMD бар бағдарламаларды бұзбай алып тастай алмайтын ондаған жылдық мұра. Содан кейін қарсы дәлелді іздедім: x86-64-тің нағыз қорғаны дәл осы бағдарламалар. 2012 жылғы Windows RT кәдімгі x86 қосымшаларын мүлде іске қоса алмады, ал Microsoft Surface RT бойынша 900 млн долларды есептен шығарды. ARM-дағы Windows x86 эмуляциясы мен чиптердің өзі жеткілікті жақсарғанда ғана қолдануға жарамды болды. ARM жалпы жеңбейді: x86 үйлесімділігі шектеу болмайтын жерде жеңеді, ал шектеу болатын жерде қатты ұтылады.",
+    deepdive_two_title: "Неге античит Ring 0-де жұмыс істейді және оның бағасын кім төлейді",
+    deepdive_two_copy:
+      "«Античитке жай ғана ядроға қолжетімділік керек» деген сөзді дайын күйінде қабылдамадым, сондықтан пайдаланушы кеңістігіндегі античит нені көре алмайтынын тексердім: ОЖ-ның өзі көретін деңгейден төмен ілінетін читтерді. Дәл осы олқылыққа байланысты Vanguard сияқты античиттер Ring 0-де жұмыс істейді, сол жердегі бір қате ойынның емес, бүкіл жүйенің осалдығына айналады, ал Prism сияқты пайдаланушы деңгейіндегі эмулятор ядроның x64 драйверін мүлде іске қоса алмайды. Мені ойландырған нәрсе: студиялар қорғаныс жағынан нақты ұтады, ал сол компьютердегі әрбір ойыншы өзі келіспеген ядро деңгейіндегі шабуыл бетін алады.",
+    deepdive_three_title: "seL4: тестілеудің орнына дәлелдеу және оның нақты бағасы",
+    deepdive_three_copy:
+      "Формалды верификацияның айқын баламасы -- барлығы жасайтын нәрсе: ештеңе бұзылмағанша тестілеу. Сондықтан бұл тәсіл ешқашан айта алмайтын нәрсені білгім келді: тексерілмеген кіріс деректері жоқ деп. seL4 формалды түрде верификацияланған, яғни оның спецификацияға сәйкестігі жай ғана сынақтан өтпей, математикалық тұрғыда дәлелденген. Мені ойландыратыны -- осы кепілдіктің бағасы: әр жолдың дұрыстығы дәлелденуі керек, сондықтан қауіпсіздігі аса маңызды жүйелерден тыс жерде бұлай сирек жасалады. Дәлелдеу «шығар да кейін түзет» тәсілі сияқты масштабталмайды.",
+    deepdive_four_title: "Unified memory: ватт үшін өнімділік пен жаңарту мүмкіндігі арасындағы таңдау",
+    deepdive_four_copy:
+      "Әдеттегі ДК-де процессор мен дискретті бейнекартаның жады бөлек, ал деректер олардың арасында PCIe арқылы көшіріледі. Apple M-сериясында процессор мен бейнеядро бір корпустағы ортақ жадты пайдаланады, сондықтан екеуі де бір деректі көшірусіз оқиды. Бұл тегін ұтыс деп ойламаймын: тиімділік беретін сол дәнекерленген ортақ жад кейін жадты ұлғайтуға мүмкіндік бермейді. Ватт үшін өнімділік пен жөндеу құқығы қарама-қарсы бағытқа қарайды, ал Apple біреуін таңдады.",
+    deepdive_five_title: "Неге IBM өзі бастаған жарыстан шықты",
+    deepdive_five_copy:
+      "IBM коммерциялық компьютер индустриясын іс жүзінде өзі құрды, бірақ 2005 жылы ДК бизнесін, ал 2014 жылы x86 серверлерін Lenovo-ға сатты да, өзі жасаған жаппай нарық үшін күресудің орнына мейнфреймдерге, Power-ге, кейін сервистер мен кванттық есептеулерге бет бұрды. Атымен ғана болса да әлі жеңіп жүрген жарыстан компанияның неге кететінін білгім келді: барлығы бірдей компоненттерге көшкен сайын жаппай x86 жабдығының маржасы өте аз болып қалды, ал мейнфреймдер бәсекелестер оңай кіре алмайтын шағын, бірақ өте табысты тауаша болып қала берді. Бұл жеңілістен гөрі нарық үлесінің орнына тереңдікті таңдауға ұқсайды -- бірақ бұл әр тұтынушының қолында болудан келетін танымалдықтан бас тартуды да білдірді.",
+    deepdive_six_title: "AMD чиплеттерге бәс тікті, Intel 14 нм-де тұрып қалды",
+    deepdive_six_copy:
+      "Bulldozer жылдарынан кейін AMD банкроттыққа жақын болды және өз зауыттарын GlobalFoundries-ке бөліп шығарып үлгерген еді. Ол 2017 жылы Zen-ді шығарды, ал 2019 жылы Zen 2-де процессорды TSMC-нің 7 нм техпроцесіндегі чиплеттерге бөлді. Ал Intel 10 нм кешіккеннен кейін бірнеше жыл бойы 14 нм-ді қайта-қайта шығарды. Мұның қаншасы AMD дизайнының ақылдылығы, ал қаншасы Intel өндірісінің сәтсіздігі екенін білгім келді. Менің ойымша, көбі екіншісі: TSMC кішірек техпроцестерді уақытында шығармағанда, жақсы дизайн да көмектеспес еді. Чиплеттер де тегін емес: кристалды бөлу Infinity Fabric арқылы монолитті кристалда болмайтын кідіріс қосады.",
+    study_note: "өз бетімше оқу -- қолжазба конспектілер PDF-те",
+    study_kicker: "Оқу",
+    study_title: "Кодтың астындағы математиканы құрып жатырмын.",
+    study_one_title: "MIT OpenCourseWare",
+    study_one_copy:
+      "OCW дәрістерін қараймын -- профессор Стрэнгпен сызықтық алгебра, көп айнымалы функциялар анализі, дифференциалдық теңдеулер -- және қолмен конспект жазамын.",
+    study_two_title: "Дискретті математика",
+    study_two_copy:
+      "Профессор Санжар Құсдәулетовтың курсына барып, есептерді қолмен шығарамын -- матрицаның ядросы, жиындар теориясы, ақиқат кестелері.",
+    study_three_title: "Сызықтық алгебра тереңірек",
+    study_three_copy:
+      "Квадраттық формалар, QR / Грам-Шмидт және LU жіктеуі -- оқу бағдарламасынан тыс.",
+    study_four_title: "Конспектілердің өзі",
+    study_four_copy:
+      "OCW және дискретті математика дәптерлерінен беттер, ауруханадағы ChildInfo постерінің суреті, кітапхана мен Roomly интерфейстерінің скриншоттары.",
+    link_pdf: "PDF ашу",
+    trajectory_note: "3 жазба -- негіз, көшбасшылық, шығармашылық",
+    trajectory_kicker: "Жол",
+    trajectory_title: "Тек жарыстар емес.",
+    trajectory_one_title: "Бастауы",
     trajectory_one_copy:
-      "5-сыныпта C++ олимпиадалық есептерінен бастадым, 7-сыныпта Discord және Telegram боттары үшін Python-ға өттім, 8-сыныпта Django сайт жасадым.",
-    trajectory_two_title: "Liderlik pen kyzmet",
+      "5-сыныпта C++ тілінде олимпиада есептерінен бастадым, 7-сыныпта Discord пен Telegram боттары үшін Python-ға ауыстым, 8-сыныпта Django-да сайт жасадым.",
+    trajectory_two_title: "Көшбасшылық және еріктілік",
     trajectory_two_copy:
-      "WeCare-дін екі лидерының бірі болдым, UNICEF Kazakhstan және UNESCO clubs бастамалары арқылы ерікті мұғалім болдым, сондай-ақ 14 қаладағы hackathonдарды ұйымдастырдым.",
-    trajectory_three_title: "Kreativ pen product range",
+      "WeCare клубының екі жетекшісінің бірі, UNICEF Kazakhstan мен ЮНЕСКО клубтарының жобаларында ерікті мұғалім, 14 қаладан қатысушылар келген хакатондардың ұйымдастырушысы.",
+    trajectory_three_title: "Дизайн және өнім",
     trajectory_three_copy:
-      "Young Profi School-де web design окыдым, inUniGlobal-та digital marketing саласында жумыс истедим, SMM рөлдерін атқардым және drama club-та өнер көрсеттім.",
-    footer_one: "GitHub: sprinterz5",
-    footer_two: "Астана / backend жуйелер / AI workflows / research",
+      "Young Profi School-да веб-дизайн оқыдым, inUniGlobal-да digital-маркетингте жұмыс істедім, SMM жүргіздім және театр үйірмесінде ойнадым.",
+    sysenv_note: "linux жобалары қайдан шығады",
+    sysenv_kicker: "Күнделікті Linux",
+    sysenv_title: "Күн сайын бәрін түзететін компьютерім.",
+    sysenv_one:
+      "ASUS TUF A15-те Windows-пен қатар Fedora 44 KDE, оның ішінде Secure Boot кезіндегі NVIDIA драйверлері. Осы ноутбукта жетпей тұрған нәрселерден Shiftray пайда болды.",
+    sysenv_two:
+      "Өз сервистерімді VPS-те ұстаймын: PrimeTeens боттары мен платформасы үшін Docker, nginx, systemd, сақтық көшірмелер және мониторинг.",
+    sysenv_three:
+      "Алдымен өлшеймін, содан кейін қорытынды жасаймын: датчик журналдары ойынның қызып кетуге емес, процессорға тірелгенін көрсетті, ал ұйқы журналы жабық сөмкедегі ноутбукты не оятқанын көрсетті.",
+    footer_one: "Тағылымдамаға, зерттеуге және жобалық жұмысқа ашықпын.",
+    modal_close: "жабу",
+    modal_links: "Сілтемелер",
+    link_repo: "GitHub репозиторийі",
+    link_download: "AppImage жүктеу",
+    link_poster: "Ауруханадағы постер (PDF)",
   },
 };
 
-const modalContent = {
-  achievements: {
-    command: "$ open /records/competitions.log",
-    kicker: "Competition archive",
-    title: "20+ hackathons and competitions",
-    intro:
-      "The homepage stays compact, and this view carries the detail that proves range, wins, and pressure-tested work.",
-    groups: [
+// Language-independent parts of each detail window: the terminal command and links.
+const modalMeta = {
+  achievements: { command: "$ open /records/competitions.log" },
+  organizing: { command: "$ open /records/organizing.log" },
+  stack: { command: "$ open /records/stack.index" },
+  "project-shiftray": {
+    command: "$ open /projects/shiftray.app",
+    links: [
+      { label: "link_repo", href: "https://github.com/sprinterz5/shiftray" },
       {
-        title: "Wins and podiums",
-        items: [
-          {
-            title: "BiCAP Hackathon",
-            meta: "1st place out of 200 teams",
-            copy: "Text-to-SQL, SQL-to-text, and AI-assisted audit for SMBs.",
-          },
-          {
-            title: "NIS Valley",
-            meta: "1st place out of 13 teams",
-            copy: "Fast product framing and delivery in a short sprint.",
-          },
-          {
-            title: "DEM Championship",
-            meta: "2nd place out of 33 teams",
-            copy: "Marketing campaign strategy for CITIX.",
-          },
-          {
-            title: "National Economic Challenge",
-            meta: "3rd place out of 150 teams",
-            copy: "AI test generation product for SAT and IELTS prep.",
-          },
-          {
-            title: "InsureTechHackathon",
-            meta: "3rd place out of 100 teams",
-            copy: "AI assistant concept around usability and accessibility.",
-          },
-          {
-            title: "Lomonosov-2026",
-            meta: "3rd place, scientific conference",
-            copy:
-              "Research on spatial factors of housing prices in Astana.",
-          },
-        ],
-      },
-      {
-        title: "Selected runs",
-        items: [
-          {
-            title: "AmanatTech",
-            meta: "Top 20 out of 400 teams",
-            copy: "Platform concept for helping people with drug addiction.",
-          },
-          {
-            title: "IT HUB Battle",
-            meta: "Finalist, top 10 out of 42",
-            copy: "Reached the final stage in a tight evaluation field.",
-          },
-          {
-            title: "Decentrathon 2.0-5.0",
-            meta: "4 overall participations",
-            copy:
-              "Telegram mini apps, AI assistants, screening systems, PyTorch.",
-          },
-          {
-            title: "HackNU 2025 and 2026",
-            meta: "2 overall participations",
-            copy:
-              "The 2026 run focused on the Kazakhstan Temir Zholy case.",
-          },
-        ],
+        label: "link_download",
+        href: "https://github.com/sprinterz5/shiftray/releases/latest",
       },
     ],
   },
-  organizing: {
-    command: "$ open /records/organizing.log",
-    kicker: "Organizer archive",
-    title: "700+ participants across 2 hackathons",
-    intro:
-      "This block now clearly says organized, not helped, and gives the scale, prize value, and full ownership behind the line on the homepage.",
-    groups: [
-      {
-        title: "Hackathons I organized",
-        items: [
-          {
-            title: "EcoHackathon",
-            meta: "Organizer",
-            copy:
-              "Led planning, coordination, participant operations, and a prize package that included 600K tenge plus MobyDev courses worth roughly another 1 million tenge.",
-          },
-          {
-            title: "Bright Future Hackathon",
-            meta: "Organizer",
-            copy:
-              "Owned structure, delivery, and execution, including a QuickStarter course prize pool worth 1.6 million tenge.",
-          },
-        ],
-      },
-      {
-        title: "Scale and logistics",
-        items: [
-          {
-            title: "Reach",
-            meta: "700+ participants total",
-            copy: "Combined attendance across both hackathons.",
-          },
-          {
-            title: "Geography",
-            meta: "14 cities",
-            copy: "Not a single-campus event footprint.",
-          },
-          {
-            title: "Partners",
-            meta: "5 sponsors",
-            copy: "Sponsor coordination was part of the organizing work.",
-          },
-          {
-            title: "Responsibility scope",
-            meta: "Documents / negotiations / design / marketing / ops",
-            copy:
-              "Handled the full stack of organizing work: documents, partner negotiations, posters, marketing assets, forms, regulations, and operational structure.",
-          },
-        ],
-      },
-    ],
-  },
-  stack: {
-    command: "$ open /records/stack.index",
-    kicker: "Stack overview",
-    title: "Tech stack and methods",
-    intro:
-      "The card shows the headline. The modal carries the grouped stack so the hero does not turn into a résumé wall.",
-    groups: [
-      {
-        title: "Coding and backend",
-        items: [
-          {
-            title: "Core tools",
-            meta: "Python / FastAPI / Django / SQL / APIs",
-            copy: "Main layer for automation, systems, and data products.",
-          },
-          {
-            title: "Frontend layer",
-            meta: "JavaScript / Next.js / HTML / CSS / Telegram",
-            copy: "Used for admin panels, flows, and practical interfaces.",
-          },
-          {
-            title: "Foundations",
-            meta: "C++ / Git / GitHub / SQLite / Docker",
-            copy: "Supports shipping, iteration, and stronger fundamentals.",
-          },
-        ],
-      },
-      {
-        title: "AI and data systems",
-        items: [
-          {
-            title: "Applied AI",
-            meta: "RAG / prompt design / text-to-SQL / SQL-to-text",
-            copy: "Focused on usefulness, not novelty for novelty's sake.",
-          },
-          {
-            title: "Automation",
-            meta: "Playwright / RPA / integrations / screening logic",
-            copy: "Useful when institutions need repeatable workflows.",
-          },
-          {
-            title: "Model work",
-            meta: "PyTorch / prototyping",
-            copy: "Used in selected hackathons and compact experiments.",
-          },
-        ],
-      },
-      {
-        title: "Geography and design",
-        items: [
-          {
-            title: "Spatial analysis",
-            meta: "ArcMap / ArcGIS / urban data / GIS",
-            copy: "Connects research with location-based reasoning.",
-          },
-          {
-            title: "Design and communication",
-            meta: "Figma / pitching / visual communication / SMM",
-            copy: "Helps package technical work into something readable.",
-          },
-        ],
-      },
-    ],
-  },
-  "project-elibra": {
-    command: "$ open /projects/library_qr.middleware",
-    kicker: "Project file",
-    title: "eLibra QR Middleware",
-    intro:
-      "A practical library system built around real operational friction, not a toy demo.",
-    groups: [
-      {
-        title: "Problem and solution",
-        items: [
-          {
-            title: "Problem",
-            meta: "Library issuance bottleneck",
-            copy: "Students had to wait for manual librarian handling.",
-          },
-          {
-            title: "Solution",
-            meta: "Self-service QR flow",
-            copy:
-              "A reader-ID-based flow let students issue books themselves.",
-          },
-        ],
-      },
-      {
-        title: "Build",
-        items: [
-          {
-            title: "Backend",
-            meta: "FastAPI / SQLite",
-            copy: "Kept the system lightweight and deployable.",
-          },
-          {
-            title: "Automation",
-            meta: "Playwright RPA",
-            copy: "Bridged the workflow with institutional operations.",
-          },
-        ],
-      },
-    ],
-    preview:
-      "Future PNG slot: issuance screen, QR flow, or a service blueprint.",
-  },
-  "project-roomly": {
-    command: "$ open /projects/roomly.app",
-    kicker: "Project file",
-    title: "Roomly",
-    intro:
-      "A campus room reservation system where permissions and coordination mattered as much as UI.",
-    groups: [
-      {
-        title: "Product shape",
-        items: [
-          {
-            title: "Use case",
-            meta: "Campus room reservations",
-            copy: "Designed for clearer booking across students and staff.",
-          },
-          {
-            title: "Logic",
-            meta: "Roles / approvals / calendar management",
-            copy: "More than a form, it needed real workflow structure.",
-          },
-        ],
-      },
-      {
-        title: "Expansion path",
-        items: [
-          {
-            title: "Onboarding",
-            meta: "Telegram-connected flow",
-            copy: "Made access and entry simpler.",
-          },
-          {
-            title: "Future case study",
-            meta: "UI screens / booking states / admin logic",
-            copy: "Ready for richer visual explanation later.",
-          },
-        ],
-      },
-    ],
-    preview:
-      "Future PNG slot: booking screens, approval states, and admin flow.",
-  },
-  "project-research": {
-    command: "$ open /projects/astana_housing.research",
-    kicker: "Research file",
-    title: "Spatial Factors of Housing Prices in Astana",
-    intro:
-      "This adds analytical depth to the portfolio and proves range beyond product builds.",
-    groups: [
-      {
-        title: "Research signal",
-        items: [
-          {
-            title: "Result",
-            meta: "3rd place at Lomonosov-2026",
-            copy:
-              "Presented at the International Scientific Conference of Students, Postgraduates, and Young Scientists.",
-          },
-          {
-            title: "Topic",
-            meta: "Spatial economics / housing price analysis",
-            copy:
-              "Focused on how location-linked variables shape residential prices.",
-          },
-        ],
-      },
-      {
-        title: "Methods",
-        items: [
-          {
-            title: "Spatial layer",
-            meta: "GIS / urban data / geography",
-            copy: "Brings a method set that most portfolios do not show.",
-          },
-          {
-            title: "Why it belongs here",
-            meta: "Research + technical identity",
-            copy:
-              "Shows the ability to ask harder questions, not only build tools.",
-          },
-        ],
-      },
-    ],
-    preview: "Future PNG slot: map, chart, or conference slide.",
-  },
-  "project-rag": {
-    command: "$ open /projects/rag_automation.stack",
-    kicker: "Project file",
-    title: "RAG and automation workflows",
-    intro:
-      "Applied AI work sitting between backend engineering and operational tooling.",
-    groups: [
-      {
-        title: "Work shape",
-        items: [
-          {
-            title: "Direction",
-            meta: "RAG / integrations / internal tooling",
-            copy:
-              "Built AI-assisted flows for retrieval and structured access.",
-          },
-          {
-            title: "Practical value",
-            meta: "Operational support",
-            copy: "Built for real use cases, not only presentation demos.",
-          },
-        ],
-      },
-      {
-        title: "Why it matters",
-        items: [
-          {
-            title: "Signal",
-            meta: "Backend + AI bridge",
-            copy:
-              "Explains the line between automation, systems, and product AI.",
-          },
-          {
-            title: "Future asset",
-            meta: "Flow diagram / dashboard / retrieval view",
-            copy: "Ready for a visual case-study layer later.",
-          },
-        ],
-      },
-    ],
-    preview:
-      "Future PNG slot: dashboard screenshot, retrieval flow, or architecture.",
-  },
-  "project-debounce": {
-    command: "$ open /projects/keyboard_debounce.sys",
-    kicker: "Project file",
-    title: "Tea-Damaged Keyboard -> Software Debounce Layer",
-    intro:
-      "A friend spilled tea on his keyboard. Instead of replacing the hardware, I studied the failure pattern and fixed it one layer up.",
-    groups: [
-      {
-        title: "Problem and solution",
-        items: [
-          {
-            title: "Problem",
-            meta: "Ghost / multi-fire keypresses",
-            copy:
-              "Tea-damaged contacts fired multiple signals per intended keypress.",
-          },
-          {
-            title: "Solution",
-            meta: "Software debounce layer",
-            copy:
-              "Wrote a layer that reads the messy multi-fire signal and normalizes it into a single correct character.",
-          },
-        ],
-      },
-      {
-        title: "Why it matters",
-        items: [
-          {
-            title: "Framing",
-            meta: "Signal problem, not a hardware problem",
-            copy:
-              "Treated a physical fault as noisy input and solved it one abstraction layer above where most people reach for a screwdriver.",
-          },
-          {
-            title: "Pattern",
-            meta: "Systems thinking",
-            copy:
-              "The same instinct that matters in chip design: understand the failure mode before you patch it.",
-          },
-        ],
-      },
-    ],
-    preview:
-      "Future slot: source link or a GIF demo of the debounce layer in action.",
+  "project-primeteens": {
+    command: "$ open /projects/primeteens.platform",
+    links: [{ label: "link_repo", href: "https://github.com/sprinterz5/prime-teens" }],
   },
   "project-autism": {
     command: "$ open /projects/childinfo.app",
-    kicker: "Project file",
-    title: "Autism Spectrum (ChildInfo)",
-    intro:
-      "An early-diagnosis support app built with Anisa Spectrum, now in real clinical use.",
-    groups: [
-      {
-        title: "Problem and solution",
-        items: [
-          {
-            title: "Problem",
-            meta: "Early autism screening access",
-            copy:
-              "Families and clinicians needed a structured, accessible way to support early diagnosis.",
-          },
-          {
-            title: "Solution",
-            meta: "UI/UX + data layer",
-            copy:
-              "Designed the interface and built the PostgreSQL-backed data layer behind it.",
-          },
-        ],
-      },
-      {
-        title: "Deployment",
-        items: [
-          {
-            title: "Status",
-            meta: "Live in a local hospital",
-            copy: "Deployed and postered for clinical use, not just a prototype.",
-          },
-          {
-            title: "Role",
-            meta: "UI/UX design + backend data",
-            copy:
-              "Owned both the interface work and the database structure supporting it.",
-          },
-        ],
-      },
+    links: [{ label: "link_poster", href: "notes-and-builds.pdf" }],
+  },
+  "project-elibra": {
+    command: "$ open /projects/library_qr.middleware",
+    links: [{ label: "link_repo", href: "https://github.com/sprinterz5/library-qr" }],
+  },
+  "project-roomly": {
+    command: "$ open /projects/roomly.app",
+    links: [{ label: "link_repo", href: "https://github.com/sprinterz5/roomly" }],
+  },
+  "project-bloody": {
+    command: "$ open /projects/bloody_w95.protocol",
+    links: [
+      { label: "link_repo", href: "https://github.com/sprinterz5/bloody-w95-linux" },
     ],
-    preview: "Future PNG slot: app screenshots or the hospital poster.",
+  },
+  "project-debounce": { command: "$ open /projects/keyboard_debounce.sys" },
+  "project-research": { command: "$ open /projects/astana_housing.research" },
+  "project-rag": { command: "$ open /projects/rag_automation.stack" },
+};
+
+const modalContent = {
+  en: {
+    achievements: {
+      kicker: "Competition archive",
+      title: "20+ hackathons and competitions",
+      intro: "Wins, podiums and the runs that shaped how I build under pressure.",
+      groups: [
+        {
+          title: "Wins and podiums",
+          items: [
+            { title: "BiCAP Hackathon", meta: "1st place out of 200 teams", copy: "Text-to-SQL, SQL-to-text, and AI-assisted audit for SMBs." },
+            { title: "NIS Valley", meta: "1st place out of 13 teams", copy: "Fast product framing and delivery in a short sprint." },
+            { title: "DEM Championship", meta: "2nd place out of 33 teams", copy: "Marketing campaign strategy for CITIX." },
+            { title: "National Economic Challenge", meta: "3rd place out of 150 teams", copy: "AI test generation product for SAT and IELTS prep." },
+            { title: "InsureTechHackathon", meta: "3rd place out of 100 teams", copy: "AI assistant concept around usability and accessibility." },
+            { title: "Lomonosov-2026", meta: "3rd place, scientific conference", copy: "Research on spatial factors of housing prices in Astana." },
+          ],
+        },
+        {
+          title: "Selected runs",
+          items: [
+            { title: "AmanatTech", meta: "Top 20 out of 400 teams", copy: "Platform concept for helping people with drug addiction." },
+            { title: "IT HUB Battle", meta: "Finalist, top 10 out of 42", copy: "Reached the final stage in a tight evaluation field." },
+            { title: "Decentrathon 2.0-5.0", meta: "4 overall participations", copy: "Telegram mini apps, AI assistants, screening systems, PyTorch." },
+            { title: "HackNU 2025 and 2026", meta: "2 overall participations", copy: "The 2026 run focused on the Kazakhstan Temir Zholy case." },
+          ],
+        },
+      ],
+    },
+    organizing: {
+      kicker: "Organizer archive",
+      title: "700+ participants across 2 hackathons",
+      intro: "I organized both events, not just helped: structure, partners, prizes and operations.",
+      groups: [
+        {
+          title: "Hackathons I organized",
+          items: [
+            { title: "EcoHackathon", meta: "Organizer", copy: "Led planning, coordination, participant operations, and a prize package that included 600K tenge plus MobyDev courses worth roughly another 1 million tenge." },
+            { title: "Bright Future Hackathon", meta: "Organizer", copy: "Owned structure, delivery, and execution, including a QuickStarter course prize pool worth 1.6 million tenge." },
+          ],
+        },
+        {
+          title: "Scale and logistics",
+          items: [
+            { title: "Reach", meta: "700+ participants total", copy: "Combined attendance across both hackathons." },
+            { title: "Geography", meta: "14 cities", copy: "Participants came from across the country, not one campus." },
+            { title: "Partners", meta: "5 sponsors", copy: "Sponsor coordination was part of the organizing work." },
+            { title: "Responsibility scope", meta: "Documents / negotiations / design / marketing / ops", copy: "Handled the full stack of organizing work: documents, partner negotiations, posters, marketing assets, forms, regulations, and operational structure." },
+          ],
+        },
+      ],
+    },
+    stack: {
+      kicker: "Stack overview",
+      title: "Tech stack and methods",
+      intro: "Grouped by what I actually use it for.",
+      groups: [
+        {
+          title: "Coding and backend",
+          items: [
+            { title: "Core tools", meta: "Python / FastAPI / Django / aiogram / SQL", copy: "Main layer for bots, automation, systems, and data products." },
+            { title: "Frontend layer", meta: "JavaScript / TypeScript / Next.js / Qt / Telegram", copy: "Used for web platforms, admin panels and desktop apps." },
+            { title: "Infrastructure", meta: "Linux / Docker / nginx / systemd / PostgreSQL / Prisma", copy: "Running and packaging what I build, from a VPS to Fedora and Arch packages." },
+          ],
+        },
+        {
+          title: "AI and data systems",
+          items: [
+            { title: "Applied AI", meta: "RAG / prompt design / text-to-SQL / speech-to-text", copy: "Focused on usefulness, not novelty for novelty's sake." },
+            { title: "Automation", meta: "Playwright / RPA / integrations / screening logic", copy: "Useful when institutions need repeatable workflows." },
+            { title: "Model work", meta: "PyTorch / prototyping", copy: "Used in selected hackathons and compact experiments." },
+          ],
+        },
+        {
+          title: "Geography and design",
+          items: [
+            { title: "Spatial analysis", meta: "ArcMap / ArcGIS / urban data / GIS", copy: "Connects research with location-based reasoning." },
+            { title: "Design and communication", meta: "Figma / pitching / visual communication / SMM", copy: "Helps package technical work into something readable." },
+          ],
+        },
+      ],
+    },
+    "project-shiftray": {
+      kicker: "Project file",
+      title: "Shiftray",
+      intro: "I run Fedora on an ASUS TUF A15, and on Linux the laptop's power, fan and GPU controls are spread across command-line tools. Shiftray puts them into one tray app, in the style of G-Helper on Windows.",
+      groups: [
+        {
+          title: "What it does",
+          items: [
+            { title: "Performance", meta: "Silent / Balanced / Turbo / fan curves / power limits", copy: "Each power source remembers its own mode; fan curves are calibrated to real RPM." },
+            { title: "GPU", meta: "Eco / Standard / Ultimate / Optimized", copy: "Switches through Cardwire without a logout and names the apps that keep the NVIDIA GPU awake on battery." },
+            { title: "Screen, keyboard, battery", meta: "Refresh rate / Aura lighting / charge limit", copy: "60 Hz on battery and max Hz on the charger, battery history and what each mode drew." },
+          ],
+        },
+        {
+          title: "How it is built",
+          items: [
+            { title: "Design choice", meta: "A window for asusd, not a replacement", copy: "The app writes no hardware files itself: asusctl and Cardwire do the hardware work, so settings keep working with the app closed." },
+            { title: "Transparency", meta: "Every system change listed and undoable", copy: "Before any password prompt it says what it will change and why, and a System changes view has an Undo button for each change." },
+            { title: "Shipping", meta: "AppImage / Fedora COPR / Arch / 7 languages", copy: "One-click updates that verify GitHub's SHA-256, a test suite, and a translation is one JSON file." },
+          ],
+        },
+      ],
+    },
+    "project-primeteens": {
+      kicker: "Project file",
+      title: "PrimeTeens mentor bot and platform",
+      intro: "PrimeTeens runs a summer intensive for grades 7-9 in Astana. Mentors needed to track every student without spending evenings on paperwork, so I built the bot and the platform behind it.",
+      groups: [
+        {
+          title: "Mentor bot",
+          items: [
+            { title: "Onboarding", meta: "Phone number whitelist", copy: "A mentor shares a phone number and is connected to their group and student list automatically." },
+            { title: "After each lesson", meta: "3-4 minute survey by exception", copy: "Asks only about the students the mentor marked: who stood out, who struggled, who was absent, plus two in a rotating spotlight. Voice answers are transcribed with faster-whisper." },
+            { title: "End of course", meta: "Notes sorted per student", copy: "Exports every note by section with dates (HTML, Excel, JSON), so a person can write each student's characteristic in minutes." },
+          ],
+        },
+        {
+          title: "Platform and infrastructure",
+          items: [
+            { title: "Web platform", meta: "Next.js / Prisma / PostgreSQL", copy: "Online workbooks with autosave and a live mentor view, homework review, and a student calendar with .ics." },
+            { title: "Bot stack", meta: "aiogram / asyncpg / APScheduler", copy: "Shares one PostgreSQL database with the site; the bots send one-time login links." },
+            { title: "Deployment", meta: "Docker / nginx / systemd / backups", copy: "Runs on a VPS with backups and quiet monitoring." },
+          ],
+        },
+      ],
+    },
+    "project-autism": {
+      kicker: "Project file",
+      title: "Autism Spectrum (ChildInfo)",
+      intro: "An early-diagnosis support app built with Anisa Spectrum, now in real clinical use.",
+      groups: [
+        {
+          title: "Problem and solution",
+          items: [
+            { title: "Problem", meta: "Early autism screening access", copy: "Families and clinicians needed a structured, accessible way to support early diagnosis." },
+            { title: "Solution", meta: "UI/UX + data layer", copy: "Designed the interface and built the PostgreSQL-backed data layer behind it." },
+          ],
+        },
+        {
+          title: "Deployment",
+          items: [
+            { title: "Status", meta: "Live in a local hospital", copy: "Deployed and postered for clinical use, not just a prototype." },
+            { title: "Role", meta: "UI/UX design + backend data", copy: "Owned both the interface work and the database structure supporting it." },
+          ],
+        },
+      ],
+    },
+    "project-elibra": {
+      kicker: "Project file",
+      title: "eLibra QR Middleware",
+      intro: "Many libraries in Astana issue books through e-libra. I automated the issuance so students can do it themselves.",
+      groups: [
+        {
+          title: "Problem and solution",
+          items: [
+            { title: "Problem", meta: "Library issuance bottleneck", copy: "Students had to wait for a librarian to issue every book by hand." },
+            { title: "Solution", meta: "Self-service QR flow", copy: "A reader-ID-based flow lets students issue books themselves; an alternative to RFID gates." },
+          ],
+        },
+        {
+          title: "Build and status",
+          items: [
+            { title: "Backend", meta: "FastAPI / SQLite", copy: "Kept the system lightweight and deployable." },
+            { title: "Automation", meta: "Playwright RPA", copy: "Drives the e-libra interface, which has no API, the same way a librarian would." },
+            { title: "Status", meta: "In use", copy: "Used by the Coventry University Kazakhstan library." },
+          ],
+        },
+      ],
+    },
+    "project-roomly": {
+      kicker: "Project file",
+      title: "Roomly",
+      intro: "A room booking system for student clubs, where permissions and coordination mattered as much as the UI.",
+      groups: [
+        {
+          title: "Product shape",
+          items: [
+            { title: "Use case", meta: "Campus room reservations", copy: "Clear booking for clubs, students and staff instead of chats and spreadsheets." },
+            { title: "Logic", meta: "Roles / approvals / calendar management", copy: "More than a form: requests go through approval, and the calendar shows what is free." },
+          ],
+        },
+        {
+          title: "Build",
+          items: [
+            { title: "Onboarding", meta: "Telegram Mini App", copy: "Opens inside Telegram, so there is nothing to install or register." },
+            { title: "Stack", meta: "FastAPI / SQLAlchemy / PostgreSQL", copy: "A relational schema for clubs, rooms and bookings." },
+          ],
+        },
+      ],
+    },
+    "project-bloody": {
+      kicker: "Project file",
+      title: "Bloody W95 mouse on Linux",
+      intro: "A4Tech ships the Bloody W95 Max configuration software only for Windows. I captured its USB traffic and decoded enough of the protocol to control the mouse from Linux.",
+      groups: [
+        {
+          title: "What works",
+          items: [
+            { title: "Lighting", meta: "Per zone and per LED", copy: "Colours for each zone, single LEDs and a rainbow along the bottom ring." },
+            { title: "DPI", meta: "Per slot, 100-5000", copy: "Live DPI changes without the vendor software." },
+          ],
+        },
+        {
+          title: "How",
+          items: [
+            { title: "Method", meta: "USB capture under Wine + hidraw", copy: "Recorded what the Windows tool sends, then replayed and varied the packets from Python through hidraw feature reports, with no extra dependencies." },
+            { title: "Safety", meta: "Dangerous opcodes documented", copy: "The vendor channel can also write SPI flash and jump to the bootloader, so the protocol notes list the commands not to send." },
+          ],
+        },
+      ],
+    },
+    "project-debounce": {
+      kicker: "Project file",
+      title: "Tea-Damaged Keyboard -> Software Debounce Layer",
+      intro: "A friend spilled tea on his keyboard. Instead of replacing the hardware, I studied the failure pattern and fixed it one layer up.",
+      groups: [
+        {
+          title: "Problem and solution",
+          items: [
+            { title: "Problem", meta: "Ghost / multi-fire keypresses", copy: "Tea-damaged contacts fired multiple signals per intended keypress." },
+            { title: "Solution", meta: "Software debounce layer", copy: "Wrote a layer that reads the messy multi-fire signal and normalizes it into a single correct character." },
+          ],
+        },
+        {
+          title: "Why it matters",
+          items: [
+            { title: "Framing", meta: "Signal problem, not a hardware problem", copy: "Treated a physical fault as noisy input and solved it one abstraction layer above where most people reach for a screwdriver." },
+            { title: "Pattern", meta: "Understand the failure first", copy: "Look at how something breaks before deciding how to fix it." },
+          ],
+        },
+      ],
+    },
+    "project-research": {
+      kicker: "Research file",
+      title: "Spatial Factors of Housing Prices in Astana",
+      intro: "Research outside product work: how location shapes housing prices across the city.",
+      groups: [
+        {
+          title: "Result and topic",
+          items: [
+            { title: "Result", meta: "3rd place at Lomonosov-2026", copy: "Presented at the International Scientific Conference of Students, Postgraduates, and Young Scientists." },
+            { title: "Topic", meta: "Spatial economics / housing price analysis", copy: "How location-linked variables shape residential prices." },
+          ],
+        },
+        {
+          title: "Methods",
+          items: [
+            { title: "Spatial layer", meta: "GIS / urban data / geography", copy: "Location-based variables mapped and compared across districts of the city." },
+          ],
+        },
+      ],
+    },
+    "project-rag": {
+      kicker: "Project file",
+      title: "RAG and automation workflows",
+      intro: "Applied AI work sitting between backend engineering and operational tooling.",
+      groups: [
+        {
+          title: "Work",
+          items: [
+            { title: "Library chatbot", meta: "RAG / Ollama / n8n", copy: "An AI chatbot on the university library website that answers from the library's own materials." },
+            { title: "Direction", meta: "RAG / integrations / internal tooling", copy: "AI-assisted flows for retrieval and structured access to institutional data." },
+            { title: "Practical value", meta: "Operational support", copy: "Built for real use cases, not only presentation demos." },
+          ],
+        },
+      ],
+    },
+  },
+  ru: {
+    achievements: {
+      kicker: "Архив соревнований",
+      title: "20+ хакатонов и соревнований",
+      intro: "Победы, призовые места и выступления, которые научили меня делать продукт под давлением.",
+      groups: [
+        {
+          title: "Победы и призовые места",
+          items: [
+            { title: "BiCAP Hackathon", meta: "1-е место из 200 команд", copy: "Text-to-SQL, SQL-to-text и AI-аудит для малого и среднего бизнеса." },
+            { title: "NIS Valley", meta: "1-е место из 13 команд", copy: "Быстрая постановка продукта и сдача за короткий спринт." },
+            { title: "DEM Championship", meta: "2-е место из 33 команд", copy: "Стратегия маркетинговой кампании для CITIX." },
+            { title: "National Economic Challenge", meta: "3-е место из 150 команд", copy: "AI-генерация тестов для подготовки к SAT и IELTS." },
+            { title: "InsureTechHackathon", meta: "3-е место из 100 команд", copy: "Концепция AI-ассистента с упором на удобство и доступность." },
+            { title: "Ломоносов-2026", meta: "3-е место, научная конференция", copy: "Исследование пространственных факторов цен на жильё в Астане." },
+          ],
+        },
+        {
+          title: "Другие выступления",
+          items: [
+            { title: "AmanatTech", meta: "Топ-20 из 400 команд", copy: "Концепция платформы помощи людям с наркозависимостью." },
+            { title: "IT HUB Battle", meta: "Финалист, топ-10 из 42", copy: "Дошли до финала в плотной конкуренции." },
+            { title: "Decentrathon 2.0-5.0", meta: "4 участия", copy: "Telegram mini apps, AI-ассистенты, системы скрининга, PyTorch." },
+            { title: "HackNU 2025 и 2026", meta: "2 участия", copy: "В 2026 году -- кейс Қазақстан Темір Жолы." },
+          ],
+        },
+      ],
+    },
+    organizing: {
+      kicker: "Организаторский архив",
+      title: "700+ участников на 2 хакатонах",
+      intro: "Я организовал оба события, а не просто помогал: структура, партнёры, призы и операционка.",
+      groups: [
+        {
+          title: "Хакатоны, которые я организовал",
+          items: [
+            { title: "EcoHackathon", meta: "Организатор", copy: "Планирование, координация, работа с участниками и призовой фонд: 600 тыс. тенге и курсы MobyDev ещё примерно на 1 млн тенге." },
+            { title: "Bright Future Hackathon", meta: "Организатор", copy: "Отвечал за структуру и проведение, включая призовой фонд из курсов QuickStarter на 1,6 млн тенге." },
+          ],
+        },
+        {
+          title: "Масштаб и логистика",
+          items: [
+            { title: "Охват", meta: "700+ участников всего", copy: "Суммарно на обоих хакатонах." },
+            { title: "География", meta: "14 городов", copy: "Участники со всей страны, а не с одного кампуса." },
+            { title: "Партнёры", meta: "5 спонсоров", copy: "Работа со спонсорами была частью организации." },
+            { title: "Зона ответственности", meta: "Документы / переговоры / дизайн / маркетинг / операционка", copy: "Вся организаторская работа: документы, переговоры с партнёрами, постеры, маркетинг, формы, положение и операционная структура." },
+          ],
+        },
+      ],
+    },
+    stack: {
+      kicker: "Стек",
+      title: "Технологии и методы",
+      intro: "Сгруппировано по тому, для чего я это реально использую.",
+      groups: [
+        {
+          title: "Код и бэкенд",
+          items: [
+            { title: "Основное", meta: "Python / FastAPI / Django / aiogram / SQL", copy: "Боты, автоматизация, системы и продукты на данных." },
+            { title: "Интерфейсы", meta: "JavaScript / TypeScript / Next.js / Qt / Telegram", copy: "Веб-платформы, админки и десктопные приложения." },
+            { title: "Инфраструктура", meta: "Linux / Docker / nginx / systemd / PostgreSQL / Prisma", copy: "Запуск и упаковка того, что я делаю: от VPS до пакетов для Fedora и Arch." },
+          ],
+        },
+        {
+          title: "AI и данные",
+          items: [
+            { title: "Прикладной AI", meta: "RAG / промпты / text-to-SQL / распознавание речи", copy: "Ради пользы, а не новизны ради новизны." },
+            { title: "Автоматизация", meta: "Playwright / RPA / интеграции / скрининг", copy: "Когда учреждению нужны повторяемые процессы." },
+            { title: "Модели", meta: "PyTorch / прототипы", copy: "На отдельных хакатонах и в небольших экспериментах." },
+          ],
+        },
+        {
+          title: "География и дизайн",
+          items: [
+            { title: "Пространственный анализ", meta: "ArcMap / ArcGIS / городские данные / ГИС", copy: "Связывает исследования с анализом по местоположению." },
+            { title: "Дизайн и коммуникация", meta: "Figma / питчинг / визуал / SMM", copy: "Помогает упаковать техническую работу в понятный вид." },
+          ],
+        },
+      ],
+    },
+    "project-shiftray": {
+      kicker: "Проект",
+      title: "Shiftray",
+      intro: "У меня Fedora на ASUS TUF A15, а на Linux управление питанием, вентиляторами и видеокартой ноутбука разбросано по консольным утилитам. Shiftray собирает всё это в одно приложение в трее, в стиле G-Helper на Windows.",
+      groups: [
+        {
+          title: "Что умеет",
+          items: [
+            { title: "Производительность", meta: "Silent / Balanced / Turbo / кривые вентиляторов / лимиты мощности", copy: "Для батареи и зарядки запоминается свой режим; кривые вентиляторов откалиброваны по реальным оборотам." },
+            { title: "Видеокарта", meta: "Eco / Standard / Ultimate / Optimized", copy: "Переключение через Cardwire без выхода из сессии; показывает, какие приложения не дают NVIDIA уснуть на батарее." },
+            { title: "Экран, клавиатура, батарея", meta: "Частота экрана / подсветка Aura / лимит заряда", copy: "60 Гц на батарее и максимум на зарядке, история батареи и сколько потреблял каждый режим." },
+          ],
+        },
+        {
+          title: "Как устроено",
+          items: [
+            { title: "Подход", meta: "Окно для asusd, а не замена", copy: "Само приложение не пишет в железо: всю работу делают asusctl и Cardwire, поэтому настройки работают и с закрытым приложением." },
+            { title: "Прозрачность", meta: "Каждое изменение в системе видно и отменяемо", copy: "Перед запросом пароля приложение пишет, что и зачем изменит, а в окне изменений системы у каждого есть кнопка отмены." },
+            { title: "Выпуск", meta: "AppImage / Fedora COPR / Arch / 7 языков", copy: "Обновление в один клик с проверкой SHA-256 от GitHub, тесты, а перевод -- это один JSON-файл." },
+          ],
+        },
+      ],
+    },
+    "project-primeteens": {
+      kicker: "Проект",
+      title: "Бот и платформа для менторов PrimeTeens",
+      intro: "PrimeTeens проводит летний интенсив для 7-9 классов в Астане. Менторам нужно было следить за каждым учеником, не тратя вечера на бумажки, поэтому я сделал бота и платформу.",
+      groups: [
+        {
+          title: "Бот для менторов",
+          items: [
+            { title: "Регистрация", meta: "Белый список номеров", copy: "Ментор делится номером телефона и автоматически подключается к своей группе и списку учеников." },
+            { title: "После каждого занятия", meta: "Опрос на 3-4 минуты по исключениям", copy: "Спрашивает только про отмеченных учеников: кто отличился, у кого не шло, кого не было, плюс двое под «прожектором» по ротации. Голосовые ответы расшифровываются через faster-whisper." },
+            { title: "В конце курса", meta: "Заметки по каждому ученику", copy: "Выгружает все заметки по разделам с датами (HTML, Excel, JSON), чтобы характеристику на ученика можно было написать за несколько минут." },
+          ],
+        },
+        {
+          title: "Платформа и инфраструктура",
+          items: [
+            { title: "Веб-платформа", meta: "Next.js / Prisma / PostgreSQL", copy: "Онлайн-тетради с автосохранением и живым просмотром для ментора, проверка домашки и календарь ученика с .ics." },
+            { title: "Стек бота", meta: "aiogram / asyncpg / APScheduler", copy: "Одна база PostgreSQL с сайтом; вход на сайт по одноразовой ссылке из бота." },
+            { title: "Развёртывание", meta: "Docker / nginx / systemd / бэкапы", copy: "Работает на VPS с бэкапами и тихим мониторингом." },
+          ],
+        },
+      ],
+    },
+    "project-autism": {
+      kicker: "Проект",
+      title: "Autism Spectrum (ChildInfo)",
+      intro: "Приложение для поддержки ранней диагностики, сделанное с Anisa Spectrum и реально используемое в клинике.",
+      groups: [
+        {
+          title: "Проблема и решение",
+          items: [
+            { title: "Проблема", meta: "Доступ к раннему скринингу аутизма", copy: "Семьям и врачам нужен был понятный и доступный способ поддержать раннюю диагностику." },
+            { title: "Решение", meta: "UI/UX + слой данных", copy: "Спроектировал интерфейс и сделал слой данных на PostgreSQL." },
+          ],
+        },
+        {
+          title: "Внедрение",
+          items: [
+            { title: "Статус", meta: "Работает в местной больнице", copy: "Внедрено, постер висит в больнице -- это не просто прототип." },
+            { title: "Роль", meta: "UI/UX + данные", copy: "Отвечал и за интерфейс, и за структуру базы данных." },
+          ],
+        },
+      ],
+    },
+    "project-elibra": {
+      kicker: "Проект",
+      title: "eLibra QR Middleware",
+      intro: "Многие библиотеки Астаны выдают книги через e-libra. Я автоматизировал выдачу, чтобы студенты могли делать это сами.",
+      groups: [
+        {
+          title: "Проблема и решение",
+          items: [
+            { title: "Проблема", meta: "Очередь на выдачу", copy: "Студенты ждали, пока библиотекарь вручную выдаст каждую книгу." },
+            { title: "Решение", meta: "Самостоятельная выдача по QR", copy: "По номеру читательского билета студент выдаёт книгу сам; альтернатива RFID-воротам." },
+          ],
+        },
+        {
+          title: "Реализация и статус",
+          items: [
+            { title: "Бэкенд", meta: "FastAPI / SQLite", copy: "Лёгкая система, которую просто развернуть." },
+            { title: "Автоматизация", meta: "Playwright RPA", copy: "Управляет интерфейсом e-libra, у которого нет API, так же, как это делал бы библиотекарь." },
+            { title: "Статус", meta: "Используется", copy: "Работает в библиотеке Coventry University Kazakhstan." },
+          ],
+        },
+      ],
+    },
+    "project-roomly": {
+      kicker: "Проект",
+      title: "Roomly",
+      intro: "Бронирование аудиторий для студенческих клубов, где права и согласование важны не меньше интерфейса.",
+      groups: [
+        {
+          title: "Продукт",
+          items: [
+            { title: "Задача", meta: "Бронирование аудиторий в кампусе", copy: "Понятное бронирование для клубов, студентов и сотрудников вместо чатов и таблиц." },
+            { title: "Логика", meta: "Роли / согласование / календарь", copy: "Не просто форма: заявки проходят согласование, а календарь показывает, что свободно." },
+          ],
+        },
+        {
+          title: "Реализация",
+          items: [
+            { title: "Вход", meta: "Telegram Mini App", copy: "Открывается прямо в Telegram, ничего не нужно устанавливать и регистрировать." },
+            { title: "Стек", meta: "FastAPI / SQLAlchemy / PostgreSQL", copy: "Реляционная схема для клубов, аудиторий и броней." },
+          ],
+        },
+      ],
+    },
+    "project-bloody": {
+      kicker: "Проект",
+      title: "Мышь Bloody W95 на Linux",
+      intro: "A4Tech выпускает программу настройки Bloody W95 Max только под Windows. Я записал её USB-трафик и разобрал протокол настолько, чтобы управлять мышью из Linux.",
+      groups: [
+        {
+          title: "Что работает",
+          items: [
+            { title: "Подсветка", meta: "По зонам и по отдельным светодиодам", copy: "Цвет каждой зоны, отдельные светодиоды и радуга по нижнему кольцу." },
+            { title: "DPI", meta: "По слотам, 100-5000", copy: "Смена DPI на лету без фирменной программы." },
+          ],
+        },
+        {
+          title: "Как",
+          items: [
+            { title: "Метод", meta: "Запись USB под Wine + hidraw", copy: "Записал, что отправляет программа для Windows, потом повторял и менял пакеты из Python через feature reports hidraw, без лишних зависимостей." },
+            { title: "Безопасность", meta: "Опасные команды задокументированы", copy: "Через тот же канал можно писать во флеш-память и уйти в загрузчик, поэтому в заметках по протоколу перечислено, что отправлять нельзя." },
+          ],
+        },
+      ],
+    },
+    "project-debounce": {
+      kicker: "Проект",
+      title: "Залитая чаем клавиатура -> программный антидребезг",
+      intro: "Друг пролил чай на клавиатуру. Вместо замены железа я изучил, как она сбоит, и исправил это уровнем выше.",
+      groups: [
+        {
+          title: "Проблема и решение",
+          items: [
+            { title: "Проблема", meta: "Ложные и повторные нажатия", copy: "Повреждённые чаем контакты давали несколько сигналов на одно нажатие." },
+            { title: "Решение", meta: "Программный антидребезг", copy: "Написал слой, который читает шумный сигнал и превращает его в одно правильное нажатие." },
+          ],
+        },
+        {
+          title: "Почему это важно",
+          items: [
+            { title: "Взгляд", meta: "Проблема сигнала, а не железа", copy: "Отнёсся к физической неисправности как к шумному входу и решил её на уровень выше, чем там, где обычно берут отвёртку." },
+            { title: "Принцип", meta: "Сначала понять, как ломается", copy: "Смотреть, как именно что-то сбоит, прежде чем решать, как это чинить." },
+          ],
+        },
+      ],
+    },
+    "project-research": {
+      kicker: "Исследование",
+      title: "Пространственные факторы цен на жильё в Астане",
+      intro: "Исследование вне продуктовой работы: как местоположение влияет на цены на жильё в городе.",
+      groups: [
+        {
+          title: "Результат и тема",
+          items: [
+            { title: "Результат", meta: "3-е место на Ломоносов-2026", copy: "Доклад на Международной научной конференции студентов, аспирантов и молодых учёных." },
+            { title: "Тема", meta: "Пространственная экономика / анализ цен на жильё", copy: "Как переменные, связанные с местоположением, влияют на цены на жильё." },
+          ],
+        },
+        {
+          title: "Методы",
+          items: [
+            { title: "Пространственный анализ", meta: "ГИС / городские данные / география", copy: "Переменные, связанные с местоположением, нанесены на карту и сравнены по районам города." },
+          ],
+        },
+      ],
+    },
+    "project-rag": {
+      kicker: "Проект",
+      title: "RAG и автоматизация",
+      intro: "Прикладной AI на стыке бэкенда и операционных инструментов.",
+      groups: [
+        {
+          title: "Работа",
+          items: [
+            { title: "Чат-бот библиотеки", meta: "RAG / Ollama / n8n", copy: "AI-чат-бот на сайте университетской библиотеки, который отвечает по материалам самой библиотеки." },
+            { title: "Направление", meta: "RAG / интеграции / внутренние инструменты", copy: "AI-процессы для поиска и структурированного доступа к данным учреждения." },
+            { title: "Практическая польза", meta: "Поддержка работы учреждения", copy: "Для реальных задач, а не только для презентаций." },
+          ],
+        },
+      ],
+    },
+  },
+  kz: {
+    achievements: {
+      kicker: "Жарыстар мұрағаты",
+      title: "20+ хакатон мен жарыс",
+      intro: "Жеңістер, жүлделі орындар және қысым жағдайында өнім жасауды үйреткен жарыстар.",
+      groups: [
+        {
+          title: "Жеңістер мен жүлделі орындар",
+          items: [
+            { title: "BiCAP Hackathon", meta: "200 команданың ішінде 1-орын", copy: "Шағын және орта бизнеске арналған text-to-SQL, SQL-to-text және AI аудит." },
+            { title: "NIS Valley", meta: "13 команданың ішінде 1-орын", copy: "Қысқа спринтте өнімді тез құрастырып, тапсыру." },
+            { title: "DEM Championship", meta: "33 команданың ішінде 2-орын", copy: "CITIX үшін маркетингтік науқан стратегиясы." },
+            { title: "National Economic Challenge", meta: "150 команданың ішінде 3-орын", copy: "SAT және IELTS дайындығына арналған AI тест генерациясы." },
+            { title: "InsureTechHackathon", meta: "100 команданың ішінде 3-орын", copy: "Ыңғайлылық пен қолжетімділікке бағытталған AI көмекші идеясы." },
+            { title: "Ломоносов-2026", meta: "3-орын, ғылыми конференция", copy: "Астанадағы тұрғын үй бағасының кеңістіктік факторлары туралы зерттеу." },
+          ],
+        },
+        {
+          title: "Басқа жарыстар",
+          items: [
+            { title: "AmanatTech", meta: "400 команданың ішінде үздік 20", copy: "Нашақорлыққа тәуелді адамдарға көмек платформасының идеясы." },
+            { title: "IT HUB Battle", meta: "Финалист, 42 команданың ішінде үздік 10", copy: "Тығыз бәсекеде финалға жеттік." },
+            { title: "Decentrathon 2.0-5.0", meta: "4 рет қатысу", copy: "Telegram mini apps, AI көмекшілері, іріктеу жүйелері, PyTorch." },
+            { title: "HackNU 2025 және 2026", meta: "2 рет қатысу", copy: "2026 жылы -- Қазақстан Темір Жолы кейсі." },
+          ],
+        },
+      ],
+    },
+    organizing: {
+      kicker: "Ұйымдастыру мұрағаты",
+      title: "2 хакатонда 700+ қатысушы",
+      intro: "Екі іс-шараны да жай көмектесіп қана қоймай, өзім ұйымдастырдым: құрылымы, серіктестері, жүлделері және жұмыс барысы.",
+      groups: [
+        {
+          title: "Мен ұйымдастырған хакатондар",
+          items: [
+            { title: "EcoHackathon", meta: "Ұйымдастырушы", copy: "Жоспарлау, үйлестіру, қатысушылармен жұмыс және жүлде қоры: 600 мың теңге және тағы шамамен 1 млн теңгелік MobyDev курстары." },
+            { title: "Bright Future Hackathon", meta: "Ұйымдастырушы", copy: "Құрылымы мен өткізілуіне жауап бердім, оның ішінде 1,6 млн теңгелік QuickStarter курстарынан тұратын жүлде қоры." },
+          ],
+        },
+        {
+          title: "Ауқым және логистика",
+          items: [
+            { title: "Қамту", meta: "Барлығы 700+ қатысушы", copy: "Екі хакатонда жиынтығы." },
+            { title: "География", meta: "14 қала", copy: "Қатысушылар бір кампустан емес, бүкіл елден келді." },
+            { title: "Серіктестер", meta: "5 демеуші", copy: "Демеушілермен жұмыс ұйымдастырудың бір бөлігі болды." },
+            { title: "Жауапкершілік аймағы", meta: "Құжаттар / келіссөздер / дизайн / маркетинг / жұмыс барысы", copy: "Ұйымдастырудың барлық жұмысы: құжаттар, серіктестермен келіссөздер, постерлер, маркетинг, формалар, ереже және жұмыс құрылымы." },
+          ],
+        },
+      ],
+    },
+    stack: {
+      kicker: "Стек",
+      title: "Технологиялар мен әдістер",
+      intro: "Нақты не үшін қолданатыныма қарай топтастырылған.",
+      groups: [
+        {
+          title: "Код және backend",
+          items: [
+            { title: "Негізгі", meta: "Python / FastAPI / Django / aiogram / SQL", copy: "Боттар, автоматтандыру, жүйелер және деректерге негізделген өнімдер." },
+            { title: "Интерфейстер", meta: "JavaScript / TypeScript / Next.js / Qt / Telegram", copy: "Веб-платформалар, әкімші панельдері және десктоп қосымшалары." },
+            { title: "Инфрақұрылым", meta: "Linux / Docker / nginx / systemd / PostgreSQL / Prisma", copy: "Жасағанымды іске қосу және буып-түю: VPS-тен Fedora мен Arch пакеттеріне дейін." },
+          ],
+        },
+        {
+          title: "AI және деректер",
+          items: [
+            { title: "Қолданбалы AI", meta: "RAG / промпттар / text-to-SQL / сөзді тану", copy: "Жаңалық үшін емес, пайда үшін." },
+            { title: "Автоматтандыру", meta: "Playwright / RPA / интеграциялар / іріктеу", copy: "Мекемеге қайталанатын процестер керек болғанда." },
+            { title: "Модельдер", meta: "PyTorch / прототиптер", copy: "Кейбір хакатондарда және шағын тәжірибелерде." },
+          ],
+        },
+        {
+          title: "География және дизайн",
+          items: [
+            { title: "Кеңістіктік талдау", meta: "ArcMap / ArcGIS / қала деректері / ГАЖ", copy: "Зерттеуді орналасуға негізделген талдаумен байланыстырады." },
+            { title: "Дизайн және коммуникация", meta: "Figma / питчинг / визуал / SMM", copy: "Техникалық жұмысты түсінікті түрде ұсынуға көмектеседі." },
+          ],
+        },
+      ],
+    },
+    "project-shiftray": {
+      kicker: "Жоба",
+      title: "Shiftray",
+      intro: "Менің ASUS TUF A15 ноутбугымда Fedora орнатылған, ал Linux-та ноутбуктың қуатын, желдеткіштерін және бейнекартасын басқару әртүрлі консоль құралдарына шашыраңқы. Shiftray мұның бәрін Windows-тағы G-Helper стиліндегі бір трей қосымшасына жинайды.",
+      groups: [
+        {
+          title: "Не істей алады",
+          items: [
+            { title: "Өнімділік", meta: "Silent / Balanced / Turbo / желдеткіш қисықтары / қуат шектеулері", copy: "Батарея мен зарядтағыш үшін әрқайсысының өз режимі сақталады; желдеткіш қисықтары нақты айналым бойынша калибрленген." },
+            { title: "Бейнекарта", meta: "Eco / Standard / Ultimate / Optimized", copy: "Cardwire арқылы сессиядан шықпай ауысады; батареяда NVIDIA-ны ұйықтатпай тұрған қосымшаларды көрсетеді." },
+            { title: "Экран, пернетақта, батарея", meta: "Экран жиілігі / Aura жарығы / заряд шегі", copy: "Батареяда 60 Гц, зарядта ең жоғары жиілік, батарея тарихы және әр режимнің қанша тұтынғаны." },
+          ],
+        },
+        {
+          title: "Қалай жасалған",
+          items: [
+            { title: "Тәсіл", meta: "asusd-тің орнына емес, оған арналған терезе", copy: "Қосымшаның өзі құрылғыға ештеңе жазбайды: бар жұмысты asusctl мен Cardwire атқарады, сондықтан баптаулар қосымша жабық тұрса да жұмыс істейді." },
+            { title: "Ашықтық", meta: "Жүйедегі әр өзгеріс көрінеді және қайтарылады", copy: "Құпиясөз сұрамас бұрын қосымша нені және не үшін өзгертетінін айтады, ал жүйе өзгерістері терезесінде әрқайсысының қайтару батырмасы бар." },
+            { title: "Шығару", meta: "AppImage / Fedora COPR / Arch / 7 тіл", copy: "GitHub-тың SHA-256 тексерісімен бір басу арқылы жаңарту, тесттер, ал аударма -- бір JSON файлы." },
+          ],
+        },
+      ],
+    },
+    "project-primeteens": {
+      kicker: "Жоба",
+      title: "PrimeTeens менторларына арналған бот пен платформа",
+      intro: "PrimeTeens Астанада 7-9 сыныптарға арналған жазғы интенсив өткізеді. Менторларға кешкі уақытын қағазбастылыққа жұмсамай, әр оқушыны бақылау керек болды, сондықтан мен бот пен платформа жасадым.",
+      groups: [
+        {
+          title: "Менторларға арналған бот",
+          items: [
+            { title: "Тіркелу", meta: "Нөмірлердің ақ тізімі", copy: "Ментор телефон нөмірін бөліседі де, өз тобына және оқушылар тізіміне автоматты түрде қосылады." },
+            { title: "Әр сабақтан кейін", meta: "Ерекшеліктер бойынша 3-4 минуттық сауалнама", copy: "Тек белгіленген оқушылар туралы сұрайды: кім ерекшеленді, кімге қиын болды, кім келмеді, сонымен қатар кезекпен «назардағы» екі оқушы. Дауыстық жауаптар faster-whisper арқылы мәтінге айналады." },
+            { title: "Курс соңында", meta: "Әр оқушы бойынша жазбалар", copy: "Барлық жазбаларды бөлімдер мен күндер бойынша шығарады (HTML, Excel, JSON), сондықтан әр оқушыға мінездеме бірнеше минутта жазылады." },
+          ],
+        },
+        {
+          title: "Платформа және инфрақұрылым",
+          items: [
+            { title: "Веб-платформа", meta: "Next.js / Prisma / PostgreSQL", copy: "Автосақтауы бар онлайн дәптерлер және ментордың тікелей бақылауы, үй тапсырмасын тексеру және .ics күнтізбесі." },
+            { title: "Бот стегі", meta: "aiogram / asyncpg / APScheduler", copy: "Сайтпен бір PostgreSQL дерекқоры; сайтқа боттан келген бір реттік сілтеме арқылы кіреді." },
+            { title: "Орналастыру", meta: "Docker / nginx / systemd / сақтық көшірмелер", copy: "Сақтық көшірмелері мен мониторингі бар VPS-те жұмыс істейді." },
+          ],
+        },
+      ],
+    },
+    "project-autism": {
+      kicker: "Жоба",
+      title: "Autism Spectrum (ChildInfo)",
+      intro: "Anisa Spectrum-пен бірге жасалған, ерте диагностикаға көмектесетін және клиникада нақты қолданылатын қосымша.",
+      groups: [
+        {
+          title: "Мәселе және шешім",
+          items: [
+            { title: "Мәселе", meta: "Аутизмді ерте скринингтеуге қолжетімділік", copy: "Отбасылар мен дәрігерлерге ерте диагностикаға көмектесетін түсінікті әрі қолжетімді жол керек болды." },
+            { title: "Шешім", meta: "UI/UX + деректер қабаты", copy: "Интерфейсті жобалап, PostgreSQL негізіндегі деректер қабатын жасадым." },
+          ],
+        },
+        {
+          title: "Енгізу",
+          items: [
+            { title: "Күйі", meta: "Жергілікті ауруханада жұмыс істейді", copy: "Енгізілген, постері ауруханада ілулі -- бұл жай прототип емес." },
+            { title: "Рөлім", meta: "UI/UX + деректер", copy: "Интерфейске де, дерекқор құрылымына да жауап бердім." },
+          ],
+        },
+      ],
+    },
+    "project-elibra": {
+      kicker: "Жоба",
+      title: "eLibra QR Middleware",
+      intro: "Астанадағы көптеген кітапханалар кітапты e-libra арқылы береді. Студенттер мұны өздері жасай алуы үшін кітап беруді автоматтандырдым.",
+      groups: [
+        {
+          title: "Мәселе және шешім",
+          items: [
+            { title: "Мәселе", meta: "Кітап алу кезегі", copy: "Студенттер кітапханашы әр кітапты қолмен бергенше күтетін." },
+            { title: "Шешім", meta: "QR арқылы өз бетінше алу", copy: "Оқырман билетінің нөмірі бойынша студент кітапты өзі алады; RFID қақпаларына балама." },
+          ],
+        },
+        {
+          title: "Іске асыру және күйі",
+          items: [
+            { title: "Backend", meta: "FastAPI / SQLite", copy: "Оңай орнатылатын жеңіл жүйе." },
+            { title: "Автоматтандыру", meta: "Playwright RPA", copy: "API-ы жоқ e-libra интерфейсін кітапханашы сияқты басқарады." },
+            { title: "Күйі", meta: "Қолданыста", copy: "Coventry University Kazakhstan кітапханасында жұмыс істейді." },
+          ],
+        },
+      ],
+    },
+    "project-roomly": {
+      kicker: "Жоба",
+      title: "Roomly",
+      intro: "Студенттік клубтарға арналған аудитория брондау жүйесі, мұнда құқықтар мен келісу интерфейстен кем маңызды емес.",
+      groups: [
+        {
+          title: "Өнім",
+          items: [
+            { title: "Міндет", meta: "Кампустағы аудиторияларды брондау", copy: "Чаттар мен кестелердің орнына клубтарға, студенттер мен қызметкерлерге түсінікті брондау." },
+            { title: "Логика", meta: "Рөлдер / келісу / күнтізбе", copy: "Жай форма емес: өтінімдер келісуден өтеді, ал күнтізбе қай уақыттың бос екенін көрсетеді." },
+          ],
+        },
+        {
+          title: "Іске асыру",
+          items: [
+            { title: "Кіру", meta: "Telegram Mini App", copy: "Тікелей Telegram ішінде ашылады, ештеңе орнатудың және тіркелудің қажеті жоқ." },
+            { title: "Стек", meta: "FastAPI / SQLAlchemy / PostgreSQL", copy: "Клубтар, аудиториялар және брондар үшін реляциялық схема." },
+          ],
+        },
+      ],
+    },
+    "project-bloody": {
+      kicker: "Жоба",
+      title: "Linux-тағы Bloody W95 тінтуірі",
+      intro: "A4Tech Bloody W95 Max баптау бағдарламасын тек Windows үшін шығарады. Мен оның USB трафигін жазып алып, тінтуірді Linux-тан басқаруға жететіндей протоколын талдадым.",
+      groups: [
+        {
+          title: "Не жұмыс істейді",
+          items: [
+            { title: "Жарық", meta: "Аймақтар және жеке жарық диодтары бойынша", copy: "Әр аймақтың түсі, жеке жарық диодтары және төменгі сақина бойымен кемпірқосақ." },
+            { title: "DPI", meta: "Слоттар бойынша, 100-5000", copy: "Фирмалық бағдарламасыз DPI-ды бірден өзгерту." },
+          ],
+        },
+        {
+          title: "Қалай",
+          items: [
+            { title: "Әдіс", meta: "Wine астында USB жазу + hidraw", copy: "Windows бағдарламасы не жіберетінін жазып алдым, содан кейін пакеттерді Python-нан hidraw feature reports арқылы қайталап, өзгерттім, артық тәуелділіксіз." },
+            { title: "Қауіпсіздік", meta: "Қауіпті командалар құжатталған", copy: "Сол арна арқылы флеш-жадқа жазуға және жүктеушіге өтуге болады, сондықтан протокол жазбаларында не жіберуге болмайтыны көрсетілген." },
+          ],
+        },
+      ],
+    },
+    "project-debounce": {
+      kicker: "Жоба",
+      title: "Шай төгілген пернетақта -> бағдарламалық debounce",
+      intro: "Досым пернетақтасына шай төгіп алды. Құрылғыны ауыстырудың орнына мен оның қалай істен шығатынын зерттеп, мәселені бір деңгей жоғарыда шештім.",
+      groups: [
+        {
+          title: "Мәселе және шешім",
+          items: [
+            { title: "Мәселе", meta: "Жалған және қайталанған басулар", copy: "Шайдан зақымданған түйіспелер бір басқанда бірнеше сигнал берді." },
+            { title: "Шешім", meta: "Бағдарламалық debounce қабаты", copy: "Шулы сигналды оқып, оны бір дұрыс таңбаға айналдыратын қабат жаздым." },
+          ],
+        },
+        {
+          title: "Неге маңызды",
+          items: [
+            { title: "Көзқарас", meta: "Құрылғы емес, сигнал мәселесі", copy: "Физикалық ақауды шулы кіріс ретінде қарастырып, әдетте бұрағыш алатын жерден бір деңгей жоғары шештім." },
+            { title: "Қағида", meta: "Алдымен қалай бұзылатынын түсіну", copy: "Бір нәрсені қалай түзетуді шешпес бұрын, оның қалай істен шығатынын қарау." },
+          ],
+        },
+      ],
+    },
+    "project-research": {
+      kicker: "Зерттеу",
+      title: "Астанадағы тұрғын үй бағасының кеңістіктік факторлары",
+      intro: "Өнім жасаудан тыс зерттеу: орналасу қаладағы тұрғын үй бағасына қалай әсер етеді.",
+      groups: [
+        {
+          title: "Нәтиже және тақырып",
+          items: [
+            { title: "Нәтиже", meta: "Ломоносов-2026-да 3-орын", copy: "Студенттер, аспиранттар және жас ғалымдардың Халықаралық ғылыми конференциясындағы баяндама." },
+            { title: "Тақырып", meta: "Кеңістіктік экономика / тұрғын үй бағасын талдау", copy: "Орналасуға байланысты айнымалылар тұрғын үй бағасына қалай әсер етеді." },
+          ],
+        },
+        {
+          title: "Әдістер",
+          items: [
+            { title: "Кеңістіктік талдау", meta: "ГАЖ / қала деректері / география", copy: "Орналасуға байланысты айнымалылар картаға түсіріліп, қала аудандары бойынша салыстырылды." },
+          ],
+        },
+      ],
+    },
+    "project-rag": {
+      kicker: "Жоба",
+      title: "RAG және автоматтандыру",
+      intro: "Backend пен жұмыс құралдарының түйіскен жеріндегі қолданбалы AI.",
+      groups: [
+        {
+          title: "Жұмыс",
+          items: [
+            { title: "Кітапхана чат-боты", meta: "RAG / Ollama / n8n", copy: "Университет кітапханасының сайтындағы, кітапхананың өз материалдары бойынша жауап беретін AI чат-бот." },
+            { title: "Бағыт", meta: "RAG / интеграциялар / ішкі құралдар", copy: "Мекеме деректерін іздеуге және құрылымды түрде алуға арналған AI процестері." },
+            { title: "Практикалық пайда", meta: "Мекеме жұмысын қолдау", copy: "Тек таныстырылымдар үшін емес, нақты міндеттер үшін." },
+          ],
+        },
+      ],
+    },
   },
 };
 
 const buttons = document.querySelectorAll(".lang-btn");
 const translatable = document.querySelectorAll("[data-i18n]");
+const pageFrame = document.querySelector(".pixel-frame");
 const modalShell = document.querySelector(".modal-shell");
+const modalPanel = document.querySelector(".modal-panel");
 const modalTriggers = document.querySelectorAll(".modal-trigger");
 const modalCommand = document.getElementById("modal-command");
 const modalKicker = document.getElementById("modal-kicker");
 const modalTitle = document.getElementById("modal-title");
 const modalIntro = document.getElementById("modal-intro");
 const modalBody = document.getElementById("modal-body");
-const modalPreview = document.getElementById("modal-preview");
-const modalPreviewCopy = document.getElementById("modal-preview-copy");
+const modalLinks = document.getElementById("modal-links");
 const modalCloseButtons = document.querySelectorAll("[data-close-modal]");
 const modalPrimaryClose = document.querySelector(".modal-close");
 
-let currentLanguage = window.localStorage.getItem("portfolio-lang") || "en";
+function readSavedLanguage() {
+  try {
+    return window.localStorage.getItem("portfolio-lang");
+  } catch {
+    return null;
+  }
+}
+
+let currentLanguage = readSavedLanguage() || "en";
 let activeModalKey = null;
 let lastFocusedTrigger = null;
 
@@ -881,14 +1365,20 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function t(key) {
+  return translations[currentLanguage][key] ?? translations.en[key] ?? "";
+}
+
 function renderModalContent(modalKey) {
-  const entry = modalContent[modalKey];
+  const entry =
+    modalContent[currentLanguage][modalKey] ?? modalContent.en[modalKey];
+  const meta = modalMeta[modalKey] ?? {};
 
   if (!entry) {
     return;
   }
 
-  modalCommand.textContent = entry.command;
+  modalCommand.textContent = meta.command ?? "";
   modalKicker.textContent = entry.kicker;
   modalTitle.textContent = entry.title;
   modalIntro.textContent = entry.intro;
@@ -916,12 +1406,22 @@ function renderModalContent(modalKey) {
     )
     .join("");
 
-  if (entry.preview) {
-    modalPreview.hidden = false;
-    modalPreviewCopy.textContent = entry.preview;
+  if (meta.links?.length) {
+    modalLinks.hidden = false;
+    modalLinks.innerHTML = `
+      <p class="modal-group-title">${escapeHtml(t("modal_links"))}</p>
+      <div class="contact-row">
+        ${meta.links
+          .map(
+            (link) =>
+              `<a class="contact-link" href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(t(link.label))}</a>`,
+          )
+          .join("")}
+      </div>
+    `;
   } else {
-    modalPreview.hidden = true;
-    modalPreviewCopy.textContent = "";
+    modalLinks.hidden = true;
+    modalLinks.innerHTML = "";
   }
 }
 
@@ -930,12 +1430,15 @@ function openModal(modalKey, trigger) {
   lastFocusedTrigger = trigger;
   renderModalContent(modalKey);
   modalShell.hidden = false;
+  pageFrame.inert = true;
   document.body.classList.add("modal-open");
+  modalPanel.scrollTop = 0;
   modalPrimaryClose?.focus();
 }
 
 function closeModal() {
   modalShell.hidden = true;
+  pageFrame.inert = false;
   document.body.classList.remove("modal-open");
   activeModalKey = null;
 
@@ -944,25 +1447,54 @@ function closeModal() {
   }
 }
 
+// Keep Tab inside the open dialog.
+function trapFocus(event) {
+  const focusable = [
+    ...modalPanel.querySelectorAll("button, a[href]"),
+  ].filter((node) => !node.closest("[hidden]"));
+
+  if (!focusable.length) {
+    return;
+  }
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
 function applyLanguage(lang) {
-  const dict = translations[lang] || translations.en;
   currentLanguage = translations[lang] ? lang : "en";
 
   translatable.forEach((node) => {
-    const key = node.dataset.i18n;
+    const text = t(node.dataset.i18n);
 
-    if (dict[key]) {
-      node.textContent = dict[key];
+    if (text) {
+      node.textContent = text;
     }
   });
 
-  document.documentElement.lang = currentLanguage;
+  document.documentElement.lang = currentLanguage === "kz" ? "kk" : currentLanguage;
 
   buttons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === currentLanguage);
   });
 
-  window.localStorage.setItem("portfolio-lang", currentLanguage);
+  if (activeModalKey) {
+    renderModalContent(activeModalKey);
+  }
+
+  try {
+    window.localStorage.setItem("portfolio-lang", currentLanguage);
+  } catch {
+    // Storage can be blocked; the page still works without remembering.
+  }
 }
 
 buttons.forEach((button) => {
@@ -978,8 +1510,14 @@ modalCloseButtons.forEach((button) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && !modalShell.hidden) {
+  if (modalShell.hidden) {
+    return;
+  }
+
+  if (event.key === "Escape") {
     closeModal();
+  } else if (event.key === "Tab") {
+    trapFocus(event);
   }
 });
 
