@@ -22,4 +22,5 @@ Projects mentioned on the site: [Shiftray](https://github.com/sprinterz5/shiftra
 [library-qr](https://github.com/sprinterz5/library-qr),
 [Roomly](https://github.com/sprinterz5/roomly),
 [bloody-w95-linux](https://github.com/sprinterz5/bloody-w95-linux),
-[hacknu26](https://github.com/sprinterz5/hacknu26).
+[hacknu26](https://github.com/sprinterz5/hacknu26),
+[keyboard-ghost-filter](https://github.com/sprinterz5/keyboard-ghost-filter), and the live library site [library.coventry.edu.kz](https://library.coventry.edu.kz/).

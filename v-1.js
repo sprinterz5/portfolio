@@ -132,7 +132,7 @@ const translations = {
     fact_uni: "BSc CS with AI, Coventry University Kazakhstan",
     fact_langs: "RU / EN / KZ",
     now_one: "now:: shipping Shiftray, a Linux app for ASUS laptops",
-    now_two: "now:: running the PrimeTeens mentor platform",
+    now_two: "now:: building Bookgram, a social reading app",
     now_three:
       "now:: research on RL with Hamilton-Jacobi-Bellman value functions",
     chip_deployed: "deployed",
@@ -330,7 +330,7 @@ const translations = {
     fact_uni: "BSc CS with AI, Coventry University Kazakhstan",
     fact_langs: "RU / EN / KZ",
     now_one: "now:: выпускаю Shiftray, Linux-приложение для ноутбуков ASUS",
-    now_two: "now:: веду платформу для менторов PrimeTeens",
+    now_two: "now:: делаю Bookgram, социальное приложение для чтения",
     now_three:
       "now:: исследую RL с функциями ценности Гамильтона-Якоби-Беллмана",
     chip_deployed: "внедрено",
@@ -533,7 +533,7 @@ const translations = {
     fact_langs: "RU / EN / KZ",
     now_one:
       "now:: ASUS ноутбуктеріне арналған Linux қосымшасы Shiftray-ді шығарып жатырмын",
-    now_two: "now:: PrimeTeens менторлар платформасын жүргіземін",
+    now_two: "now:: Bookgram кітап оқуға арналған әлеуметтік қосымшасын жасап жатырмын",
     now_three:
       "now:: Гамильтон-Якоби-Беллман құндылық функцияларымен RL зерттеймін",
     chip_deployed: "енгізілген",
@@ -638,7 +638,12 @@ const modalMeta = {
       { label: "link_repo", href: "https://github.com/sprinterz5/bloody-w95-linux" },
     ],
   },
-  "project-debounce": { command: "$ open /projects/keyboard_debounce.sys" },
+  "project-debounce": {
+    command: "$ open /projects/keyboard_ghost_filter.sys",
+    links: [
+      { label: "link_repo", href: "https://github.com/sprinterz5/keyboard-ghost-filter" },
+    ],
+  },
   "project-research": { command: "$ open /projects/astana_housing.research" },
   "project-rag": { command: "$ open /projects/rag_automation.stack" },
 };
@@ -766,7 +771,7 @@ const modalContent = {
           items: [
             { title: "Web platform", meta: "Next.js / Prisma / PostgreSQL", copy: "Online workbooks with autosave and a live mentor view, homework review, and a student calendar with .ics." },
             { title: "Bot stack", meta: "aiogram / asyncpg / APScheduler", copy: "Shares one PostgreSQL database with the site; the bots send one-time login links." },
-            { title: "Deployment", meta: "Docker / nginx / systemd / backups", copy: "Runs on a VPS with backups and quiet monitoring." },
+            { title: "Deployment", meta: "Docker / nginx / systemd / backups", copy: "Ran on a VPS with backups and quiet monitoring during the course." },
           ],
         },
       ],
@@ -1128,7 +1133,7 @@ const modalContent = {
           items: [
             { title: "Веб-платформа", meta: "Next.js / Prisma / PostgreSQL", copy: "Онлайн-тетради с автосохранением и живым просмотром для ментора, проверка домашки и календарь ученика с .ics." },
             { title: "Стек бота", meta: "aiogram / asyncpg / APScheduler", copy: "Одна база PostgreSQL с сайтом; вход на сайт по одноразовой ссылке из бота." },
-            { title: "Развёртывание", meta: "Docker / nginx / systemd / бэкапы", copy: "Работает на VPS с бэкапами и тихим мониторингом." },
+            { title: "Развёртывание", meta: "Docker / nginx / systemd / бэкапы", copy: "Работала на VPS с бэкапами и тихим мониторингом на время курса." },
           ],
         },
       ],
@@ -1490,7 +1495,7 @@ const modalContent = {
           items: [
             { title: "Веб-платформа", meta: "Next.js / Prisma / PostgreSQL", copy: "Автосақтауы бар онлайн дәптерлер және ментордың тікелей бақылауы, үй тапсырмасын тексеру және .ics күнтізбесі." },
             { title: "Бот стегі", meta: "aiogram / asyncpg / APScheduler", copy: "Сайтпен бір PostgreSQL дерекқоры; сайтқа боттан келген бір реттік сілтеме арқылы кіреді." },
-            { title: "Орналастыру", meta: "Docker / nginx / systemd / сақтық көшірмелер", copy: "Сақтық көшірмелері мен мониторингі бар VPS-те жұмыс істейді." },
+            { title: "Орналастыру", meta: "Docker / nginx / systemd / сақтық көшірмелер", copy: "Курс кезінде сақтық көшірмелері мен мониторингі бар VPS-те жұмыс істеді." },
           ],
         },
       ],
@@ -1924,14 +1929,11 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// Light / dark theme: follows the system until the visitor picks one.
+// Light / dark theme: dark until the visitor picks light.
 const themeButton = document.querySelector(".theme-btn");
 
 function currentTheme() {
-  return (
-    document.documentElement.dataset.theme ||
-    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
-  );
+  return document.documentElement.dataset.theme || "dark";
 }
 
 themeButton?.addEventListener("click", () => {
