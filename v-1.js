@@ -17,7 +17,7 @@ const translations = {
     nav_deepdives: "blog",
     nav_study: "study",
     nav_contact: "contact",
-    projects_note: "9 entries -- open a card for details and links",
+    projects_note: "8 entries -- open a card for details and links",
     projects_kicker: "Selected builds",
     projects_title: "Projects behind the signal.",
     project_open: "open project file",
@@ -34,9 +34,9 @@ const translations = {
     project_autism_copy:
       "Built the UI/UX and PostgreSQL-backed data layer for an early autism-diagnosis app now deployed and postered in a local hospital.",
     project_one_tag: "Library Automation Intern",
-    project_one_title: "eLibra QR Middleware",
+    project_one_title: "Coventry Kazakhstan library platform",
     project_one_copy:
-      "Built a QR-based self-service issuance flow with FastAPI, Playwright RPA, SQLite, and a web interface that reduced librarian bottlenecks.",
+      "The library's live website: QR self-service book issuance through eLibra, event registration, admin pages and an AI Librarian chat that answers from the catalog, rules and site content.",
     project_two_tag: "University Product",
     project_two_title: "Roomly",
     project_two_copy:
@@ -46,14 +46,13 @@ const translations = {
     project_bloody_copy:
       "The mouse ships with Windows-only software, so I decoded its USB protocol and wrote a Python tool that sets RGB and DPI over hidraw.",
     project_debounce_tag: "Builder Story",
-    project_debounce_title:
-      "Tea-Damaged Keyboard -> Software Debounce Layer",
+    project_debounce_title: "Tea-damaged keyboard -> ghost-key filter",
     project_debounce_copy:
-      "A friend spilled tea on his keyboard and the damaged contacts fired multiple ghost keypresses per press. Instead of replacing the hardware, I studied the failure pattern and wrote a software layer that reads the messy multi-fire signal and normalizes it into a single correct character.",
+      "Tea shorted my friend's keyboard matrix: one press fired two scan codes. I logged the bursts, mapped which keys ghost which, and wrote a global hook that drops the ghosts. For pairs the signal can't tell apart, Caps Lock picks the second key.",
     project_three_tag: "Research",
     project_three_title: "Spatial Factors of Housing Prices in Astana",
     project_three_copy:
-      "Earned 3rd place at Lomonosov-2026 with research on how location-linked variables shape housing prices in Astana.",
+      "3rd place at Lomonosov-2026. Twelve location factors on a 1 km hexagon grid against Krisha.kz listings: distance to the centre, LRT and universities matter most.",
     project_four_tag: "Applied AI",
     project_four_title: "RAG and automation workflows",
     project_four_copy:
@@ -189,6 +188,11 @@ const translations = {
     read_post: "read",
     blog_all: "all posts",
     contact_title: "Let's talk.",
+    link_live: "Live site",
+    chip_live: "live",
+    chip_hook: "global keyboard hook",
+    chip_hex: "1 km hex grid",
+    chip_corr: "correlation",
   },
   ru: {
     hero_eyebrow: "строю // отлаживаю // соревнуюсь // выпускаю",
@@ -209,7 +213,7 @@ const translations = {
     nav_study: "учёба",
     nav_contact: "контакты",
     projects_note:
-      "9 записей -- откройте карточку, там подробности и ссылки",
+      "8 записей -- откройте карточку, там подробности и ссылки",
     projects_kicker: "Избранные проекты",
     projects_title: "Проекты за цифрами.",
     project_open: "открыть проект",
@@ -226,9 +230,9 @@ const translations = {
     project_autism_copy:
       "Сделал UI/UX и слой данных на PostgreSQL для приложения ранней диагностики аутизма. Приложение работает, его постер висит в местной больнице.",
     project_one_tag: "Стажировка в библиотеке",
-    project_one_title: "eLibra QR Middleware",
+    project_one_title: "Платформа библиотеки Coventry Kazakhstan",
     project_one_copy:
-      "Сделал самостоятельную выдачу книг по QR на FastAPI, Playwright RPA, SQLite и веб-интерфейсе, которая разгрузила библиотекарей.",
+      "Живой сайт библиотеки: самостоятельная выдача книг по QR через eLibra, регистрация на события, админка и AI-библиотекарь, который отвечает по каталогу, правилам и материалам сайта.",
     project_two_tag: "Университетский продукт",
     project_two_title: "Roomly",
     project_two_copy:
@@ -239,13 +243,13 @@ const translations = {
       "Программа для мыши есть только под Windows, поэтому я разобрал её USB-протокол и написал утилиту на Python, которая меняет подсветку и DPI через hidraw.",
     project_debounce_tag: "История",
     project_debounce_title:
-      "Залитая чаем клавиатура -> программный антидребезг",
+      "Залитая чаем клавиатура -> фильтр призрачных нажатий",
     project_debounce_copy:
-      "Друг пролил чай на клавиатуру, и повреждённые контакты давали несколько ложных нажатий на одно. Вместо замены железа я изучил, как именно они срабатывают, и написал программный слой, который превращает этот шумный сигнал в одно правильное нажатие.",
+      "Чай замкнул матрицу клавиатуры друга: одно нажатие давало два сканкода. Я записал эти пачки, составил карту, какая клавиша даёт какой призрак, и написал глобальный хук, который глушит призраков. Для пар, которые по сигналу не различить, вторую клавишу выбирает Caps Lock.",
     project_three_tag: "Исследование",
     project_three_title: "Пространственные факторы цен на жильё в Астане",
     project_three_copy:
-      "3-е место на Ломоносов-2026 с исследованием о том, как переменные, связанные с местоположением, влияют на цены на жильё в Астане.",
+      "3-е место на Ломоносов-2026. Двенадцать факторов местоположения на сетке шестиугольников 1 км против объявлений Krisha.kz: сильнее всего влияют расстояние до центра, ЛРТ и университетов.",
     project_four_tag: "Прикладной AI",
     project_four_title: "RAG и автоматизация",
     project_four_copy:
@@ -384,6 +388,11 @@ const translations = {
     read_post: "читать",
     blog_all: "все записи",
     contact_title: "Давайте поговорим.",
+    link_live: "Открыть сайт",
+    chip_live: "работает",
+    chip_hook: "глобальный хук клавиатуры",
+    chip_hex: "сетка 1 км",
+    chip_corr: "корреляция",
   },
   kz: {
     hero_eyebrow: "жасаймын // түзетемін // жарысамын // шығарамын",
@@ -404,7 +413,7 @@ const translations = {
     nav_study: "оқу",
     nav_contact: "байланыс",
     projects_note:
-      "9 жазба -- толығырақ ақпарат пен сілтемелер карточканың ішінде",
+      "8 жазба -- толығырақ ақпарат пен сілтемелер карточканың ішінде",
     projects_kicker: "Таңдаулы жобалар",
     projects_title: "Сандардың артындағы жобалар.",
     project_open: "жобаны ашу",
@@ -422,9 +431,9 @@ const translations = {
     project_autism_copy:
       "Аутизмді ерте анықтауға арналған қосымшаның UI/UX бөлігін және PostgreSQL негізіндегі деректер қабатын жасадым. Қосымша іске қосылған, оның постері жергілікті ауруханада ілулі тұр.",
     project_one_tag: "Кітапханадағы тағылымдама",
-    project_one_title: "eLibra QR Middleware",
+    project_one_title: "Coventry Kazakhstan кітапханасының платформасы",
     project_one_copy:
-      "FastAPI, Playwright RPA, SQLite және веб-интерфейс арқылы QR бойынша кітапты өз бетінше алу жүйесін жасадым, ол кітапханашылардың жүктемесін азайтты.",
+      "Кітапхананың жұмыс істеп тұрған сайты: eLibra арқылы QR бойынша кітапты өз бетінше алу, іс-шараларға тіркелу, әкімші беттері және каталог, ережелер мен сайт материалдары бойынша жауап беретін AI кітапханашы.",
     project_two_tag: "Университет өнімі",
     project_two_title: "Roomly",
     project_two_copy:
@@ -435,14 +444,14 @@ const translations = {
       "Тінтуірдің бағдарламасы тек Windows-қа арналған, сондықтан мен оның USB протоколын талдап, hidraw арқылы жарық пен DPI-ды өзгертетін Python құралын жаздым.",
     project_debounce_tag: "Оқиға",
     project_debounce_title:
-      "Шай төгілген пернетақта -> бағдарламалық debounce",
+      "Шай төгілген пернетақта -> жалған басуларды сүзгі",
     project_debounce_copy:
-      "Досым пернетақтасына шай төгіп алды, зақымдалған түйіспелер бір басқанда бірнеше жалған басу берді. Құрылғыны ауыстырудың орнына мен ақаудың қалай пайда болатынын зерттеп, осы шулы сигналды бір дұрыс таңбаға айналдыратын бағдарламалық қабат жаздым.",
+      "Шай досымның пернетақта матрицасын тұйықтап тастады: бір басу екі сканкод берді. Мен осы топтарды жазып алып, қай перне қандай жалған сигнал беретінінің картасын жасадым да, оларды өшіретін глобал хук жаздым. Сигнал бойынша ажыратуға болмайтын жұптарда екінші пернені Caps Lock таңдайды.",
     project_three_tag: "Зерттеу",
     project_three_title:
       "Астанадағы тұрғын үй бағасының кеңістіктік факторлары",
     project_three_copy:
-      "Орналасуға байланысты айнымалылардың Астанадағы тұрғын үй бағасына әсері туралы зерттеуіммен Ломоносов-2026-да 3-орын алдым.",
+      "Ломоносов-2026-да 3-орын. Krisha.kz хабарландыруларымен салыстырылған 1 км алтыбұрышты тордағы он екі орналасу факторы: орталыққа, ЛРТ-ға және университеттерге дейінгі қашықтық ең көп әсер етеді.",
     project_four_tag: "Қолданбалы AI",
     project_four_title: "RAG және автоматтандыру",
     project_four_copy:
@@ -581,6 +590,11 @@ const translations = {
     read_post: "оқу",
     blog_all: "барлық жазбалар",
     contact_title: "Сөйлесейік.",
+    link_live: "Сайтты ашу",
+    chip_live: "жұмыс істейді",
+    chip_hook: "глобал пернетақта хугы",
+    chip_hex: "1 км тор",
+    chip_corr: "корреляция",
   },
 };
 
@@ -608,8 +622,11 @@ const modalMeta = {
     links: [{ label: "link_poster", href: "notes-and-builds.pdf" }],
   },
   "project-elibra": {
-    command: "$ open /projects/library_qr.middleware",
-    links: [{ label: "link_repo", href: "https://github.com/sprinterz5/library-qr" }],
+    command: "$ open /projects/library.platform",
+    links: [
+      { label: "link_live", href: "https://library.coventry.edu.kz/" },
+      { label: "link_repo", href: "https://github.com/sprinterz5/library-qr" },
+    ],
   },
   "project-roomly": {
     command: "$ open /projects/roomly.app",
@@ -776,26 +793,66 @@ const modalContent = {
       ],
     },
     "project-elibra": {
-      kicker: "Project file",
-      title: "eLibra QR Middleware",
-      intro: "Many libraries in Astana issue books through e-libra. I automated the issuance so students can do it themselves.",
-      groups: [
+      "kicker": "Project file",
+      "title": "Coventry Kazakhstan library platform",
+      "intro": "The university library's website, which I built and which runs today at library.coventry.edu.kz. It started as a fix for the queue at the issue desk and grew into the library's main site.",
+      "groups": [
         {
-          title: "Problem and solution",
-          items: [
-            { title: "Problem", meta: "Library issuance bottleneck", copy: "Students had to wait for a librarian to issue every book by hand." },
-            { title: "Solution", meta: "Self-service QR flow", copy: "A reader-ID-based flow lets students issue books themselves; an alternative to RFID gates." },
-          ],
+          "title": "Self-service issuance",
+          "items": [
+            {
+              "title": "Problem",
+              "meta": "Manual issuance in eLibra",
+              "copy": "Students waited for a librarian to issue every book by hand, and eLibra has no API."
+            },
+            {
+              "title": "Solution",
+              "meta": "QR / barcode + Playwright RPA",
+              "copy": "A student scans the book and their reader barcode; Playwright drives the eLibra interface the way a librarian would. A low-cost alternative to RFID gates."
+            }
+          ]
         },
         {
-          title: "Build and status",
-          items: [
-            { title: "Backend", meta: "FastAPI / SQLite", copy: "Kept the system lightweight and deployable." },
-            { title: "Automation", meta: "Playwright RPA", copy: "Drives the e-libra interface, which has no API, the same way a librarian would." },
-            { title: "Status", meta: "In use", copy: "Used by the Coventry University Kazakhstan library." },
-          ],
+          "title": "AI Librarian",
+          "items": [
+            {
+              "title": "Retrieval",
+              "meta": "Pinecone + Ollama embeddings",
+              "copy": "The library catalog, rules from PDFs and site pages are indexed; each question pulls the closest pieces as context."
+            },
+            {
+              "title": "Live catalog",
+              "meta": "eLibra search",
+              "copy": "Book questions also search eLibra directly, so the answer shows copies that are really on the shelf."
+            },
+            {
+              "title": "Answer",
+              "meta": "llama3.2 via Ollama, RU and EN",
+              "copy": "Runs on a local model with a short history of the conversation and suggestions while typing."
+            }
+          ]
         },
-      ],
+        {
+          "title": "Rest of the site",
+          "items": [
+            {
+              "title": "Events",
+              "meta": "Registration on the site",
+              "copy": "Workshops with registration and attendee lists, replacing Microsoft Forms."
+            },
+            {
+              "title": "Admin",
+              "meta": "Returns, readers, stats",
+              "copy": "Pages for librarians to moderate returns, find readers and see statistics."
+            },
+            {
+              "title": "Stack",
+              "meta": "FastAPI / SQLite / Docker / nginx",
+              "copy": "Deployed for the university and in daily use."
+            }
+          ]
+        }
+      ]
     },
     "project-roomly": {
       kicker: "Project file",
@@ -840,45 +897,98 @@ const modalContent = {
       ],
     },
     "project-debounce": {
-      kicker: "Project file",
-      title: "Tea-Damaged Keyboard -> Software Debounce Layer",
-      intro: "A friend spilled tea on his keyboard. Instead of replacing the hardware, I studied the failure pattern and fixed it one layer up.",
-      groups: [
+      "kicker": "Project file",
+      "title": "Tea-damaged keyboard -> ghost-key filter",
+      "intro": "A friend spilled tea on his keyboard. Instead of buying a new one, I measured how it fails and filtered the faults out in software.",
+      "groups": [
         {
-          title: "Problem and solution",
-          items: [
-            { title: "Problem", meta: "Ghost / multi-fire keypresses", copy: "Tea-damaged contacts fired multiple signals per intended keypress." },
-            { title: "Solution", meta: "Software debounce layer", copy: "Wrote a layer that reads the messy multi-fire signal and normalizes it into a single correct character." },
-          ],
+          "title": "Diagnosis",
+          "items": [
+            {
+              "title": "Logger",
+              "meta": "Bursts of scan codes",
+              "copy": "A passive global hook groups events that arrive together from one physical press and saves them to JSONL."
+            },
+            {
+              "title": "Finding",
+              "meta": "A shorted matrix",
+              "copy": "Number keys always come first in a burst with a fixed ghost (1 -> z, 2 -> x ...). Letter pairs like a/z come in a fixed order whichever key was pressed."
+            }
+          ]
         },
         {
-          title: "Why it matters",
-          items: [
-            { title: "Framing", meta: "Signal problem, not a hardware problem", copy: "Treated a physical fault as noisy input and solved it one abstraction layer above where most people reach for a screwdriver." },
-            { title: "Pattern", meta: "Understand the failure first", copy: "Look at how something breaks before deciding how to fix it." },
-          ],
-        },
-      ],
+          "title": "Filter",
+          "items": [
+            {
+              "title": "Number row",
+              "meta": "Drop the ghost",
+              "copy": "The real key always leads, so the ghost that follows within its time window is swallowed."
+            },
+            {
+              "title": "Letter pairs",
+              "meta": "Genuinely ambiguous",
+              "copy": "The signal cannot tell a from z, so a plain press types the home-row key and Caps Lock + key types the bottom-row one."
+            },
+            {
+              "title": "Dead end",
+              "meta": "Right Ctrl",
+              "copy": "Tried first as the switch, but the matrix cannot register Ctrl together with keys in that column at all. A hardware limit, so Caps Lock it is."
+            },
+            {
+              "title": "Safety",
+              "meta": "Ctrl+Alt+Esc",
+              "copy": "An emergency exit returns the keyboard to normal; injected keys run on a separate thread so the hook never catches its own events."
+            }
+          ]
+        }
+      ]
     },
     "project-research": {
-      kicker: "Research file",
-      title: "Spatial Factors of Housing Prices in Astana",
-      intro: "Research outside product work: how location shapes housing prices across the city.",
-      groups: [
+      "kicker": "Research file",
+      "title": "Spatial Factors of Housing Prices in Astana",
+      "intro": "A team study for the Lomonosov-2026 conference: which location factors actually move apartment prices in Astana, and where renting out pays best.",
+      "groups": [
         {
-          title: "Result and topic",
-          items: [
-            { title: "Result", meta: "3rd place at Lomonosov-2026", copy: "Presented at the International Scientific Conference of Students, Postgraduates, and Young Scientists." },
-            { title: "Topic", meta: "Spatial economics / housing price analysis", copy: "How location-linked variables shape residential prices." },
-          ],
+          "title": "Data",
+          "items": [
+            {
+              "title": "Listings",
+              "meta": "Krisha.kz",
+              "copy": "Price, area, rooms, year of construction and coordinates of apartments."
+            },
+            {
+              "title": "City layers",
+              "meta": "OpenStreetMap / 2GIS / Yandex Maps / MVD geoportal",
+              "copy": "Schools, kindergartens, pharmacies, shops, malls, universities, LRT stations, rush-hour travel time to the centre, crime and air pollution."
+            },
+            {
+              "title": "Grid",
+              "meta": "1 km hexagons in ArcGIS",
+              "copy": "Every factor and the average adjusted price mapped onto the same cells."
+            }
+          ]
         },
         {
-          title: "Methods",
-          items: [
-            { title: "Spatial layer", meta: "GIS / urban data / geography", copy: "Location-based variables mapped and compared across districts of the city." },
-          ],
-        },
-      ],
+          "title": "Findings",
+          "items": [
+            {
+              "title": "Moderate effect",
+              "meta": "Centre -0.59 / LRT -0.54 / universities -0.49",
+              "copy": "Only 3 of 12 factors matter much for purchase prices; malls and pharmacies have a weak effect."
+            },
+            {
+              "title": "Rent vs. purchase",
+              "meta": "Rent reacts, prices mostly don't",
+              "copy": "Rental prices follow location far more than purchase prices do."
+            },
+            {
+              "title": "Result",
+              "meta": "3rd place of 20 reports",
+              "copy": "Geo-ecology and spatial analysis section; districts with the best rental margin mapped (Zhagalau, south-west of EXPO, the Turan embankment)."
+            }
+          ]
+        }
+      ]
     },
     "project-rag": {
       kicker: "Project file",
@@ -1045,26 +1155,66 @@ const modalContent = {
       ],
     },
     "project-elibra": {
-      kicker: "Проект",
-      title: "eLibra QR Middleware",
-      intro: "Многие библиотеки Астаны выдают книги через e-libra. Я автоматизировал выдачу, чтобы студенты могли делать это сами.",
-      groups: [
+      "kicker": "Проект",
+      "title": "Платформа библиотеки Coventry Kazakhstan",
+      "intro": "Сайт университетской библиотеки, который я сделал и который сейчас работает на library.coventry.edu.kz. Начинался как решение очереди на выдачу и вырос в основной сайт библиотеки.",
+      "groups": [
         {
-          title: "Проблема и решение",
-          items: [
-            { title: "Проблема", meta: "Очередь на выдачу", copy: "Студенты ждали, пока библиотекарь вручную выдаст каждую книгу." },
-            { title: "Решение", meta: "Самостоятельная выдача по QR", copy: "По номеру читательского билета студент выдаёт книгу сам; альтернатива RFID-воротам." },
-          ],
+          "title": "Самостоятельная выдача",
+          "items": [
+            {
+              "title": "Проблема",
+              "meta": "Ручная выдача в eLibra",
+              "copy": "Студенты ждали, пока библиотекарь вручную выдаст каждую книгу, а у eLibra нет API."
+            },
+            {
+              "title": "Решение",
+              "meta": "QR / штрихкод + Playwright RPA",
+              "copy": "Студент сканирует книгу и свой читательский штрихкод, Playwright управляет интерфейсом eLibra так же, как библиотекарь. Дешёвая альтернатива RFID-воротам."
+            }
+          ]
         },
         {
-          title: "Реализация и статус",
-          items: [
-            { title: "Бэкенд", meta: "FastAPI / SQLite", copy: "Лёгкая система, которую просто развернуть." },
-            { title: "Автоматизация", meta: "Playwright RPA", copy: "Управляет интерфейсом e-libra, у которого нет API, так же, как это делал бы библиотекарь." },
-            { title: "Статус", meta: "Используется", copy: "Работает в библиотеке Coventry University Kazakhstan." },
-          ],
+          "title": "AI-библиотекарь",
+          "items": [
+            {
+              "title": "Поиск",
+              "meta": "Pinecone + эмбеддинги Ollama",
+              "copy": "Каталог, правила из PDF и страницы сайта проиндексированы; к каждому вопросу подтягиваются ближайшие куски как контекст."
+            },
+            {
+              "title": "Живой каталог",
+              "meta": "Поиск по eLibra",
+              "copy": "Вопросы о книгах ищутся и прямо в eLibra, поэтому в ответе экземпляры, которые реально стоят на полке."
+            },
+            {
+              "title": "Ответ",
+              "meta": "llama3.2 через Ollama, RU и EN",
+              "copy": "Локальная модель, короткая история диалога и подсказки при наборе."
+            }
+          ]
         },
-      ],
+        {
+          "title": "Остальной сайт",
+          "items": [
+            {
+              "title": "События",
+              "meta": "Регистрация на сайте",
+              "copy": "Воркшопы с регистрацией и списками участников вместо Microsoft Forms."
+            },
+            {
+              "title": "Админка",
+              "meta": "Возвраты, читатели, статистика",
+              "copy": "Страницы для библиотекарей: модерация возвратов, поиск читателей, статистика."
+            },
+            {
+              "title": "Стек",
+              "meta": "FastAPI / SQLite / Docker / nginx",
+              "copy": "Развёрнуто в университете и используется каждый день."
+            }
+          ]
+        }
+      ]
     },
     "project-roomly": {
       kicker: "Проект",
@@ -1109,45 +1259,98 @@ const modalContent = {
       ],
     },
     "project-debounce": {
-      kicker: "Проект",
-      title: "Залитая чаем клавиатура -> программный антидребезг",
-      intro: "Друг пролил чай на клавиатуру. Вместо замены железа я изучил, как она сбоит, и исправил это уровнем выше.",
-      groups: [
+      "kicker": "Проект",
+      "title": "Залитая чаем клавиатура -> фильтр призрачных нажатий",
+      "intro": "Друг пролил чай на клавиатуру. Вместо новой клавиатуры я измерил, как именно она сбоит, и отфильтровал сбои программно.",
+      "groups": [
         {
-          title: "Проблема и решение",
-          items: [
-            { title: "Проблема", meta: "Ложные и повторные нажатия", copy: "Повреждённые чаем контакты давали несколько сигналов на одно нажатие." },
-            { title: "Решение", meta: "Программный антидребезг", copy: "Написал слой, который читает шумный сигнал и превращает его в одно правильное нажатие." },
-          ],
+          "title": "Диагностика",
+          "items": [
+            {
+              "title": "Логгер",
+              "meta": "Пачки сканкодов",
+              "copy": "Пассивный глобальный хук группирует события, пришедшие вместе от одного физического нажатия, и пишет их в JSONL."
+            },
+            {
+              "title": "Вывод",
+              "meta": "Замкнутая матрица",
+              "copy": "Цифры всегда идут первыми в пачке с постоянным призраком (1 -> z, 2 -> x ...). Буквенные пары вроде a/z приходят в одном и том же порядке, какую бы клавишу ни нажали."
+            }
+          ]
         },
         {
-          title: "Почему это важно",
-          items: [
-            { title: "Взгляд", meta: "Проблема сигнала, а не железа", copy: "Отнёсся к физической неисправности как к шумному входу и решил её на уровень выше, чем там, где обычно берут отвёртку." },
-            { title: "Принцип", meta: "Сначала понять, как ломается", copy: "Смотреть, как именно что-то сбоит, прежде чем решать, как это чинить." },
-          ],
-        },
-      ],
+          "title": "Фильтр",
+          "items": [
+            {
+              "title": "Цифровой ряд",
+              "meta": "Глушить призрака",
+              "copy": "Настоящая клавиша всегда первая, поэтому призрак в своём окне времени проглатывается."
+            },
+            {
+              "title": "Буквенные пары",
+              "meta": "По-настоящему неразличимы",
+              "copy": "По сигналу a от z не отличить, поэтому обычное нажатие печатает клавишу домашнего ряда, а Caps Lock + клавиша — нижнего."
+            },
+            {
+              "title": "Тупик",
+              "meta": "Правый Ctrl",
+              "copy": "Сначала пробовал его как переключатель, но матрица вообще не регистрирует Ctrl вместе с клавишами этого столбца. Это ограничение железа, поэтому Caps Lock."
+            },
+            {
+              "title": "Безопасность",
+              "meta": "Ctrl+Alt+Esc",
+              "copy": "Аварийный выход возвращает клавиатуру в норму; допечатка идёт в отдельном потоке, чтобы хук не ловил свои же события."
+            }
+          ]
+        }
+      ]
     },
     "project-research": {
-      kicker: "Исследование",
-      title: "Пространственные факторы цен на жильё в Астане",
-      intro: "Исследование вне продуктовой работы: как местоположение влияет на цены на жильё в городе.",
-      groups: [
+      "kicker": "Исследование",
+      "title": "Пространственные факторы цен на жильё в Астане",
+      "intro": "Командное исследование для конференции Ломоносов-2026: какие факторы местоположения реально двигают цены на квартиры в Астане и где сдавать выгоднее всего.",
+      "groups": [
         {
-          title: "Результат и тема",
-          items: [
-            { title: "Результат", meta: "3-е место на Ломоносов-2026", copy: "Доклад на Международной научной конференции студентов, аспирантов и молодых учёных." },
-            { title: "Тема", meta: "Пространственная экономика / анализ цен на жильё", copy: "Как переменные, связанные с местоположением, влияют на цены на жильё." },
-          ],
+          "title": "Данные",
+          "items": [
+            {
+              "title": "Объявления",
+              "meta": "Krisha.kz",
+              "copy": "Цена, площадь, комнаты, год постройки и координаты квартир."
+            },
+            {
+              "title": "Слои города",
+              "meta": "OpenStreetMap / 2ГИС / Яндекс Карты / геопортал МВД",
+              "copy": "Школы, детсады, аптеки, магазины, ТРЦ, университеты, станции ЛРТ, время до центра в час пик, преступность и загрязнение воздуха."
+            },
+            {
+              "title": "Сетка",
+              "meta": "Шестиугольники 1 км в ArcGIS",
+              "copy": "Все факторы и средняя приведённая цена нанесены на одни и те же ячейки."
+            }
+          ]
         },
         {
-          title: "Методы",
-          items: [
-            { title: "Пространственный анализ", meta: "ГИС / городские данные / география", copy: "Переменные, связанные с местоположением, нанесены на карту и сравнены по районам города." },
-          ],
-        },
-      ],
+          "title": "Результаты",
+          "items": [
+            {
+              "title": "Умеренное влияние",
+              "meta": "Центр -0,59 / ЛРТ -0,54 / университеты -0,49",
+              "copy": "Из 12 факторов на цену покупки заметно влияют только 3; у ТРЦ и аптек влияние слабое."
+            },
+            {
+              "title": "Аренда и покупка",
+              "meta": "Аренда реагирует, цены почти нет",
+              "copy": "Цены аренды следуют за местоположением намного сильнее, чем цены покупки."
+            },
+            {
+              "title": "Итог",
+              "meta": "3-е место из 20 докладов",
+              "copy": "Секция геоэкологии и пространственного анализа; на карте выделены районы с максимальной маржой аренды (Жагалау, юго-запад от ЭКСПО, набережная у ул. Туран)."
+            }
+          ]
+        }
+      ]
     },
     "project-rag": {
       kicker: "Проект",
@@ -1314,26 +1517,66 @@ const modalContent = {
       ],
     },
     "project-elibra": {
-      kicker: "Жоба",
-      title: "eLibra QR Middleware",
-      intro: "Астанадағы көптеген кітапханалар кітапты e-libra арқылы береді. Студенттер мұны өздері жасай алуы үшін кітап беруді автоматтандырдым.",
-      groups: [
+      "kicker": "Жоба",
+      "title": "Coventry Kazakhstan кітапханасының платформасы",
+      "intro": "Мен жасаған және қазір library.coventry.edu.kz мекенжайында жұмыс істеп тұрған университет кітапханасының сайты. Кітап беру кезегін шешуден басталып, кітапхананың негізгі сайтына айналды.",
+      "groups": [
         {
-          title: "Мәселе және шешім",
-          items: [
-            { title: "Мәселе", meta: "Кітап алу кезегі", copy: "Студенттер кітапханашы әр кітапты қолмен бергенше күтетін." },
-            { title: "Шешім", meta: "QR арқылы өз бетінше алу", copy: "Оқырман билетінің нөмірі бойынша студент кітапты өзі алады; RFID қақпаларына балама." },
-          ],
+          "title": "Кітапты өз бетінше алу",
+          "items": [
+            {
+              "title": "Мәселе",
+              "meta": "eLibra-да қолмен беру",
+              "copy": "Студенттер кітапханашы әр кітапты қолмен бергенше күтетін, ал eLibra-да API жоқ."
+            },
+            {
+              "title": "Шешім",
+              "meta": "QR / штрихкод + Playwright RPA",
+              "copy": "Студент кітапты және өзінің оқырман штрихкодын сканерлейді, Playwright eLibra интерфейсін кітапханашы сияқты басқарады. RFID қақпаларына арзан балама."
+            }
+          ]
         },
         {
-          title: "Іске асыру және күйі",
-          items: [
-            { title: "Backend", meta: "FastAPI / SQLite", copy: "Оңай орнатылатын жеңіл жүйе." },
-            { title: "Автоматтандыру", meta: "Playwright RPA", copy: "API-ы жоқ e-libra интерфейсін кітапханашы сияқты басқарады." },
-            { title: "Күйі", meta: "Қолданыста", copy: "Coventry University Kazakhstan кітапханасында жұмыс істейді." },
-          ],
+          "title": "AI кітапханашы",
+          "items": [
+            {
+              "title": "Іздеу",
+              "meta": "Pinecone + Ollama эмбеддингтері",
+              "copy": "Каталог, PDF-тегі ережелер және сайт беттері индекстелген; әр сұраққа ең жақын бөліктер контекст ретінде алынады."
+            },
+            {
+              "title": "Тірі каталог",
+              "meta": "eLibra бойынша іздеу",
+              "copy": "Кітап туралы сұрақтар тікелей eLibra-дан да ізделеді, сондықтан жауапта сөреде нақты тұрған даналар көрсетіледі."
+            },
+            {
+              "title": "Жауап",
+              "meta": "Ollama арқылы llama3.2, RU және EN",
+              "copy": "Жергілікті модель, диалогтың қысқа тарихы және теру кезіндегі ұсыныстар."
+            }
+          ]
         },
-      ],
+        {
+          "title": "Сайттың қалған бөлігі",
+          "items": [
+            {
+              "title": "Іс-шаралар",
+              "meta": "Сайтта тіркелу",
+              "copy": "Microsoft Forms-тың орнына тіркелуі және қатысушылар тізімі бар воркшоптар."
+            },
+            {
+              "title": "Әкімші беттері",
+              "meta": "Қайтарулар, оқырмандар, статистика",
+              "copy": "Кітапханашыларға арналған беттер: қайтаруларды тексеру, оқырмандарды іздеу, статистика."
+            },
+            {
+              "title": "Стек",
+              "meta": "FastAPI / SQLite / Docker / nginx",
+              "copy": "Университетте орнатылған және күн сайын қолданылады."
+            }
+          ]
+        }
+      ]
     },
     "project-roomly": {
       kicker: "Жоба",
@@ -1378,45 +1621,98 @@ const modalContent = {
       ],
     },
     "project-debounce": {
-      kicker: "Жоба",
-      title: "Шай төгілген пернетақта -> бағдарламалық debounce",
-      intro: "Досым пернетақтасына шай төгіп алды. Құрылғыны ауыстырудың орнына мен оның қалай істен шығатынын зерттеп, мәселені бір деңгей жоғарыда шештім.",
-      groups: [
+      "kicker": "Жоба",
+      "title": "Шай төгілген пернетақта -> жалған басуларды сүзгі",
+      "intro": "Досым пернетақтасына шай төгіп алды. Жаңасын алудың орнына мен оның қалай істен шығатынын өлшеп, ақауларды бағдарлама арқылы сүздім.",
+      "groups": [
         {
-          title: "Мәселе және шешім",
-          items: [
-            { title: "Мәселе", meta: "Жалған және қайталанған басулар", copy: "Шайдан зақымданған түйіспелер бір басқанда бірнеше сигнал берді." },
-            { title: "Шешім", meta: "Бағдарламалық debounce қабаты", copy: "Шулы сигналды оқып, оны бір дұрыс таңбаға айналдыратын қабат жаздым." },
-          ],
+          "title": "Диагностика",
+          "items": [
+            {
+              "title": "Логгер",
+              "meta": "Сканкод топтары",
+              "copy": "Пассивті глобал хук бір физикалық басудан бірге келген оқиғаларды топтап, JSONL-ге жазады."
+            },
+            {
+              "title": "Қорытынды",
+              "meta": "Тұйықталған матрица",
+              "copy": "Сандар әрқашан топта бірінші келеді және тұрақты жалған сигнал береді (1 -> z, 2 -> x ...). a/z сияқты әріп жұптары қай перне басылса да бір ретпен келеді."
+            }
+          ]
         },
         {
-          title: "Неге маңызды",
-          items: [
-            { title: "Көзқарас", meta: "Құрылғы емес, сигнал мәселесі", copy: "Физикалық ақауды шулы кіріс ретінде қарастырып, әдетте бұрағыш алатын жерден бір деңгей жоғары шештім." },
-            { title: "Қағида", meta: "Алдымен қалай бұзылатынын түсіну", copy: "Бір нәрсені қалай түзетуді шешпес бұрын, оның қалай істен шығатынын қарау." },
-          ],
-        },
-      ],
+          "title": "Сүзгі",
+          "items": [
+            {
+              "title": "Сандар қатары",
+              "meta": "Жалған сигналды өшіру",
+              "copy": "Нақты перне әрқашан бірінші, сондықтан оның уақыт терезесіндегі жалған сигнал жұтылады."
+            },
+            {
+              "title": "Әріп жұптары",
+              "meta": "Шынымен ажыратылмайды",
+              "copy": "Сигнал бойынша a мен z-ті ажырату мүмкін емес, сондықтан жай басу негізгі қатардағы пернені, ал Caps Lock + перне төменгі қатардағысын басады."
+            },
+            {
+              "title": "Тұйық",
+              "meta": "Оң жақ Ctrl",
+              "copy": "Алдымен ауыстырғыш ретінде соны қолданып көрдім, бірақ матрица Ctrl-ды сол бағандағы пернелермен бірге мүлде тіркемейді. Бұл құрылғының шектеуі, сондықтан Caps Lock."
+            },
+            {
+              "title": "Қауіпсіздік",
+              "meta": "Ctrl+Alt+Esc",
+              "copy": "Апаттық шығу пернетақтаны қалыпты күйге қайтарады; хук өз оқиғаларын ұстап алмауы үшін таңба бөлек ағында енгізіледі."
+            }
+          ]
+        }
+      ]
     },
     "project-research": {
-      kicker: "Зерттеу",
-      title: "Астанадағы тұрғын үй бағасының кеңістіктік факторлары",
-      intro: "Өнім жасаудан тыс зерттеу: орналасу қаладағы тұрғын үй бағасына қалай әсер етеді.",
-      groups: [
+      "kicker": "Зерттеу",
+      "title": "Астанадағы тұрғын үй бағасының кеңістіктік факторлары",
+      "intro": "Ломоносов-2026 конференциясына арналған командалық зерттеу: Астанада пәтер бағасына орналасудың қандай факторлары шынымен әсер етеді және жалға беру қай жерде тиімді.",
+      "groups": [
         {
-          title: "Нәтиже және тақырып",
-          items: [
-            { title: "Нәтиже", meta: "Ломоносов-2026-да 3-орын", copy: "Студенттер, аспиранттар және жас ғалымдардың Халықаралық ғылыми конференциясындағы баяндама." },
-            { title: "Тақырып", meta: "Кеңістіктік экономика / тұрғын үй бағасын талдау", copy: "Орналасуға байланысты айнымалылар тұрғын үй бағасына қалай әсер етеді." },
-          ],
+          "title": "Деректер",
+          "items": [
+            {
+              "title": "Хабарландырулар",
+              "meta": "Krisha.kz",
+              "copy": "Пәтерлердің бағасы, ауданы, бөлме саны, салынған жылы және координаттары."
+            },
+            {
+              "title": "Қала қабаттары",
+              "meta": "OpenStreetMap / 2ГИС / Яндекс Карталар / ІІМ геопорталы",
+              "copy": "Мектептер, балабақшалар, дәріханалар, дүкендер, сауда орталықтары, университеттер, ЛРТ бекеттері, қарбалас уақытта орталыққа дейінгі жол, қылмыс және ауаның ластануы."
+            },
+            {
+              "title": "Тор",
+              "meta": "ArcGIS-те 1 км алтыбұрыштар",
+              "copy": "Барлық факторлар мен орташа келтірілген баға бір ұяшықтарға түсірілген."
+            }
+          ]
         },
         {
-          title: "Әдістер",
-          items: [
-            { title: "Кеңістіктік талдау", meta: "ГАЖ / қала деректері / география", copy: "Орналасуға байланысты айнымалылар картаға түсіріліп, қала аудандары бойынша салыстырылды." },
-          ],
-        },
-      ],
+          "title": "Нәтижелер",
+          "items": [
+            {
+              "title": "Орташа әсер",
+              "meta": "Орталық -0,59 / ЛРТ -0,54 / университеттер -0,49",
+              "copy": "12 фактордың ішінде сатып алу бағасына тек 3-еуі айтарлықтай әсер етеді; сауда орталықтары мен дәріханалардың әсері әлсіз."
+            },
+            {
+              "title": "Жалға алу және сатып алу",
+              "meta": "Жалдау әсер етеді, баға дерлік жоқ",
+              "copy": "Жалдау бағасы орналасуға сатып алу бағасынан әлдеқайда күшті тәуелді."
+            },
+            {
+              "title": "Нәтиже",
+              "meta": "20 баяндаманың ішінде 3-орын",
+              "copy": "Геоэкология және кеңістіктік талдау секциясы; картада жалдау маржасы ең жоғары аудандар белгіленген (Жағалау, EXPO-ның оңтүстік-батысы, Тұран көшесі маңындағы жағалау)."
+            }
+          ]
+        }
+      ]
     },
     "project-rag": {
       kicker: "Жоба",

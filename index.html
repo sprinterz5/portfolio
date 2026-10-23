@@ -151,7 +151,7 @@
         <section class="section reveal" id="projects">
           <div class="section-terminal">
             <p class="command"><span class="section-num">01</span> $ ls /projects/</p>
-            <p class="section-note" data-i18n="projects_note">9 entries -- open a card for details and links</p>
+            <p class="section-note" data-i18n="projects_note">8 entries -- open a card for details and links</p>
           </div>
           <div class="section-head">
             <p class="card-kicker" data-i18n="projects_kicker">Selected builds</p>
@@ -220,15 +220,16 @@
             </article>
 
             <article class="project-card">
-              <div class="project-thumb thumb-phone">
-                <img src="img/library-desk.webp" width="420" height="900" loading="lazy" alt="Library Desk self-service screen" />
+              <div class="project-thumb thumb-wide">
+                <img src="img/library-site.webp" width="1200" height="517" loading="lazy" alt="Coventry University Kazakhstan library website" />
               </div>
               <div class="project-body">
                 <p class="project-tag" data-i18n="project_one_tag">Library Automation Intern</p>
-                <h3 data-i18n="project_one_title">eLibra QR Middleware</h3>
-                <p class="card-copy" data-i18n="project_one_copy">Built a QR-based self-service issuance flow with FastAPI, Playwright RPA, SQLite, and a web interface that reduced librarian bottlenecks.</p>
-                <ul class="chips"><li>FastAPI</li><li>Playwright</li><li>SQLite</li></ul>
+                <h3 data-i18n="project_one_title">Coventry Kazakhstan library platform</h3>
+                <p class="card-copy" data-i18n="project_one_copy">The library's live website: QR self-service book issuance through eLibra, event registration, admin pages and an AI Librarian chat that answers from the catalog, rules and site content.</p>
+                <ul class="chips"><li>FastAPI</li><li>Playwright RPA</li><li>Pinecone</li><li>Ollama</li><li data-i18n="chip_live">live</li></ul>
                 <div class="card-actions">
+                  <a class="action-btn action-primary" href="https://library.coventry.edu.kz/" target="_blank" rel="noopener" data-i18n="link_live">Live site</a>
                   <button class="action-btn modal-trigger" type="button" data-modal="project-elibra" data-i18n="project_open">open project file</button>
                   <a class="action-btn" href="https://github.com/sprinterz5/library-qr" target="_blank" rel="noopener">GitHub</a>
                 </div>
@@ -274,15 +275,18 @@
 
             <article class="project-card">
               <div class="project-thumb thumb-term" aria-hidden="true">
-                <pre><span class="t-dim">raw:</span>   h h h e e l l l l o o
-<span class="t-dim">gap:</span>   3 2 4 1 2 3 1 2 5 3 ms
-<span class="t-dim">rule:</span>  same key &lt; 30 ms -&gt; drop
-<span class="t-ok">out:</span>   h e l l o</pre>
+                <pre><span class="t-prompt">$</span> python src/diagnose.py
+<span class="t-dim">burst:</span> down 1, down z   <span class="t-y">&lt;- one press</span>
+<span class="t-prompt">$</span> python src/engine.py
+<span class="t-dim">ghosts</span>  1&gt;z 2&gt;x 3&gt;c 4&gt;v 7&gt;m 8&gt;, 9&gt;. 0&gt;\
+<span class="t-dim">pairs </span>  a/z s/x d/c f/v j/m k/, l/.
+<span class="t-ok">caps lock</span> picks the second key</pre>
               </div>
               <div class="project-body">
                 <p class="project-tag" data-i18n="project_debounce_tag">Builder Story</p>
-                <h3 data-i18n="project_debounce_title">Tea-Damaged Keyboard -&gt; Software Debounce Layer</h3>
-                <p class="card-copy" data-i18n="project_debounce_copy">A friend spilled tea on his keyboard and the damaged contacts fired multiple ghost keypresses per press. Instead of replacing the hardware, I studied the failure pattern and wrote a software layer that reads the messy multi-fire signal and normalizes it into a single correct character.</p>
+                <h3 data-i18n="project_debounce_title">Tea-damaged keyboard -&gt; ghost-key filter</h3>
+                <p class="card-copy" data-i18n="project_debounce_copy">Tea shorted my friend's keyboard matrix: one press fired two scan codes. I logged the bursts, mapped which keys ghost which, and wrote a global hook that drops the ghosts. For pairs the signal can't tell apart, Caps Lock picks the second key.</p>
+                <ul class="chips"><li>Python</li><li data-i18n="chip_hook">global keyboard hook</li><li>Windows</li></ul>
                 <div class="card-actions">
                   <button class="action-btn modal-trigger" type="button" data-modal="project-debounce" data-i18n="project_open">open project file</button>
                 </div>
@@ -290,20 +294,24 @@
             </article>
           </div>
 
-          <div class="mini-grid">
-            <button class="mini-card modal-trigger" type="button" data-modal="project-research">
-              <p class="file-name">astana_housing.research</p>
+          <article class="feature-card feature-research">
+            <figure class="feature-shot">
+              <img src="img/astana-housing-map.webp" width="1200" height="670" loading="lazy" alt="Hexagon map of urban environment quality in Astana" />
+            </figure>
+            <div class="feature-copy">
+              <div class="file-meta">
+                <p class="file-name">astana_housing.research</p>
+                <p class="file-status">lomonosov-2026 / 3rd of 20 reports</p>
+              </div>
+              <p class="project-tag" data-i18n="project_three_tag">Research</p>
               <h3 data-i18n="project_three_title">Spatial Factors of Housing Prices in Astana</h3>
               <p class="card-copy" data-i18n="project_three_copy">Earned 3rd place at Lomonosov-2026 with research on how location-linked variables shape housing prices in Astana.</p>
-              <p class="card-action" data-i18n="project_open">open project file</p>
-            </button>
-            <button class="mini-card modal-trigger" type="button" data-modal="project-rag">
-              <p class="file-name">rag_automation.stack</p>
-              <h3 data-i18n="project_four_title">RAG and automation workflows</h3>
-              <p class="card-copy" data-i18n="project_four_copy">Built AI-assisted workflows around RAG, backend integrations, and operational automation for real institutional use cases.</p>
-              <p class="card-action" data-i18n="project_open">open project file</p>
-            </button>
-          </div>
+              <ul class="chips"><li>ArcGIS</li><li data-i18n="chip_hex">1 km hex grid</li><li>Krisha.kz</li><li>OpenStreetMap</li><li>2GIS</li><li data-i18n="chip_corr">correlation</li></ul>
+              <div class="card-actions">
+                <button class="action-btn modal-trigger" type="button" data-modal="project-research" data-i18n="project_open">open project file</button>
+              </div>
+            </div>
+          </article>
         </section>
 
         <section class="section reveal" id="experience">
