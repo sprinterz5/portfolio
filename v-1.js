@@ -1,31 +1,24 @@
 const translations = {
   en: {
-    hero_eyebrow: "Aidar Begotayev // systems_curious:on",
-    hero_title: "Build. Debug. Compete. Ship.",
+    hero_eyebrow: "build // debug // compete // ship",
     hero_lead:
-      "Backend systems, Linux tools for real hardware, AI workflows, and a growing curiosity for how computers work underneath -- from ISA design to kernel boundaries.",
+      "CS with AI student in Astana. I build backend systems, Linux tools for real hardware and AI workflows.",
     contact_cv: "CV (PDF)",
-    stat_one:
-      "hackathons and competitions. click for wins, finalists, and selected builds",
-    stat_two:
-      "participants across EcoHackathon and Bright Future Hackathon that I organized",
+    stat_one: "hackathons and competitions",
+    stat_two: "participants at hackathons I organized",
     stat_three_value: "Tech Stack",
-    stat_three: "Python, SQL, Next.js, Linux, Docker, automation",
-    stat_four_value: "6 notes",
-    stat_four:
-      "short personal notes on ISA design, kernel boundaries, and systems trade-offs",
-    stat_four_action: "read the notes",
+    stat_three: "Python, SQL, Next.js, Linux, Docker",
+    stat_four_value: "Blog",
+    stat_four: "notes on how systems work",
+    stat_four_action: "read the blog",
     card_action: "open breakdown",
     focus_one: "focus:: linux tools for real hardware",
     focus_two: "focus:: backend systems + product builds",
     focus_three: "focus:: ai workflows + automation",
     focus_four: "focus:: competition prototypes under pressure",
-    signal_kicker: "Current signal",
-    signal_copy:
-      "From a Linux control app for ASUS laptops to a mentor platform for a summer school and library automation, I like building tools that actually get used.",
     nav_projects: "projects",
     nav_highlights: "wins",
-    nav_deepdives: "notes",
+    nav_deepdives: "blog",
     nav_study: "study",
     nav_trajectory: "trajectory",
     nav_systems: "linux",
@@ -59,7 +52,8 @@ const translations = {
     project_bloody_copy:
       "The mouse ships with Windows-only software, so I decoded its USB protocol and wrote a Python tool that sets RGB and DPI over hidraw.",
     project_debounce_tag: "Builder Story",
-    project_debounce_title: "Tea-Damaged Keyboard -> Software Debounce Layer",
+    project_debounce_title:
+      "Tea-Damaged Keyboard -> Software Debounce Layer",
     project_debounce_copy:
       "A friend spilled tea on his keyboard and the damaged contacts fired multiple ghost keypresses per press. Instead of replacing the hardware, I studied the failure pattern and wrote a software layer that reads the messy multi-fire signal and normalizes it into a single correct character.",
     project_three_tag: "Research",
@@ -102,7 +96,8 @@ const translations = {
       "Why anti-cheat lives in Ring 0 -- and what that costs everyone else",
     deepdive_two_copy:
       'I didn\'t accept "anti-cheat just needs kernel access" at face value, so I looked at what user-space anti-cheat actually can\'t see: cheats that hook below the OS\'s own visibility. That gap is why Vanguard-style anti-cheat runs in Ring 0, why a single bug there is a whole-system vulnerability and not a game bug, and why a user-space emulator like Prism can\'t run a kernel-mode x64 driver at all. The part I kept circling back to: studios get a real security win, and every player on that machine inherits a kernel-level attack surface they never agreed to.',
-    deepdive_three_title: "seL4: proof over testing, and what that actually costs",
+    deepdive_three_title:
+      "seL4: proof over testing, and what that actually costs",
     deepdive_three_copy:
       'The obvious alternative to formal verification is what everyone already does -- test until nothing breaks -- so I wanted to know what that approach can never claim: that no untested input exists. seL4 is formally verified, mathematically proven correct against its spec, not just battle-tested. What I keep chewing on is the price of that guarantee: every line has to be provably correct, which is why almost nothing outside safety-critical systems gets built this way. Proof doesn\'t scale the way "ship and patch" does.',
     deepdive_four_title:
@@ -158,39 +153,36 @@ const translations = {
     link_repo: "GitHub repository",
     link_download: "Download the AppImage",
     link_poster: "Hospital poster (PDF)",
+    contact_cv_hint: "1 page",
+    blog_back: "<- back to portfolio",
+    blog_kicker: "Blog",
   },
   ru: {
-    hero_eyebrow: "Aidar Begotayev // systems_curious:on",
-    hero_title: "Строю. Отлаживаю. Соревнуюсь. Выпускаю.",
+    hero_eyebrow: "строю // отлаживаю // соревнуюсь // выпускаю",
     hero_lead:
-      "Бэкенд-системы, Linux-инструменты для реального железа, AI-автоматизация и растущий интерес к тому, как компьютер устроен внутри -- от архитектуры ISA до границ ядра ОС.",
+      "Студент CS with AI в Астане. Делаю бэкенд, Linux-инструменты для реального железа и AI-автоматизацию.",
     contact_cv: "Резюме (PDF)",
-    stat_one:
-      "хакатонов и соревнований. нажмите, чтобы увидеть победы, финалы и избранные работы",
-    stat_two:
-      "участников на EcoHackathon и Bright Future Hackathon, которые я организовал",
+    stat_one: "хакатонов и соревнований",
+    stat_two: "участников на хакатонах, которые я организовал",
     stat_three_value: "Стек",
-    stat_three: "Python, SQL, Next.js, Linux, Docker, автоматизация",
-    stat_four_value: "6 заметок",
-    stat_four:
-      "короткие личные заметки об архитектуре ISA, границах ядра и компромиссах в системах",
-    stat_four_action: "читать заметки",
+    stat_three: "Python, SQL, Next.js, Linux, Docker",
+    stat_four_value: "Блог",
+    stat_four: "заметки о том, как устроены системы",
+    stat_four_action: "читать блог",
     card_action: "подробнее",
     focus_one: "focus:: linux-инструменты для реального железа",
     focus_two: "focus:: бэкенд-системы + продукты",
     focus_three: "focus:: ai-процессы + автоматизация",
     focus_four: "focus:: прототипы на соревнованиях под давлением",
-    signal_kicker: "Сейчас",
-    signal_copy:
-      "От Linux-приложения для управления ноутбуками ASUS до платформы для менторов летней школы и автоматизации библиотеки -- мне нравится делать инструменты, которыми реально пользуются.",
     nav_projects: "проекты",
     nav_highlights: "победы",
-    nav_deepdives: "заметки",
+    nav_deepdives: "блог",
     nav_study: "учёба",
     nav_trajectory: "путь",
     nav_systems: "linux",
     nav_contact: "контакты",
-    projects_note: "9 записей -- откройте карточку, там подробности и ссылки",
+    projects_note:
+      "9 записей -- откройте карточку, там подробности и ссылки",
     projects_kicker: "Избранные проекты",
     projects_title: "Проекты за цифрами.",
     project_open: "открыть проект",
@@ -219,7 +211,8 @@ const translations = {
     project_bloody_copy:
       "Программа для мыши есть только под Windows, поэтому я разобрал её USB-протокол и написал утилиту на Python, которая меняет подсветку и DPI через hidraw.",
     project_debounce_tag: "История",
-    project_debounce_title: "Залитая чаем клавиатура -> программный антидребезг",
+    project_debounce_title:
+      "Залитая чаем клавиатура -> программный антидребезг",
     project_debounce_copy:
       "Друг пролил чай на клавиатуру, и повреждённые контакты давали несколько ложных нажатий на одно. Вместо замены железа я изучил, как именно они срабатывают, и написал программный слой, который превращает этот шумный сигнал в одно правильное нажатие.",
     project_three_tag: "Исследование",
@@ -258,19 +251,23 @@ const translations = {
     deepdive_one_title: "Почему ARM, а не просто почему не x86-64",
     deepdive_one_copy:
       "«ARM эффективнее» -- это вывод, а не аргумент, поэтому я искал, что x86-64 реально теряет: более сложный декодер для команд переменной длины и десятилетия наследия, которое Intel и AMD не могут выбросить, не сломав существующие программы. Потом я искал контраргумент: настоящая защита x86-64 -- как раз эти программы. Windows RT в 2012 году вообще не запускала обычные x86-приложения, и Microsoft списала $900 млн на Surface RT. Windows на ARM стала пригодной, только когда эмуляция x86 и сами чипы стали достаточно хорошими. ARM не выигрывает вообще: он выигрывает там, где совместимость с x86 не ограничение, и сильно проигрывает там, где ограничение.",
-    deepdive_two_title: "Почему античит живёт в Ring 0 и чего это стоит остальным",
+    deepdive_two_title:
+      "Почему античит живёт в Ring 0 и чего это стоит остальным",
     deepdive_two_copy:
       "Я не принял на веру «античиту просто нужен доступ к ядру» и проверил, чего античит в пространстве пользователя не видит: читы, которые цепляются ниже того, что видит сама ОС. Из-за этого пробела античиты вроде Vanguard работают в Ring 0, одна ошибка там -- уязвимость всей системы, а не баг игры, а эмулятор уровня пользователя вроде Prism вообще не может запустить x64-драйвер ядра. К чему я всё время возвращался: студии получают реальный выигрыш в защите, а каждый игрок на этом компьютере получает поверхность атаки на уровне ядра, на которую не соглашался.",
-    deepdive_three_title: "seL4: доказательство вместо тестов и его настоящая цена",
+    deepdive_three_title:
+      "seL4: доказательство вместо тестов и его настоящая цена",
     deepdive_three_copy:
       "Очевидная альтернатива формальной верификации -- то, что делают все: тестировать, пока ничего не ломается. Поэтому мне было интересно, чего этот подход никогда не может утверждать: что непроверенных входных данных не существует. seL4 формально верифицирован, его корректность относительно спецификации доказана математически, а не просто проверена в бою. Думаю я о цене этой гарантии: каждая строка должна быть доказуемо верной, поэтому вне критичных к безопасности систем так почти ничего не строят. Доказательство не масштабируется так, как «выпусти и допатчи».",
-    deepdive_four_title: "Настоящий размен unified memory: производительность на ватт против апгрейда",
+    deepdive_four_title:
+      "Настоящий размен unified memory: производительность на ватт против апгрейда",
     deepdive_four_copy:
       "В обычном ПК у процессора и дискретной видеокарты своя память, и данные копируются между ними по PCIe. В Apple M-серии процессор и видеоядро сидят на одном общем пуле памяти в одном корпусе, и оба читают одни и те же данные без копирования. Не думаю, что это бесплатный выигрыш: та же распаянная общая память, которая даёт эффективность, -- причина, почему память нельзя нарастить потом. Производительность на ватт и право на ремонт смотрят в разные стороны, и Apple выбрала одно.",
     deepdive_five_title: "Почему IBM ушла из гонки, которую сама начала",
     deepdive_five_copy:
       "IBM по сути создала коммерческую компьютерную индустрию, а потом продала бизнес ПК компании Lenovo в 2005 году и x86-серверы в 2014-м, и ушла в мейнфреймы, Power, а позже в сервисы и квантовые вычисления вместо борьбы за массовый рынок, который сама создала. Мне было интересно, почему компания уходит из гонки, в которой всё ещё выигрывает хотя бы именем: массовое x86-железо скатывалось в мизерную маржу, потому что все перешли на одинаковые компоненты, а мейнфреймы оставались маленькой, но очень прибыльной нишей, куда конкурентам трудно зайти. Это похоже не на поражение, а на выбор глубины вместо доли рынка -- хотя это значило и отказ от узнаваемости, которая приходит, когда ты в руках у каждого покупателя.",
-    deepdive_six_title: "Ставка AMD на чиплеты против Intel, застрявшей на 14 нм",
+    deepdive_six_title:
+      "Ставка AMD на чиплеты против Intel, застрявшей на 14 нм",
     deepdive_six_copy:
       "После лет Bulldozer AMD была на грани банкротства и уже выделила свои фабрики в GlobalFoundries. В 2017 году она выпустила Zen, а в 2019-м с Zen 2 разделила процессор на чиплеты на 7-нм техпроцессе TSMC, пока Intel годами перевыпускала 14 нм после срыва 10 нм. Мне было интересно, сколько здесь от умного дизайна AMD, а сколько от провала производства Intel, и я думаю, что в основном второе: лучший дизайн не помог бы, если бы TSMC не выпускала меньшие техпроцессы вовремя. Чиплеты тоже не бесплатны: разделение кристалла добавляет задержку на Infinity Fabric, которой у монолитного кристалла нет.",
     study_note: "самостоятельная учёба -- рукописные конспекты в PDF",
@@ -316,39 +313,36 @@ const translations = {
     link_repo: "Репозиторий на GitHub",
     link_download: "Скачать AppImage",
     link_poster: "Постер в больнице (PDF)",
+    contact_cv_hint: "1 страница",
+    blog_back: "<- назад к портфолио",
+    blog_kicker: "Блог",
   },
   kz: {
-    hero_eyebrow: "Aidar Begotayev // systems_curious:on",
-    hero_title: "Жасаймын. Түзетемін. Жарысамын. Шығарамын.",
+    hero_eyebrow: "жасаймын // түзетемін // жарысамын // шығарамын",
     hero_lead:
-      "Backend жүйелер, нақты құрылғыларға арналған Linux құралдары, AI автоматтандыру және компьютердің ішкі құрылымына деген қызығушылық -- ISA архитектурасынан ОЖ ядросының шекараларына дейін.",
+      "Астанада CS with AI мамандығында оқимын. Backend, нақты құрылғыларға арналған Linux құралдары және AI автоматтандыру жасаймын.",
     contact_cv: "Түйіндеме (PDF)",
-    stat_one:
-      "хакатон мен жарыс. жеңістерді, финалдарды және таңдаулы жобаларды көру үшін басыңыз",
-    stat_two:
-      "мен ұйымдастырған EcoHackathon және Bright Future Hackathon қатысушылары",
+    stat_one: "хакатон мен жарыс",
+    stat_two: "мен ұйымдастырған хакатондардың қатысушылары",
     stat_three_value: "Стек",
-    stat_three: "Python, SQL, Next.js, Linux, Docker, автоматтандыру",
-    stat_four_value: "6 жазба",
-    stat_four:
-      "ISA архитектурасы, ядро шекаралары және жүйелердегі ымыралар туралы қысқа жеке жазбалар",
-    stat_four_action: "жазбаларды оқу",
+    stat_three: "Python, SQL, Next.js, Linux, Docker",
+    stat_four_value: "Блог",
+    stat_four: "жүйелердің қалай жұмыс істейтіні туралы жазбалар",
+    stat_four_action: "блогты оқу",
     card_action: "толығырақ",
     focus_one: "focus:: нақты құрылғыларға арналған linux құралдары",
     focus_two: "focus:: backend жүйелер + өнімдер",
     focus_three: "focus:: ai процестері + автоматтандыру",
     focus_four: "focus:: жарыстағы прототиптер",
-    signal_kicker: "Қазір",
-    signal_copy:
-      "ASUS ноутбуктеріне арналған Linux қосымшасынан бастап жазғы мектеп менторларына арналған платформа мен кітапхананы автоматтандыруға дейін -- адамдар шынымен қолданатын құралдар жасағанды ұнатамын.",
     nav_projects: "жобалар",
     nav_highlights: "жеңістер",
-    nav_deepdives: "жазбалар",
+    nav_deepdives: "блог",
     nav_study: "оқу",
     nav_trajectory: "жол",
     nav_systems: "linux",
     nav_contact: "байланыс",
-    projects_note: "9 жазба -- толығырақ ақпарат пен сілтемелер карточканың ішінде",
+    projects_note:
+      "9 жазба -- толығырақ ақпарат пен сілтемелер карточканың ішінде",
     projects_kicker: "Таңдаулы жобалар",
     projects_title: "Сандардың артындағы жобалар.",
     project_open: "жобаны ашу",
@@ -357,7 +351,8 @@ const translations = {
     project_shiftray_copy:
       "Linux-тағы ASUS ноутбуктеріне арналған трей қосымшасы: қуат режимдері, желдеткіш қисықтары, бейнекартаны ауыстыру, пернетақта жарығы, заряд шегі және Fn пернелері бір шағын терезеде. AppImage және Fedora мен Arch пакеттері ретінде шығады, 7 тілге аударылған.",
     project_primeteens_tag: "Жазғы мектеп платформасы",
-    project_primeteens_title: "PrimeTeens менторларына арналған бот пен платформа",
+    project_primeteens_title:
+      "PrimeTeens менторларына арналған бот пен платформа",
     project_primeteens_copy:
       "7-11 сыныптарға арналған жазғы интенсивтің Telegram-боты мен веб-платформасы: сабақ туралы еске салғыштар, әр сабақтан кейін дауыспен жауап беруге болатын қысқа сауалнама, онлайн дәптерлер және үй тапсырмасын тексеру.",
     project_autism_tag: "Anisa Spectrum",
@@ -377,11 +372,13 @@ const translations = {
     project_bloody_copy:
       "Тінтуірдің бағдарламасы тек Windows-қа арналған, сондықтан мен оның USB протоколын талдап, hidraw арқылы жарық пен DPI-ды өзгертетін Python құралын жаздым.",
     project_debounce_tag: "Оқиға",
-    project_debounce_title: "Шай төгілген пернетақта -> бағдарламалық debounce",
+    project_debounce_title:
+      "Шай төгілген пернетақта -> бағдарламалық debounce",
     project_debounce_copy:
       "Досым пернетақтасына шай төгіп алды, зақымдалған түйіспелер бір басқанда бірнеше жалған басу берді. Құрылғыны ауыстырудың орнына мен ақаудың қалай пайда болатынын зерттеп, осы шулы сигналды бір дұрыс таңбаға айналдыратын бағдарламалық қабат жаздым.",
     project_three_tag: "Зерттеу",
-    project_three_title: "Астанадағы тұрғын үй бағасының кеңістіктік факторлары",
+    project_three_title:
+      "Астанадағы тұрғын үй бағасының кеңістіктік факторлары",
     project_three_copy:
       "Орналасуға байланысты айнымалылардың Астанадағы тұрғын үй бағасына әсері туралы зерттеуіммен Ломоносов-2026-да 3-орын алдым.",
     project_four_tag: "Қолданбалы AI",
@@ -416,19 +413,23 @@ const translations = {
     deepdive_one_title: "Неге ARM: тек x86-64 неге емес деген сұрақ емес",
     deepdive_one_copy:
       "«ARM тиімдірек» -- бұл дәлел емес, қорытынды. Сондықтан мен x86-64 нақты неден ұтылатынын іздедім: ұзындығы әртүрлі командаларға арналған күрделірек декодер және Intel мен AMD бар бағдарламаларды бұзбай алып тастай алмайтын ондаған жылдық мұра. Содан кейін қарсы дәлелді іздедім: x86-64-тің нағыз қорғаны дәл осы бағдарламалар. 2012 жылғы Windows RT кәдімгі x86 қосымшаларын мүлде іске қоса алмады, ал Microsoft Surface RT бойынша 900 млн долларды есептен шығарды. ARM-дағы Windows x86 эмуляциясы мен чиптердің өзі жеткілікті жақсарғанда ғана қолдануға жарамды болды. ARM жалпы жеңбейді: x86 үйлесімділігі шектеу болмайтын жерде жеңеді, ал шектеу болатын жерде қатты ұтылады.",
-    deepdive_two_title: "Неге античит Ring 0-де жұмыс істейді және оның бағасын кім төлейді",
+    deepdive_two_title:
+      "Неге античит Ring 0-де жұмыс істейді және оның бағасын кім төлейді",
     deepdive_two_copy:
       "«Античитке жай ғана ядроға қолжетімділік керек» деген сөзді дайын күйінде қабылдамадым, сондықтан пайдаланушы кеңістігіндегі античит нені көре алмайтынын тексердім: ОЖ-ның өзі көретін деңгейден төмен ілінетін читтерді. Дәл осы олқылыққа байланысты Vanguard сияқты античиттер Ring 0-де жұмыс істейді, сол жердегі бір қате ойынның емес, бүкіл жүйенің осалдығына айналады, ал Prism сияқты пайдаланушы деңгейіндегі эмулятор ядроның x64 драйверін мүлде іске қоса алмайды. Мені ойландырған нәрсе: студиялар қорғаныс жағынан нақты ұтады, ал сол компьютердегі әрбір ойыншы өзі келіспеген ядро деңгейіндегі шабуыл бетін алады.",
-    deepdive_three_title: "seL4: тестілеудің орнына дәлелдеу және оның нақты бағасы",
+    deepdive_three_title:
+      "seL4: тестілеудің орнына дәлелдеу және оның нақты бағасы",
     deepdive_three_copy:
       "Формалды верификацияның айқын баламасы -- барлығы жасайтын нәрсе: ештеңе бұзылмағанша тестілеу. Сондықтан бұл тәсіл ешқашан айта алмайтын нәрсені білгім келді: тексерілмеген кіріс деректері жоқ деп. seL4 формалды түрде верификацияланған, яғни оның спецификацияға сәйкестігі жай ғана сынақтан өтпей, математикалық тұрғыда дәлелденген. Мені ойландыратыны -- осы кепілдіктің бағасы: әр жолдың дұрыстығы дәлелденуі керек, сондықтан қауіпсіздігі аса маңызды жүйелерден тыс жерде бұлай сирек жасалады. Дәлелдеу «шығар да кейін түзет» тәсілі сияқты масштабталмайды.",
-    deepdive_four_title: "Unified memory: ватт үшін өнімділік пен жаңарту мүмкіндігі арасындағы таңдау",
+    deepdive_four_title:
+      "Unified memory: ватт үшін өнімділік пен жаңарту мүмкіндігі арасындағы таңдау",
     deepdive_four_copy:
       "Әдеттегі ДК-де процессор мен дискретті бейнекартаның жады бөлек, ал деректер олардың арасында PCIe арқылы көшіріледі. Apple M-сериясында процессор мен бейнеядро бір корпустағы ортақ жадты пайдаланады, сондықтан екеуі де бір деректі көшірусіз оқиды. Бұл тегін ұтыс деп ойламаймын: тиімділік беретін сол дәнекерленген ортақ жад кейін жадты ұлғайтуға мүмкіндік бермейді. Ватт үшін өнімділік пен жөндеу құқығы қарама-қарсы бағытқа қарайды, ал Apple біреуін таңдады.",
     deepdive_five_title: "Неге IBM өзі бастаған жарыстан шықты",
     deepdive_five_copy:
       "IBM коммерциялық компьютер индустриясын іс жүзінде өзі құрды, бірақ 2005 жылы ДК бизнесін, ал 2014 жылы x86 серверлерін Lenovo-ға сатты да, өзі жасаған жаппай нарық үшін күресудің орнына мейнфреймдерге, Power-ге, кейін сервистер мен кванттық есептеулерге бет бұрды. Атымен ғана болса да әлі жеңіп жүрген жарыстан компанияның неге кететінін білгім келді: барлығы бірдей компоненттерге көшкен сайын жаппай x86 жабдығының маржасы өте аз болып қалды, ал мейнфреймдер бәсекелестер оңай кіре алмайтын шағын, бірақ өте табысты тауаша болып қала берді. Бұл жеңілістен гөрі нарық үлесінің орнына тереңдікті таңдауға ұқсайды -- бірақ бұл әр тұтынушының қолында болудан келетін танымалдықтан бас тартуды да білдірді.",
-    deepdive_six_title: "AMD чиплеттерге бәс тікті, Intel 14 нм-де тұрып қалды",
+    deepdive_six_title:
+      "AMD чиплеттерге бәс тікті, Intel 14 нм-де тұрып қалды",
     deepdive_six_copy:
       "Bulldozer жылдарынан кейін AMD банкроттыққа жақын болды және өз зауыттарын GlobalFoundries-ке бөліп шығарып үлгерген еді. Ол 2017 жылы Zen-ді шығарды, ал 2019 жылы Zen 2-де процессорды TSMC-нің 7 нм техпроцесіндегі чиплеттерге бөлді. Ал Intel 10 нм кешіккеннен кейін бірнеше жыл бойы 14 нм-ді қайта-қайта шығарды. Мұның қаншасы AMD дизайнының ақылдылығы, ал қаншасы Intel өндірісінің сәтсіздігі екенін білгім келді. Менің ойымша, көбі екіншісі: TSMC кішірек техпроцестерді уақытында шығармағанда, жақсы дизайн да көмектеспес еді. Чиплеттер де тегін емес: кристалды бөлу Infinity Fabric арқылы монолитті кристалда болмайтын кідіріс қосады.",
     study_note: "өз бетімше оқу -- қолжазба конспектілер PDF-те",
@@ -474,6 +475,9 @@ const translations = {
     link_repo: "GitHub репозиторийі",
     link_download: "AppImage жүктеу",
     link_poster: "Ауруханадағы постер (PDF)",
+    contact_cv_hint: "1 бет",
+    blog_back: "<- портфолиоға оралу",
+    blog_kicker: "Блог",
   },
 };
 
@@ -1486,7 +1490,7 @@ function applyLanguage(lang) {
     button.classList.toggle("is-active", button.dataset.lang === currentLanguage);
   });
 
-  if (activeModalKey) {
+  if (modalShell && activeModalKey) {
     renderModalContent(activeModalKey);
   }
 
@@ -1510,7 +1514,7 @@ modalCloseButtons.forEach((button) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (modalShell.hidden) {
+  if (!modalShell || modalShell.hidden) {
     return;
   }
 
@@ -1520,20 +1524,5 @@ document.addEventListener("keydown", (event) => {
     trapFocus(event);
   }
 });
-
-// Deep-dive notes: collapsed by default on narrow screens to save space,
-// expanded on wider screens. Re-applied only when the breakpoint is crossed,
-// so a manual toggle within one viewport size is preserved.
-const deepdiveFolds = document.querySelectorAll(".deepdive-fold");
-const compactQuery = window.matchMedia("(max-width: 700px)");
-
-function syncDeepdiveFolds(isCompact) {
-  deepdiveFolds.forEach((fold) => {
-    fold.open = !isCompact;
-  });
-}
-
-syncDeepdiveFolds(compactQuery.matches);
-compactQuery.addEventListener("change", (event) => syncDeepdiveFolds(event.matches));
 
 applyLanguage(currentLanguage);

@@ -50,7 +50,7 @@
         <span class="nav-prompt" aria-hidden="true">$ cd</span>
         <a class="nav-link" href="#projects" data-i18n="nav_projects">projects</a>
         <a class="nav-link" href="#highlights" data-i18n="nav_highlights">wins</a>
-        <a class="nav-link" href="#deep-dives" data-i18n="nav_deepdives">notes</a>
+        <a class="nav-link" href="blog.html" data-i18n="nav_deepdives">blog</a>
         <a class="nav-link" href="#study" data-i18n="nav_study">study</a>
         <a class="nav-link" href="#trajectory" data-i18n="nav_trajectory">trajectory</a>
         <a class="nav-link" href="#systems-env" data-i18n="nav_systems">linux</a>
@@ -60,29 +60,15 @@
       <main>
         <section class="hero">
           <div class="hero-copy">
-            <div class="boot-block">
-              <p class="sys-line">SYS.NAME : AIDAR_BEGOTAYEV</p>
-              <p class="sys-line">SYS.AUTH : GUEST_ACCESS_GRANTED</p>
-              <p class="sys-line">SYS.ZONE : ASTANA / KAZAKHSTAN</p>
-              <p class="sys-line">SYS.MODE : ENGINEER / SYSTEMS_CURIOUS / COMPETITOR / ORGANIZER</p>
-              <p class="sys-line">SYS.INTEREST : RING0_TO_RISCV // WHY_SYSTEMS_WORK</p>
-            </div>
 
             <div class="hero-main-copy">
               <p class="command">$ whoami</p>
-              <p class="eyebrow" data-i18n="hero_eyebrow">Aidar Begotayev // systems_curious:on</p>
-              <h1 data-i18n="hero_title">Build. Debug. Compete. Ship.</h1>
+              <h1>Aidar Begotayev</h1>
+              <p class="eyebrow" data-i18n="hero_eyebrow">build // debug // compete // ship</p>
               <p class="lead" data-i18n="hero_lead">
-                Backend systems, Linux tools for real hardware, AI workflows,
-                and a growing curiosity for how computers work underneath --
-                from ISA design to kernel boundaries.
+                CS with AI student in Astana. I build backend systems, Linux
+                tools for real hardware and AI workflows.
               </p>
-              <div class="contact-row">
-                <a class="contact-link" href="https://github.com/sprinterz5" target="_blank" rel="noopener">GitHub</a>
-                <a class="contact-link" href="https://www.linkedin.com/in/aidar-begotayev-918369239/" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="contact-link" href="mailto:begotayeva@coventry.ac.uk">Email</a>
-                <a class="contact-link" href="CV.pdf" target="_blank" rel="noopener" data-i18n="contact_cv">CV (PDF)</a>
-              </div>
             </div>
 
             <div class="stat-grid">
@@ -129,7 +115,7 @@
                   open breakdown
                 </p>
               </button>
-              <a class="stat-card" href="#deep-dives">
+              <a class="stat-card" href="blog.html">
                 <p class="stat-value" data-i18n="stat_four_value">6 notes</p>
                 <p class="stat-label" data-i18n="stat_four">
                   short personal notes on ISA design, kernel boundaries, and
@@ -143,12 +129,34 @@
           </div>
 
           <aside class="hero-side">
-            <div class="portrait-card">
-              <img
-                class="portrait-image"
-                src="aidar.jpg"
-                alt="Portrait of Aidar Begotayev"
-              />
+            <div class="hero-top">
+              <nav class="links-card" aria-label="Links">
+                <p class="command">$ ls ~/links</p>
+                <a class="big-link" href="CV.pdf" target="_blank" rel="noopener">
+                  <span class="big-link-name" data-i18n="contact_cv">CV (PDF)</span>
+                  <span class="big-link-hint" data-i18n="contact_cv_hint">1 page</span>
+                </a>
+                <a class="big-link" href="https://github.com/sprinterz5" target="_blank" rel="noopener">
+                  <span class="big-link-name">GitHub</span>
+                  <span class="big-link-hint">sprinterz5</span>
+                </a>
+                <a class="big-link" href="https://www.linkedin.com/in/aidar-begotayev-918369239/" target="_blank" rel="noopener">
+                  <span class="big-link-name">LinkedIn</span>
+                  <span class="big-link-hint">aidar-begotayev</span>
+                </a>
+                <a class="big-link" href="mailto:begotayeva@coventry.ac.uk">
+                  <span class="big-link-name">Email</span>
+                  <span class="big-link-hint">begotayeva@coventry.ac.uk</span>
+                </a>
+              </nav>
+
+              <div class="portrait-card">
+                <img
+                  class="portrait-image"
+                  src="aidar.jpg"
+                  alt="Portrait of Aidar Begotayev"
+                />
+              </div>
             </div>
 
             <div class="terminal-card">
@@ -159,15 +167,6 @@
               <p class="terminal-line" data-i18n="focus_four">focus:: competition prototypes under pressure</p>
             </div>
 
-            <div class="signal-card">
-              <p class="command">$ cat signal.log</p>
-              <p class="card-kicker" data-i18n="signal_kicker">Current signal</p>
-              <p data-i18n="signal_copy">
-                From a Linux control app for ASUS laptops to a mentor platform
-                for a summer school and library automation, I like building
-                tools that actually get used.
-              </p>
-            </div>
           </aside>
         </section>
 
@@ -429,117 +428,6 @@
           </div>
         </section>
 
-        <section class="section" id="deep-dives">
-          <div class="section-terminal">
-            <p class="command">$ cat /notes/</p>
-            <p class="section-note" data-i18n="deepdives_note">
-              6 entries -- personal notes, not coursework
-            </p>
-          </div>
-
-          <div class="section-head">
-            <p class="card-kicker" data-i18n="deepdives_kicker">What I dig into</p>
-            <h2 data-i18n="deepdives_title">Systems questions I keep coming back to.</h2>
-            <p class="section-intro" data-i18n="deepdives_intro">
-              I keep pulling on a thread until the causal chain closes, then
-              look for the strongest counter-argument before I trust my own
-              conclusion. The question is rarely "why did the winner win", it
-              is "what did the alternative actually lose, and who paid for it".
-            </p>
-          </div>
-
-          <div class="deepdive-grid">
-            <article class="panel deepdive">
-              <details class="deepdive-fold">
-                <summary class="deepdive-summary">
-                  <div class="file-meta">
-                    <p class="file-name">x86_vs_arm.compare</p>
-                    <p class="file-status">isa trade-offs / not just "arm won"</p>
-                  </div>
-                  <h3 data-i18n="deepdive_one_title">Why ARM, not just why not x86-64</h3>
-                </summary>
-                <p data-i18n="deepdive_one_copy">
-                  "ARM is more efficient" is a conclusion, not an argument, so I went after what x86-64 actually loses: a more complex decoder for variable-length instructions and decades of legacy behaviour Intel and AMD cannot drop without breaking existing software. Then I looked for the counter-case: x86-64's real moat is exactly that software. Windows RT in 2012 could not run existing x86 desktop apps at all, and Microsoft wrote down $900M on Surface RT. Windows on ARM only became usable once x86 emulation and the chips got good enough. ARM does not win in general; it wins where x86 compatibility is not the constraint, and loses hard where it is.
-                </p>
-              </details>
-            </article>
-
-            <article class="panel deepdive">
-              <details class="deepdive-fold">
-                <summary class="deepdive-summary">
-                  <div class="file-meta">
-                    <p class="file-name">anticheat.ring0</p>
-                    <p class="file-status">kernel boundaries / who pays for it</p>
-                  </div>
-                  <h3 data-i18n="deepdive_two_title">Why anti-cheat lives in Ring 0 -- and what that costs everyone else</h3>
-                </summary>
-                <p data-i18n="deepdive_two_copy">
-                  I didn't accept "anti-cheat just needs kernel access" at face value, so I looked at what user-space anti-cheat actually can't see: cheats that hook below the OS's own visibility. That gap is why Vanguard-style anti-cheat runs in Ring 0, why a single bug there is a whole-system vulnerability and not a game bug, and why a user-space emulator like Prism can't run a kernel-mode x64 driver at all. The part I kept circling back to: studios get a real security win, and every player on that machine inherits a kernel-level attack surface they never agreed to.
-                </p>
-              </details>
-            </article>
-
-            <article class="panel deepdive">
-              <details class="deepdive-fold">
-                <summary class="deepdive-summary">
-                  <div class="file-meta">
-                    <p class="file-name">sel4.verified</p>
-                    <p class="file-status">proof vs. testing / what proof costs</p>
-                  </div>
-                  <h3 data-i18n="deepdive_three_title">seL4: proof over testing, and what that actually costs</h3>
-                </summary>
-                <p data-i18n="deepdive_three_copy">
-                  The obvious alternative to formal verification is what everyone already does -- test until nothing breaks -- so I wanted to know what that approach can never claim: that no untested input exists. seL4 is formally verified, mathematically proven correct against its spec, not just battle-tested. What I keep chewing on is the price of that guarantee: every line has to be provably correct, which is why almost nothing outside safety-critical systems gets built this way. Proof doesn't scale the way "ship and patch" does.
-                </p>
-              </details>
-            </article>
-
-            <article class="panel deepdive">
-              <details class="deepdive-fold">
-                <summary class="deepdive-summary">
-                  <div class="file-meta">
-                    <p class="file-name">apple_silicon.memory</p>
-                    <p class="file-status">efficiency vs. upgradability</p>
-                  </div>
-                  <h3 data-i18n="deepdive_four_title">Unified memory's real trade: performance-per-watt for upgradability</h3>
-                </summary>
-                <p data-i18n="deepdive_four_copy">
-                  The usual PC design gives the CPU and the discrete GPU separate memory and copies data between them over PCIe. Apple's M-series puts the CPU and GPU on one shared pool of memory in the same package, so both read the same data without the copy. I don't think that's a free win: the same soldered, shared memory that makes it efficient is also why you can't upgrade the RAM later. Performance-per-watt and right-to-repair point in opposite directions, and Apple picked one.
-                </p>
-              </details>
-            </article>
-
-            <article class="panel deepdive">
-              <details class="deepdive-fold">
-                <summary class="deepdive-summary">
-                  <div class="file-meta">
-                    <p class="file-name">ibm.retreat</p>
-                    <p class="file-status">competitive strategy / depth over share</p>
-                  </div>
-                  <h3 data-i18n="deepdive_five_title">Why IBM walked out of the race it started</h3>
-                </summary>
-                <p data-i18n="deepdive_five_copy">
-                  IBM basically invented the commercial computer industry, then sold its PC business to Lenovo in 2005 and its x86 server line in 2014, and kept pushing into mainframes, Power, and later services and quantum instead of fighting for the commodity market it created. I wanted to know why a company retreats from a race it's still winning on name alone: commodity x86 hardware was collapsing into razor-thin margins as everyone converged on the same components, while mainframes stayed a small, high-margin niche competitors couldn't easily enter. It reads less like losing and more like choosing depth over share -- though it also meant giving up the mindshare that comes with being in every consumer's hands.
-                </p>
-              </details>
-            </article>
-
-            <article class="panel deepdive">
-              <details class="deepdive-fold">
-                <summary class="deepdive-summary">
-                  <div class="file-meta">
-                    <p class="file-name">amd_zen.revolution</p>
-                    <p class="file-status">manufacturing bet vs. process stall</p>
-                  </div>
-                  <h3 data-i18n="deepdive_six_title">AMD's chiplet bet vs. Intel stuck on 14nm</h3>
-                </summary>
-                <p data-i18n="deepdive_six_copy">
-                  AMD was nearly bankrupt after the Bulldozer years and had already spun its fabs off into GlobalFoundries. It launched Zen in 2017, then with Zen 2 in 2019 split the CPU into chiplets built on TSMC's 7nm process, while Intel kept re-spinning 14nm for years after its 10nm node slipped. I wanted to know how much of this was AMD's design being smarter versus Intel's manufacturing failing to deliver, and I think it's mostly the second: a better design wouldn't have mattered without TSMC shipping smaller nodes on schedule. Chiplets aren't free either: splitting the die adds interconnect latency across Infinity Fabric that a monolithic die never pays.
-                </p>
-              </details>
-            </article>
-          </div>
-        </section>
 
         <section class="section" id="study">
           <div class="section-terminal">

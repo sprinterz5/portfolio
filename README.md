@@ -5,6 +5,7 @@ Source of my personal site: **https://sprinterz5.github.io/portfolio/**
 A static page in a pixel-terminal style, in English, Russian and Kazakh. No framework and no build step:
 
 - `index.html` - the page; text in it is the English version, so it reads fine without JavaScript
+- `blog.html` - notes on how computer systems work
 - `v-1.js` - translations, the detail windows for projects and achievements, language switching
 - `v-1.css` - styles
 - `CV.pdf` - my CV

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Aidar Begotayev</title>
+    <meta
+      name="description"
+      content="Aidar Begotayev's notes on computer systems: ARM vs x86, anti-cheat in Ring 0, seL4, unified memory, IBM, AMD chiplets."
+    />
+    <meta name="author" content="Aidar Begotayev" />
+    <meta name="theme-color" content="#0a1116" />
+    <link rel="canonical" href="https://sprinterz5.github.io/portfolio/blog.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sprinterz5.github.io/portfolio/blog.html" />
+    <meta property="og:title" content="Blog | Aidar Begotayev" />
+    <meta
+      property="og:description"
+      content="Notes on how computer systems work and what their trade-offs cost."
+    />
+    <meta property="og:image" content="https://sprinterz5.github.io/portfolio/aidar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230a1116'/%3E%3Crect x='2' y='2' width='12' height='12' fill='none' stroke='%237ce7c1' stroke-width='2'/%3E%3Crect x='5' y='5' width='2' height='2' fill='%23ff9169'/%3E%3Crect x='9' y='5' width='2' height='2' fill='%2387d8ff'/%3E%3Crect x='5' y='9' width='6' height='2' fill='%23ffd28d'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="v-1.css" />
+    <script src="v-1.js" defer></script>
+  </head>
+  <body class="blog-page">
+    <div class="pixel-frame">
+      <header class="topbar">
+        <div class="topbar-copy">
+          <a class="back-link" href="./" data-i18n="blog_back">&lt;- back to portfolio</a>
+        </div>
+        <div class="lang-switcher" aria-label="Language switcher">
+          <button class="lang-btn is-active" type="button" data-lang="en">EN</button>
+          <button class="lang-btn" type="button" data-lang="ru">RU</button>
+          <button class="lang-btn" type="button" data-lang="kz">KZ</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="section blog-head">
+          <div class="section-terminal">
+            <p class="command">$ cat /blog/</p>
+            <p class="section-note" data-i18n="deepdives_note">6 entries -- personal notes, not coursework</p>
+          </div>
+
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="blog_kicker">Blog</p>
+            <h1 class="blog-title" data-i18n="deepdives_title">Systems questions I keep coming back to.</h1>
+            <p class="section-intro" data-i18n="deepdives_intro">
+              I keep pulling on a thread until the causal chain closes, then
+              look for the strongest counter-argument before I trust my own
+              conclusion. The question is rarely "why did the winner win", it
+              is "what did the alternative actually lose, and who paid for it".
+            </p>
+          </div>
+
+          <ol class="toc">
+            <li><a class="toc-link" href="#arm-vs-x86" data-i18n="deepdive_one_title">Why ARM, not just why not x86-64</a></li>
+            <li><a class="toc-link" href="#anticheat-ring0" data-i18n="deepdive_two_title">Why anti-cheat lives in Ring 0 -- and what that costs everyone else</a></li>
+            <li><a class="toc-link" href="#sel4" data-i18n="deepdive_three_title">seL4: proof over testing, and what that actually costs</a></li>
+            <li><a class="toc-link" href="#unified-memory" data-i18n="deepdive_four_title">Unified memory's real trade: performance-per-watt for upgradability</a></li>
+            <li><a class="toc-link" href="#ibm" data-i18n="deepdive_five_title">Why IBM walked out of the race it started</a></li>
+            <li><a class="toc-link" href="#amd-chiplets" data-i18n="deepdive_six_title">AMD's chiplet bet vs. Intel stuck on 14nm</a></li>
+          </ol>
+        </section>
+
+        <section class="post-list">
+          <article class="panel post" id="arm-vs-x86">
+            <div class="file-meta">
+              <p class="file-name">x86_vs_arm.compare</p>
+              <p class="file-status">isa trade-offs / not just "arm won"</p>
+            </div>
+            <h2 class="post-title" data-i18n="deepdive_one_title">Why ARM, not just why not x86-64</h2>
+            <p data-i18n="deepdive_one_copy">
+              "ARM is more efficient" is a conclusion, not an argument, so I went after what x86-64 actually loses: a more complex decoder for variable-length instructions and decades of legacy behaviour Intel and AMD cannot drop without breaking existing software. Then I looked for the counter-case: x86-64's real moat is exactly that software. Windows RT in 2012 could not run existing x86 desktop apps at all, and Microsoft wrote down $900M on Surface RT. Windows on ARM only became usable once x86 emulation and the chips got good enough. ARM does not win in general; it wins where x86 compatibility is not the constraint, and loses hard where it is.
+            </p>
+          </article>
+
+          <article class="panel post" id="anticheat-ring0">
+            <div class="file-meta">
+              <p class="file-name">anticheat.ring0</p>
+              <p class="file-status">kernel boundaries / who pays for it</p>
+            </div>
+            <h2 class="post-title" data-i18n="deepdive_two_title">Why anti-cheat lives in Ring 0 -- and what that costs everyone else</h2>
+            <p data-i18n="deepdive_two_copy">
+              I didn't accept "anti-cheat just needs kernel access" at face value, so I looked at what user-space anti-cheat actually can't see: cheats that hook below the OS's own visibility. That gap is why Vanguard-style anti-cheat runs in Ring 0, why a single bug there is a whole-system vulnerability and not a game bug, and why a user-space emulator like Prism can't run a kernel-mode x64 driver at all. The part I kept circling back to: studios get a real security win, and every player on that machine inherits a kernel-level attack surface they never agreed to.
+            </p>
+          </article>
+
+          <article class="panel post" id="sel4">
+            <div class="file-meta">
+              <p class="file-name">sel4.verified</p>
+              <p class="file-status">proof vs. testing / what proof costs</p>
+            </div>
+            <h2 class="post-title" data-i18n="deepdive_three_title">seL4: proof over testing, and what that actually costs</h2>
+            <p data-i18n="deepdive_three_copy">
+              The obvious alternative to formal verification is what everyone already does -- test until nothing breaks -- so I wanted to know what that approach can never claim: that no untested input exists. seL4 is formally verified, mathematically proven correct against its spec, not just battle-tested. What I keep chewing on is the price of that guarantee: every line has to be provably correct, which is why almost nothing outside safety-critical systems gets built this way. Proof doesn't scale the way "ship and patch" does.
+            </p>
+          </article>
+
+          <article class="panel post" id="unified-memory">
+            <div class="file-meta">
+              <p class="file-name">apple_silicon.memory</p>
+              <p class="file-status">efficiency vs. upgradability</p>
+            </div>
+            <h2 class="post-title" data-i18n="deepdive_four_title">Unified memory's real trade: performance-per-watt for upgradability</h2>
+            <p data-i18n="deepdive_four_copy">
+              The usual PC design gives the CPU and the discrete GPU separate memory and copies data between them over PCIe. Apple's M-series puts the CPU and GPU on one shared pool of memory in the same package, so both read the same data without the copy. I don't think that's a free win: the same soldered, shared memory that makes it efficient is also why you can't upgrade the RAM later. Performance-per-watt and right-to-repair point in opposite directions, and Apple picked one.
+            </p>
+          </article>
+
+          <article class="panel post" id="ibm">
+            <div class="file-meta">
+              <p class="file-name">ibm.retreat</p>
+              <p class="file-status">competitive strategy / depth over share</p>
+            </div>
+            <h2 class="post-title" data-i18n="deepdive_five_title">Why IBM walked out of the race it started</h2>
+            <p data-i18n="deepdive_five_copy">
+              IBM basically invented the commercial computer industry, then sold its PC business to Lenovo in 2005 and its x86 server line in 2014, and kept pushing into mainframes, Power, and later services and quantum instead of fighting for the commodity market it created. I wanted to know why a company retreats from a race it's still winning on name alone: commodity x86 hardware was collapsing into razor-thin margins as everyone converged on the same components, while mainframes stayed a small, high-margin niche competitors couldn't easily enter. It reads less like losing and more like choosing depth over share -- though it also meant giving up the mindshare that comes with being in every consumer's hands.
+            </p>
+          </article>
+
+          <article class="panel post" id="amd-chiplets">
+            <div class="file-meta">
+              <p class="file-name">amd_zen.revolution</p>
+              <p class="file-status">manufacturing bet vs. process stall</p>
+            </div>
+            <h2 class="post-title" data-i18n="deepdive_six_title">AMD's chiplet bet vs. Intel stuck on 14nm</h2>
+            <p data-i18n="deepdive_six_copy">
+              AMD was nearly bankrupt after the Bulldozer years and had already spun its fabs off into GlobalFoundries. It launched Zen in 2017, then with Zen 2 in 2019 split the CPU into chiplets built on TSMC's 7nm process, while Intel kept re-spinning 14nm for years after its 10nm node slipped. I wanted to know how much of this was AMD's design being smarter versus Intel's manufacturing failing to deliver, and I think it's mostly the second: a better design wouldn't have mattered without TSMC shipping smaller nodes on schedule. Chiplets aren't free either: splitting the die adds interconnect latency across Infinity Fabric that a monolithic die never pays.
+            </p>
+          </article>
+        </section>
+
+        <footer class="site-footer" id="contact">
+          <div class="footer-block">
+            <p class="command">$ contact --list</p>
+            <p class="footer-copy" data-i18n="footer_one">Open to internships, research and project work.</p>
+          </div>
+          <div class="contact-row">
+            <a class="contact-link" href="https://github.com/sprinterz5" target="_blank" rel="noopener">GitHub</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/aidar-begotayev-918369239/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="contact-link" href="mailto:begotayeva@coventry.ac.uk">begotayeva@coventry.ac.uk</a>
+            <a class="contact-link" href="CV.pdf" target="_blank" rel="noopener" data-i18n="contact_cv">CV (PDF)</a>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
