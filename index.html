@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aidar Begotayev | Backend, Linux tooling, AI workflows</title>
+    <title>Aidar Begotayev | Backend, Linux tools, AI workflows</title>
     <meta
       name="description"
       content="Aidar Begotayev, CS with AI student in Astana. Builds backend systems, Linux tools for real hardware and AI workflows: Shiftray, PrimeTeens mentor platform, library automation. 1st place at BiCAP out of 200 teams."
     />
     <meta name="author" content="Aidar Begotayev" />
-    <meta name="theme-color" content="#0a1116" />
+    <meta name="theme-color" content="#0a1116" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f3f6f4" media="(prefers-color-scheme: light)" />
     <link rel="canonical" href="https://sprinterz5.github.io/portfolio/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sprinterz5.github.io/portfolio/" />
     <meta property="og:title" content="Aidar Begotayev | Portfolio" />
     <meta
       property="og:description"
-      content="Backend systems, Linux tools for real hardware, AI workflows and 20+ hackathons. Projects, wins and contacts."
+      content="Backend systems, Linux tools for real hardware, AI workflows and 20+ hackathons. Projects, experience, research and contacts."
     />
     <meta property="og:image" content="https://sprinterz5.github.io/portfolio/aidar.jpg" />
     <meta name="twitter:card" content="summary" />
@@ -24,10 +25,18 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230a1116'/%3E%3Crect x='2' y='2' width='12' height='12' fill='none' stroke='%237ce7c1' stroke-width='2'/%3E%3Crect x='5' y='5' width='2' height='2' fill='%23ff9169'/%3E%3Crect x='9' y='5' width='2' height='2' fill='%2387d8ff'/%3E%3Crect x='5' y='9' width='6' height='2' fill='%23ffd28d'/%3E%3C/svg%3E"
     />
+    <script>
+      // Apply the saved theme before the first paint.
+      document.documentElement.classList.add("js");
+      try {
+        const saved = localStorage.getItem("portfolio-theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="v-1.css" />
@@ -36,31 +45,33 @@
   <body>
     <div class="pixel-frame">
       <header class="topbar">
-        <div class="topbar-copy">
-          <p class="topbar-name">SYS.NODE : aidar.runtime // STATUS : active</p>
-        </div>
-        <div class="lang-switcher" aria-label="Language switcher">
-          <button class="lang-btn is-active" type="button" data-lang="en">EN</button>
-          <button class="lang-btn" type="button" data-lang="ru">RU</button>
-          <button class="lang-btn" type="button" data-lang="kz">KZ</button>
+        <a class="brand" href="./">aidar<span>.runtime</span></a>
+        <div class="topbar-tools">
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button class="lang-btn is-active" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="ru">RU</button>
+            <button class="lang-btn" type="button" data-lang="kz">KZ</button>
+          </div>
+          <button class="theme-btn" type="button" aria-label="Switch light or dark theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+          </button>
         </div>
       </header>
 
       <nav class="section-nav" aria-label="Section navigation">
         <span class="nav-prompt" aria-hidden="true">$ cd</span>
         <a class="nav-link" href="#projects" data-i18n="nav_projects">projects</a>
+        <a class="nav-link" href="#experience" data-i18n="nav_experience">experience</a>
         <a class="nav-link" href="#highlights" data-i18n="nav_highlights">wins</a>
-        <a class="nav-link" href="blog.html" data-i18n="nav_deepdives">blog</a>
+        <a class="nav-link" href="#blog" data-i18n="nav_deepdives">blog</a>
         <a class="nav-link" href="#study" data-i18n="nav_study">study</a>
-        <a class="nav-link" href="#trajectory" data-i18n="nav_trajectory">trajectory</a>
-        <a class="nav-link" href="#systems-env" data-i18n="nav_systems">linux</a>
         <a class="nav-link" href="#contact" data-i18n="nav_contact">contact</a>
       </nav>
 
       <main>
         <section class="hero">
           <div class="hero-copy">
-
             <div class="hero-main-copy">
               <p class="command">$ whoami</p>
               <h1>Aidar Begotayev</h1>
@@ -69,61 +80,34 @@
                 CS with AI student in Astana. I build backend systems, Linux
                 tools for real hardware and AI workflows.
               </p>
+              <ul class="fact-list">
+                <li data-i18n="fact_uni">BSc CS with AI, Coventry University Kazakhstan</li>
+                <li>GPA 3.75/4</li>
+                <li>IB 39/45</li>
+                <li data-i18n="fact_langs">RU / EN / KZ</li>
+              </ul>
             </div>
 
             <div class="stat-grid">
-              <button
-                class="stat-card modal-trigger"
-                type="button"
-                data-modal="achievements"
-              >
+              <button class="stat-card modal-trigger" type="button" data-modal="achievements">
                 <p class="stat-value">20+</p>
-                <p class="stat-label" data-i18n="stat_one">
-                  hackathons and competitions. click for wins, finalists, and
-                  selected builds
-                </p>
-                <p class="card-action" data-i18n="card_action">
-                  open breakdown
-                </p>
+                <p class="stat-label" data-i18n="stat_one">hackathons and competitions</p>
+                <p class="card-action" data-i18n="card_action">open breakdown</p>
               </button>
-              <button
-                class="stat-card modal-trigger"
-                type="button"
-                data-modal="organizing"
-              >
+              <button class="stat-card modal-trigger" type="button" data-modal="organizing">
                 <p class="stat-value">650+</p>
-                <p class="stat-label" data-i18n="stat_two">
-                  participants across EcoHackathon and Bright Future Hackathon
-                  that I organized
-                </p>
-                <p class="card-action" data-i18n="card_action">
-                  open breakdown
-                </p>
+                <p class="stat-label" data-i18n="stat_two">participants at hackathons I organized</p>
+                <p class="card-action" data-i18n="card_action">open breakdown</p>
               </button>
-              <button
-                class="stat-card modal-trigger"
-                type="button"
-                data-modal="stack"
-              >
-                <p class="stat-value" data-i18n="stat_three_value">
-                  Tech Stack
-                </p>
-                <p class="stat-label" data-i18n="stat_three">
-                  Python, SQL, Next.js, Linux, Docker, automation
-                </p>
-                <p class="card-action" data-i18n="card_action">
-                  open breakdown
-                </p>
+              <button class="stat-card modal-trigger" type="button" data-modal="stack">
+                <p class="stat-value" data-i18n="stat_three_value">Tech Stack</p>
+                <p class="stat-label" data-i18n="stat_three">Python, SQL, Next.js, Linux, Docker</p>
+                <p class="card-action" data-i18n="card_action">open breakdown</p>
               </button>
               <a class="stat-card" href="blog.html">
-                <p class="stat-value" data-i18n="stat_four_value">6 notes</p>
-                <p class="stat-label" data-i18n="stat_four">
-                  short personal notes on ISA design, kernel boundaries, and
-                  systems trade-offs
-                </p>
-                <p class="card-action" data-i18n="stat_four_action">
-                  read the notes
-                </p>
+                <p class="stat-value" data-i18n="stat_four_value">Blog</p>
+                <p class="stat-label" data-i18n="stat_four">notes on how systems work</p>
+                <p class="card-action" data-i18n="stat_four_action">read the blog</p>
               </a>
             </div>
           </div>
@@ -133,238 +117,286 @@
               <nav class="links-card" aria-label="Links">
                 <p class="command">$ ls ~/links</p>
                 <a class="big-link" href="CV.pdf" target="_blank" rel="noopener">
-                  <span class="big-link-name" data-i18n="contact_cv">CV (PDF)</span>
+                  <span class="big-link-name"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l5 5v15H6z"/><path d="M14 2v5h5M9 13h7M9 17h7"/></svg><span data-i18n="contact_cv">CV (PDF)</span></span>
                   <span class="big-link-hint" data-i18n="contact_cv_hint">1 page</span>
                 </a>
                 <a class="big-link" href="https://github.com/sprinterz5" target="_blank" rel="noopener">
-                  <span class="big-link-name">GitHub</span>
+                  <span class="big-link-name"><svg class="icon icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</span>
                   <span class="big-link-hint">sprinterz5</span>
                 </a>
                 <a class="big-link" href="https://www.linkedin.com/in/aidar-begotayev-918369239/" target="_blank" rel="noopener">
-                  <span class="big-link-name">LinkedIn</span>
+                  <span class="big-link-name"><svg class="icon icon-fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 8.5h3V21H3zM9 8.5h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V21h-3v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V21H9z"/></svg>LinkedIn</span>
                   <span class="big-link-hint">aidar-begotayev</span>
                 </a>
                 <a class="big-link" href="mailto:begotayeva@coventry.ac.uk">
-                  <span class="big-link-name">Email</span>
+                  <span class="big-link-name"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14"/><path d="M3 6l9 7 9-7"/></svg>Email</span>
                   <span class="big-link-hint">begotayeva@coventry.ac.uk</span>
                 </a>
               </nav>
 
               <div class="portrait-card">
-                <img
-                  class="portrait-image"
-                  src="aidar.jpg"
-                  alt="Portrait of Aidar Begotayev"
-                />
+                <img class="portrait-image" src="img/aidar.webp" width="600" height="678" alt="Portrait of Aidar Begotayev" />
               </div>
             </div>
 
             <div class="terminal-card">
-              <p class="command">$ cat status.txt</p>
-              <p class="terminal-line" data-i18n="focus_one">focus:: linux tools for real hardware</p>
-              <p class="terminal-line" data-i18n="focus_two">focus:: backend systems + product builds</p>
-              <p class="terminal-line" data-i18n="focus_three">focus:: ai workflows + automation</p>
-              <p class="terminal-line" data-i18n="focus_four">focus:: competition prototypes under pressure</p>
+              <p class="command">$ cat now.txt</p>
+              <p class="terminal-line" data-i18n="now_one">now:: shipping Shiftray, a Linux app for ASUS laptops</p>
+              <p class="terminal-line" data-i18n="now_two">now:: running the PrimeTeens mentor platform</p>
+              <p class="terminal-line" data-i18n="now_three">now:: research on RL with Hamilton-Jacobi-Bellman value functions</p>
             </div>
-
           </aside>
         </section>
 
-        <section class="section" id="projects">
+        <section class="section reveal" id="projects">
           <div class="section-terminal">
-            <p class="command">$ ls /projects/</p>
-            <p class="section-note" data-i18n="projects_note">
-              9 entries -- open a card for details and links
-            </p>
+            <p class="command"><span class="section-num">01</span> $ ls /projects/</p>
+            <p class="section-note" data-i18n="projects_note">9 entries -- open a card for details and links</p>
           </div>
-
           <div class="section-head">
             <p class="card-kicker" data-i18n="projects_kicker">Selected builds</p>
             <h2 data-i18n="projects_title">Projects behind the signal.</h2>
           </div>
 
-          <div class="project-grid">
-            <button
-              class="project-card modal-trigger project-trigger featured-project project-wide"
-              type="button"
-              data-modal="project-shiftray"
-            >
+          <article class="feature-card">
+            <div class="feature-copy">
               <div class="file-meta">
                 <p class="file-name">shiftray.app</p>
-                <p class="file-status">python / qt / asusctl / linux packaging</p>
+                <p class="file-status">v0.13 / GPL-3.0 / fedora copr / arch / appimage</p>
               </div>
               <p class="project-tag" data-i18n="project_shiftray_tag">Open source / Linux</p>
               <h3 data-i18n="project_shiftray_title">Shiftray</h3>
-              <p data-i18n="project_shiftray_copy">
+              <p class="card-copy" data-i18n="project_shiftray_copy">
                 A tray app for ASUS laptops on Linux: power modes, fan curves,
                 GPU switching, keyboard lighting, battery limits and the Fn
                 keys in one small window. Released as an AppImage and as
                 Fedora and Arch packages, translated into 7 languages.
               </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
-            </button>
-
-            <button
-              class="project-card modal-trigger project-trigger"
-              type="button"
-              data-modal="project-primeteens"
-            >
-              <div class="file-meta">
-                <p class="file-name">primeteens.platform</p>
-                <p class="file-status">aiogram / next.js / postgres / vps</p>
+              <ul class="chips">
+                <li>Python</li><li>PySide6 / Qt</li><li>asusctl</li><li>Cardwire</li><li>RPM / AUR</li>
+              </ul>
+              <div class="card-actions">
+                <a class="action-btn action-primary" href="https://github.com/sprinterz5/shiftray" target="_blank" rel="noopener" data-i18n="link_repo">GitHub repository</a>
+                <a class="action-btn" href="https://github.com/sprinterz5/shiftray/releases/latest" target="_blank" rel="noopener" data-i18n="link_download">Download the AppImage</a>
+                <button class="action-btn modal-trigger" type="button" data-modal="project-shiftray" data-i18n="project_open">open project file</button>
               </div>
-              <p class="project-tag" data-i18n="project_primeteens_tag">Summer school platform</p>
-              <h3 data-i18n="project_primeteens_title">PrimeTeens mentor bot and platform</h3>
-              <p data-i18n="project_primeteens_copy">
-                A Telegram bot and web platform for a summer intensive for
-                grades 7-11: lesson reminders, a short survey after each lesson
-                with voice answers, online workbooks and homework review.
-              </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
-            </button>
+            </div>
+            <figure class="feature-shot">
+              <img src="img/shiftray-main.webp" width="1200" height="574" loading="lazy" alt="Shiftray main window in the dark and the light theme" />
+            </figure>
+          </article>
 
-            <button
-              class="project-card modal-trigger project-trigger"
-              type="button"
-              data-modal="project-autism"
-            >
-              <div class="file-meta">
-                <p class="file-name">childinfo.app</p>
-                <p class="file-status">ui/ux / postgresql / deployed</p>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-thumb thumb-logo">
+                <img src="img/primeteens-logo.webp" width="400" height="400" loading="lazy" alt="PrimeTeens logo" />
               </div>
-              <p class="project-tag" data-i18n="project_autism_tag">Anisa Spectrum</p>
-              <h3 data-i18n="project_autism_title">Autism Spectrum (ChildInfo)</h3>
-              <p data-i18n="project_autism_copy">
-                Built the UI/UX and PostgreSQL-backed data layer for an early
-                autism-diagnosis app now deployed and postered in a local
-                hospital.
-              </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
-            </button>
+              <div class="project-body">
+                <p class="project-tag" data-i18n="project_primeteens_tag">Summer school platform</p>
+                <h3 data-i18n="project_primeteens_title">PrimeTeens mentor bot and platform</h3>
+                <p class="card-copy" data-i18n="project_primeteens_copy">A Telegram bot and web platform for a summer intensive: lesson reminders, a short survey after each lesson with voice answers, online workbooks and homework review.</p>
+                <ul class="chips"><li>aiogram</li><li>Next.js</li><li>PostgreSQL</li><li>Whisper</li></ul>
+                <div class="card-actions">
+                  <button class="action-btn modal-trigger" type="button" data-modal="project-primeteens" data-i18n="project_open">open project file</button>
+                  <a class="action-btn" href="https://github.com/sprinterz5/prime-teens" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
 
-            <button
-              class="project-card modal-trigger project-trigger"
-              type="button"
-              data-modal="project-elibra"
-            >
-              <div class="file-meta">
-                <p class="file-name">library_qr.middleware</p>
-                <p class="file-status">fastapi / playwright / sqlite</p>
+            <article class="project-card">
+              <div class="project-thumb thumb-pair">
+                <img src="img/childinfo.webp" width="420" height="900" loading="lazy" alt="ChildInfo app screen" />
+                <img src="img/childinfo-poster.webp" width="506" height="900" loading="lazy" alt="ChildInfo poster in a hospital corridor" />
               </div>
-              <p class="project-tag" data-i18n="project_one_tag">Library Automation Intern</p>
-              <h3 data-i18n="project_one_title">eLibra QR Middleware</h3>
-              <p data-i18n="project_one_copy">
-                Built a QR-based self-service issuance flow with FastAPI,
-                Playwright RPA, SQLite, and a web interface that reduced
-                librarian bottlenecks.
-              </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
-            </button>
+              <div class="project-body">
+                <p class="project-tag" data-i18n="project_autism_tag">Anisa Spectrum</p>
+                <h3 data-i18n="project_autism_title">Autism Spectrum (ChildInfo)</h3>
+                <p class="card-copy" data-i18n="project_autism_copy">Built the UI/UX and PostgreSQL-backed data layer for an early autism-diagnosis app now deployed and postered in a local hospital.</p>
+                <ul class="chips"><li>UI/UX</li><li>PostgreSQL</li><li data-i18n="chip_deployed">deployed</li></ul>
+                <div class="card-actions">
+                  <button class="action-btn modal-trigger" type="button" data-modal="project-autism" data-i18n="project_open">open project file</button>
+                </div>
+              </div>
+            </article>
 
-            <button
-              class="project-card modal-trigger project-trigger"
-              type="button"
-              data-modal="project-roomly"
-            >
-              <div class="file-meta">
-                <p class="file-name">roomly.app</p>
-                <p class="file-status">campus ops / telegram / scheduling</p>
+            <article class="project-card">
+              <div class="project-thumb thumb-phone">
+                <img src="img/library-desk.webp" width="420" height="900" loading="lazy" alt="Library Desk self-service screen" />
               </div>
-              <p class="project-tag" data-i18n="project_two_tag">University Product</p>
-              <h3 data-i18n="project_two_title">Roomly</h3>
-              <p data-i18n="project_two_copy">
-                Built a room reservation system with role-based flows, approval
-                logic, calendar management, and Telegram onboarding.
-              </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
-            </button>
+              <div class="project-body">
+                <p class="project-tag" data-i18n="project_one_tag">Library Automation Intern</p>
+                <h3 data-i18n="project_one_title">eLibra QR Middleware</h3>
+                <p class="card-copy" data-i18n="project_one_copy">Built a QR-based self-service issuance flow with FastAPI, Playwright RPA, SQLite, and a web interface that reduced librarian bottlenecks.</p>
+                <ul class="chips"><li>FastAPI</li><li>Playwright</li><li>SQLite</li></ul>
+                <div class="card-actions">
+                  <button class="action-btn modal-trigger" type="button" data-modal="project-elibra" data-i18n="project_open">open project file</button>
+                  <a class="action-btn" href="https://github.com/sprinterz5/library-qr" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
 
-            <button
-              class="project-card modal-trigger project-trigger"
-              type="button"
-              data-modal="project-bloody"
-            >
-              <div class="file-meta">
-                <p class="file-name">bloody_w95.protocol</p>
-                <p class="file-status">hidraw / usb / protocol notes</p>
+            <article class="project-card">
+              <div class="project-thumb thumb-wide">
+                <img src="img/roomly.webp" width="1200" height="569" loading="lazy" alt="Roomly booking calendar" />
               </div>
-              <p class="project-tag" data-i18n="project_bloody_tag">Hardware on Linux</p>
-              <h3 data-i18n="project_bloody_title">Bloody W95 mouse on Linux</h3>
-              <p data-i18n="project_bloody_copy">
-                The mouse ships with Windows-only software, so I decoded its
-                USB protocol and wrote a Python tool that sets RGB and DPI
-                over hidraw.
-              </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
-            </button>
+              <div class="project-body">
+                <p class="project-tag" data-i18n="project_two_tag">University Product</p>
+                <h3 data-i18n="project_two_title">Roomly</h3>
+                <p class="card-copy" data-i18n="project_two_copy">Built a room reservation system with role-based flows, approval logic, calendar management, and Telegram onboarding.</p>
+                <ul class="chips"><li>FastAPI</li><li>SQLAlchemy</li><li>Telegram Mini App</li></ul>
+                <div class="card-actions">
+                  <button class="action-btn modal-trigger" type="button" data-modal="project-roomly" data-i18n="project_open">open project file</button>
+                  <a class="action-btn" href="https://github.com/sprinterz5/roomly" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
 
-            <button
-              class="project-card modal-trigger project-trigger"
-              type="button"
-              data-modal="project-debounce"
-            >
-              <div class="file-meta">
-                <p class="file-name">keyboard_debounce.sys</p>
-                <p class="file-status">signal filtering / input remapping</p>
+            <article class="project-card">
+              <div class="project-thumb thumb-term" aria-hidden="true">
+                <pre><span class="t-prompt">$</span> python3 bloodyctl.py info
+<span class="t-dim">A4Tech Bloody W95 Max  09da:1434</span>
+<span class="t-prompt">$</span> python3 bloodyctl.py dpi 1600 --slot 0
+<span class="t-ok">ok</span>  slot 0 -> 1600 dpi
+<span class="t-prompt">$</span> python3 bloodyctl.py rainbow
+<span class="t-r">■</span><span class="t-o">■</span><span class="t-y">■</span><span class="t-g">■</span><span class="t-b">■</span><span class="t-v">■</span>  ring lit</pre>
               </div>
-              <p class="project-tag" data-i18n="project_debounce_tag">Builder Story</p>
-              <h3 data-i18n="project_debounce_title">
-                Tea-Damaged Keyboard -&gt; Software Debounce Layer
-              </h3>
-              <p data-i18n="project_debounce_copy">
-                A friend spilled tea on his keyboard and the damaged contacts
-                fired multiple ghost keypresses per press. Instead of
-                replacing the hardware, I studied the failure pattern and
-                wrote a software layer that reads the messy multi-fire signal
-                and normalizes it into a single correct character.
-              </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
-            </button>
+              <div class="project-body">
+                <p class="project-tag" data-i18n="project_bloody_tag">Hardware on Linux</p>
+                <h3 data-i18n="project_bloody_title">Bloody W95 mouse on Linux</h3>
+                <p class="card-copy" data-i18n="project_bloody_copy">The mouse ships with Windows-only software, so I decoded its USB protocol and wrote a Python tool that sets RGB and DPI over hidraw.</p>
+                <ul class="chips"><li>Python</li><li>hidraw</li><li>USB</li><li data-i18n="chip_re">reverse engineering</li></ul>
+                <div class="card-actions">
+                  <button class="action-btn modal-trigger" type="button" data-modal="project-bloody" data-i18n="project_open">open project file</button>
+                  <a class="action-btn" href="https://github.com/sprinterz5/bloody-w95-linux" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
 
-            <button
-              class="project-card modal-trigger project-trigger"
-              type="button"
-              data-modal="project-research"
-            >
-              <div class="file-meta">
-                <p class="file-name">astana_housing.research</p>
-                <p class="file-status">spatial economics / lomonosov-2026</p>
+            <article class="project-card">
+              <div class="project-thumb thumb-term" aria-hidden="true">
+                <pre><span class="t-dim">raw:</span>   h h h e e l l l l o o
+<span class="t-dim">gap:</span>   3 2 4 1 2 3 1 2 5 3 ms
+<span class="t-dim">rule:</span>  same key &lt; 30 ms -&gt; drop
+<span class="t-ok">out:</span>   h e l l o</pre>
               </div>
-              <p class="project-tag" data-i18n="project_three_tag">Research</p>
+              <div class="project-body">
+                <p class="project-tag" data-i18n="project_debounce_tag">Builder Story</p>
+                <h3 data-i18n="project_debounce_title">Tea-Damaged Keyboard -&gt; Software Debounce Layer</h3>
+                <p class="card-copy" data-i18n="project_debounce_copy">A friend spilled tea on his keyboard and the damaged contacts fired multiple ghost keypresses per press. Instead of replacing the hardware, I studied the failure pattern and wrote a software layer that reads the messy multi-fire signal and normalizes it into a single correct character.</p>
+                <div class="card-actions">
+                  <button class="action-btn modal-trigger" type="button" data-modal="project-debounce" data-i18n="project_open">open project file</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="mini-grid">
+            <button class="mini-card modal-trigger" type="button" data-modal="project-research">
+              <p class="file-name">astana_housing.research</p>
               <h3 data-i18n="project_three_title">Spatial Factors of Housing Prices in Astana</h3>
-              <p data-i18n="project_three_copy">
-                Earned 3rd place at Lomonosov-2026 with research on how
-                location-linked variables shape housing prices in Astana.
-              </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
+              <p class="card-copy" data-i18n="project_three_copy">Earned 3rd place at Lomonosov-2026 with research on how location-linked variables shape housing prices in Astana.</p>
+              <p class="card-action" data-i18n="project_open">open project file</p>
             </button>
-
-            <button
-              class="project-card modal-trigger project-trigger"
-              type="button"
-              data-modal="project-rag"
-            >
-              <div class="file-meta">
-                <p class="file-name">rag_automation.stack</p>
-                <p class="file-status">backend integrations / ai workflows</p>
-              </div>
-              <p class="project-tag" data-i18n="project_four_tag">Applied AI</p>
+            <button class="mini-card modal-trigger" type="button" data-modal="project-rag">
+              <p class="file-name">rag_automation.stack</p>
               <h3 data-i18n="project_four_title">RAG and automation workflows</h3>
-              <p data-i18n="project_four_copy">
-                Built AI-assisted workflows around RAG, backend integrations,
-                and operational automation for real institutional use cases.
-              </p>
-              <p class="project-open" data-i18n="project_open">open project file</p>
+              <p class="card-copy" data-i18n="project_four_copy">Built AI-assisted workflows around RAG, backend integrations, and operational automation for real institutional use cases.</p>
+              <p class="card-action" data-i18n="project_open">open project file</p>
             </button>
           </div>
         </section>
 
-        <section class="section" id="highlights">
+        <section class="section reveal" id="experience">
           <div class="section-terminal">
-            <p class="command">$ ls /highlight_cases/</p>
-            <p class="section-note" data-i18n="highlights_note">4 entries -- the strongest results</p>
+            <p class="command"><span class="section-num">02</span> $ cat /experience.log</p>
+            <p class="section-note" data-i18n="exp_note">work, research and education</p>
+          </div>
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="exp_kicker">Experience</p>
+            <h2 data-i18n="exp_title">Where the work happened.</h2>
           </div>
 
+          <div class="exp-grid">
+            <div class="exp-col">
+              <p class="exp-col-title" data-i18n="exp_work">Work</p>
+              <ol class="timeline">
+                <li>
+                  <p class="tl-date" data-i18n="exp_pt_date">Jun 2026 - now</p>
+                  <h3>PrimeTeens</h3>
+                  <p class="tl-role" data-i18n="exp_pt_role">Curriculum designer, mentor and platform developer</p>
+                  <p class="tl-copy" data-i18n="exp_pt_copy">Built the platform: site, live student workbook, Telegram bots, PostgreSQL, deployment. Designed and taught a research and portfolio course for grades 7-11 to 6 groups.</p>
+                </li>
+                <li>
+                  <p class="tl-date" data-i18n="exp_lib_date">Jan 2026 - now</p>
+                  <h3>Coventry University Kazakhstan</h3>
+                  <p class="tl-role" data-i18n="exp_lib_role">Library automation intern</p>
+                  <p class="tl-copy" data-i18n="exp_lib_copy">QR book issuance as a low-cost alternative to RFID, the library website and a RAG chatbot for it.</p>
+                </li>
+                <li>
+                  <p class="tl-date" data-i18n="exp_as_date">Sep - Dec 2024</p>
+                  <h3>Anisa Spectrum</h3>
+                  <p class="tl-role" data-i18n="exp_as_role">Software developer</p>
+                  <p class="tl-copy" data-i18n="exp_as_copy">App for early autism diagnosis, now used in a local hospital: UI/UX and the PostgreSQL database.</p>
+                </li>
+                <li>
+                  <p class="tl-date" data-i18n="exp_unicef_date">Jan - May 2024</p>
+                  <h3>UNICEF Kazakhstan</h3>
+                  <p class="tl-role" data-i18n="exp_unicef_role">Volunteer computer science teacher</p>
+                  <p class="tl-copy" data-i18n="exp_unicef_copy">Mentored children from disadvantaged backgrounds through their first programming project.</p>
+                </li>
+                <li>
+                  <p class="tl-date" data-i18n="exp_org_date">Jan - Aug 2024</p>
+                  <h3>EcoHackathon &amp; Bright Future Hackathon</h3>
+                  <p class="tl-role" data-i18n="exp_org_role">Main organizer</p>
+                  <p class="tl-copy" data-i18n="exp_org_copy">Two national hackathons across 14 cities, 650+ participants and 175 teams: logistics, rules, tasks, sponsors and marketing.</p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="exp-col">
+              <p class="exp-col-title" data-i18n="exp_research">Research</p>
+              <ol class="timeline">
+                <li>
+                  <p class="tl-date" data-i18n="exp_rl_date">2026 - now</p>
+                  <h3 data-i18n="exp_rl_title">Supervised research, Coventry University Kazakhstan</h3>
+                  <p class="tl-role" data-i18n="exp_rl_role">Supervisor: Sanzhar Kusdavletov</p>
+                  <p class="tl-copy" data-i18n="exp_rl_copy">Reinforcement learning with Hamilton-Jacobi-Bellman value functions for safety-critical control (UAV interception): V = V_HJB + learned residual, to be tested in simulation.</p>
+                </li>
+                <li>
+                  <p class="tl-date">2026</p>
+                  <h3 data-i18n="exp_lomo_title">Lomonosov-2026 conference</h3>
+                  <p class="tl-role" data-i18n="exp_lomo_role">3rd place of 20 reports, spatial analysis section</p>
+                  <p class="tl-copy" data-i18n="exp_lomo_copy">Regression model of housing prices in Astana from real-estate listings with ArcGIS: location, infrastructure and environment as price drivers.</p>
+                </li>
+                <li>
+                  <p class="tl-date">2025</p>
+                  <h3 data-i18n="exp_nu_title">Nazarbayev University Summer Research Program</h3>
+                  <p class="tl-copy" data-i18n="exp_nu_copy">Tested venture hypotheses on data, wrote the final report and pitched it to a panel.</p>
+                </li>
+              </ol>
+
+              <p class="exp-col-title" data-i18n="exp_education">Education</p>
+              <ol class="timeline">
+                <li>
+                  <p class="tl-date" data-i18n="exp_bsc_date">2025 - now</p>
+                  <h3 data-i18n="exp_bsc_title">BSc Computer Science with AI</h3>
+                  <p class="tl-role" data-i18n="exp_bsc_role">Coventry University Kazakhstan / GPA 3.75/4 / State Scholarship</p>
+                </li>
+                <li>
+                  <p class="tl-date">2019 - 2025</p>
+                  <h3 data-i18n="exp_nis_title">Nazarbayev Intellectual School of Astana</h3>
+                  <p class="tl-role" data-i18n="exp_nis_role">IB Diploma, Math AA HL / IB 39/45</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal" id="highlights">
+          <div class="section-terminal">
+            <p class="command"><span class="section-num">03</span> $ ls /highlight_cases/</p>
+            <p class="section-note" data-i18n="highlights_note">4 entries -- the strongest results</p>
+          </div>
           <div class="section-head">
             <p class="card-kicker" data-i18n="highlights_kicker">Selected stages</p>
             <h2 data-i18n="highlights_title">The events that matter most.</h2>
@@ -372,233 +404,108 @@
 
           <div class="highlight-grid">
             <article class="panel panel-accent">
-              <div class="file-meta">
-                <p class="file-name">bicap.first</p>
-                <p class="file-status">text-to-sql / ai audit / smb</p>
-              </div>
+              <p class="win-rank">#1<span>/200</span></p>
               <p class="project-tag" data-i18n="highlight_three_tag">BiCAP Hackathon</p>
               <h3 data-i18n="highlight_three_title">1st place out of 200 teams</h3>
-              <p data-i18n="highlight_three_copy">
-                Built text-to-SQL, SQL-to-text, and AI-assisted audit ideas for
-                small and medium businesses.
-              </p>
+              <p class="card-copy" data-i18n="highlight_three_copy">Built text-to-SQL, SQL-to-text, and AI-assisted audit ideas for small and medium businesses.</p>
             </article>
-
             <article class="panel panel-accent">
-              <div class="file-meta">
-                <p class="file-name">amanattech.top20</p>
-                <p class="file-status">social impact / product concept</p>
-              </div>
+              <p class="win-rank">#3<span>/125</span></p>
+              <p class="project-tag">National Economic Challenge</p>
+              <h3 data-i18n="highlight_nec_title">3rd place out of 125 teams</h3>
+              <p class="card-copy" data-i18n="highlight_nec_copy">An AI product that generates practice tests for SAT and IELTS prep.</p>
+            </article>
+            <article class="panel panel-accent">
+              <p class="win-rank">top 20<span>/400</span></p>
               <p class="project-tag" data-i18n="highlight_one_tag">AmanatTech</p>
               <h3 data-i18n="highlight_one_title">Top 20 out of 400 teams</h3>
-              <p data-i18n="highlight_one_copy">
-                Built a platform concept focused on helping people with drug
-                addiction, combining social impact with product thinking.
-              </p>
+              <p class="card-copy" data-i18n="highlight_one_copy">Built a platform concept focused on helping people with drug addiction, combining social impact with product thinking.</p>
             </article>
-
             <article class="panel panel-accent">
-              <div class="file-meta">
-                <p class="file-name">hacknu26.ktz</p>
-                <p class="file-status">telemetry / diagnostics / dashboard</p>
-              </div>
+              <p class="win-rank">KTZ<span>HackNU 2026</span></p>
               <p class="project-tag" data-i18n="highlight_two_tag">HackNU 2026</p>
               <h3 data-i18n="highlight_two_title">Kazakhstan Temir Zholy case</h3>
-              <p data-i18n="highlight_two_copy">
-                Built a locomotive digital twin platform for telemetry,
-                diagnostics, and monitoring in a high-pressure engineering
-                sprint.
-              </p>
+              <p class="card-copy" data-i18n="highlight_two_copy">Built a locomotive digital twin platform for telemetry, diagnostics, and monitoring in a high-pressure engineering sprint.</p>
               <a class="inline-link" href="https://github.com/sprinterz5/hacknu26" target="_blank" rel="noopener" data-i18n="link_code">source code</a>
             </article>
-
-            <article class="panel panel-accent">
-              <div class="file-meta">
-                <p class="file-name">decentrathon.series</p>
-                <p class="file-status">telegram mini apps / ai systems</p>
-              </div>
-              <p class="project-tag" data-i18n="highlight_four_tag">Decentrathon 2.0-5.0</p>
-              <h3 data-i18n="highlight_four_title">Four iterations, evolving scope</h3>
-              <p data-i18n="highlight_four_copy">
-                Worked on Telegram mini apps, AI assistants, rule-based
-                screening for InVision University, and model experiments with
-                PyTorch.
-              </p>
-            </article>
           </div>
+          <button class="text-btn modal-trigger" type="button" data-modal="achievements" data-i18n="wins_all">all 20+ results</button>
         </section>
 
-
-        <section class="section" id="study">
+        <section class="section reveal" id="blog">
           <div class="section-terminal">
-            <p class="command">$ ls /self_study/</p>
-            <p class="section-note" data-i18n="study_note">
-              independent coursework -- handwritten notes in the PDF
-            </p>
+            <p class="command"><span class="section-num">04</span> $ cat /blog/</p>
+            <p class="section-note" data-i18n="deepdives_note">6 entries -- personal notes, not coursework</p>
           </div>
+          <div class="section-head">
+            <p class="card-kicker" data-i18n="blog_kicker">Blog</p>
+            <h2 data-i18n="deepdives_title">Systems questions I keep coming back to.</h2>
+          </div>
+          <div class="blog-grid">
+            <a class="post-card" href="blog.html#arm-vs-x86">
+              <p class="file-name">x86_vs_arm.compare</p>
+              <h3 data-i18n="deepdive_one_title">Why ARM, not just why not x86-64</h3>
+              <p class="card-action" data-i18n="read_post">read</p>
+            </a>
+            <a class="post-card" href="blog.html#anticheat-ring0">
+              <p class="file-name">anticheat.ring0</p>
+              <h3 data-i18n="deepdive_two_title">Why anti-cheat lives in Ring 0 -- and what that costs everyone else</h3>
+              <p class="card-action" data-i18n="read_post">read</p>
+            </a>
+            <a class="post-card" href="blog.html#amd-chiplets">
+              <p class="file-name">amd_zen.revolution</p>
+              <h3 data-i18n="deepdive_six_title">AMD's chiplet bet vs. Intel stuck on 14nm</h3>
+              <p class="card-action" data-i18n="read_post">read</p>
+            </a>
+          </div>
+          <a class="text-btn" href="blog.html" data-i18n="blog_all">all posts</a>
+        </section>
 
+        <section class="section reveal" id="study">
+          <div class="section-terminal">
+            <p class="command"><span class="section-num">05</span> $ ls /self_study/</p>
+            <p class="section-note" data-i18n="study_note">independent coursework -- handwritten notes in the PDF</p>
+          </div>
           <div class="section-head">
             <p class="card-kicker" data-i18n="study_kicker">Study log</p>
             <h2 data-i18n="study_title">Building the math underneath the code.</h2>
           </div>
-
           <div class="study-grid">
             <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">mit_ocw.notes</p>
-                <p class="file-status">self-paced coursework</p>
-              </div>
+              <p class="file-name">mit_ocw.notes</p>
               <h3 data-i18n="study_one_title">MIT OpenCourseWare</h3>
-              <p data-i18n="study_one_copy">
-                Follow OCW lectures -- Linear Algebra with Prof. Strang,
-                Multivariable Calculus, Differential Equations -- and keep
-                handwritten notes alongside them.
-              </p>
+              <p class="card-copy" data-i18n="study_one_copy">Follow OCW lectures -- Linear Algebra with Prof. Strang, Multivariable Calculus, Differential Equations -- and keep handwritten notes alongside them.</p>
             </article>
-
             <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">discrete_math.notes</p>
-                <p class="file-status">voluntary freshman coursework</p>
-              </div>
+              <p class="file-name">discrete_math.notes</p>
               <h3 data-i18n="study_two_title">Discrete Mathematics</h3>
-              <p data-i18n="study_two_copy">
-                Sit in on Prof. Sanzhar Kusdavletov's course and work
-                problems by hand -- null space, set theory, truth tables.
-              </p>
+              <p class="card-copy" data-i18n="study_two_copy">Sit in on Prof. Sanzhar Kusdavletov's course and work problems by hand -- null space, set theory, truth tables.</p>
             </article>
-
             <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">linear_algebra.selfstudy</p>
-                <p class="file-status">independent study</p>
-              </div>
+              <p class="file-name">linear_algebra.selfstudy</p>
               <h3 data-i18n="study_three_title">Linear algebra, one level deeper</h3>
-              <p data-i18n="study_three_copy">
-                Quadratic forms, QR / Gram-Schmidt, and LU decomposition
-                worked through outside of class requirements.
-              </p>
+              <p class="card-copy" data-i18n="study_three_copy">Quadratic forms, QR / Gram-Schmidt, and LU decomposition worked through outside of class requirements.</p>
             </article>
-
             <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">notes_and_builds.pdf</p>
-                <p class="file-status">scans / screenshots</p>
-              </div>
+              <p class="file-name">notes_and_builds.pdf</p>
               <h3 data-i18n="study_four_title">The notes themselves</h3>
-              <p data-i18n="study_four_copy">
-                Pages from my OCW and discrete math notebooks, plus photos of
-                the ChildInfo poster in the hospital and screenshots of the
-                library and Roomly interfaces.
-              </p>
+              <p class="card-copy" data-i18n="study_four_copy">Pages from my OCW and discrete math notebooks, plus photos of the ChildInfo poster in the hospital and screenshots of the library and Roomly interfaces.</p>
               <a class="inline-link" href="notes-and-builds.pdf" target="_blank" rel="noopener" data-i18n="link_pdf">open the PDF</a>
             </article>
           </div>
         </section>
 
-        <section class="section" id="trajectory">
-          <div class="section-terminal">
-            <p class="command">$ cat /trajectory.log</p>
-            <p class="section-note" data-i18n="trajectory_note">3 records -- foundation, leadership, creative range</p>
-          </div>
-
-          <div class="section-head">
-            <p class="card-kicker" data-i18n="trajectory_kicker">Trajectory</p>
-            <h2 data-i18n="trajectory_title">Signal beyond competitions.</h2>
-          </div>
-
-          <div class="timeline-grid">
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">early_route.sys</p>
-                <p class="file-status">c++ olympiads / python bots / django</p>
-              </div>
-              <h3 data-i18n="trajectory_one_title">Early route</h3>
-              <p data-i18n="trajectory_one_copy">
-                Started with C++ olympiad problem solving in 5th grade,
-                switched to Python in 7th grade for Discord and Telegram bots,
-                and built a Django site in 8th grade.
-              </p>
-            </article>
-
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">leadership.service</p>
-                <p class="file-status">wecare / unicef / unesco / hackathons</p>
-              </div>
-              <h3 data-i18n="trajectory_two_title">Leadership and service</h3>
-              <p data-i18n="trajectory_two_copy">
-                One of two leaders of WeCare, volunteer teacher through UNICEF
-                Kazakhstan and UNESCO club initiatives, and organizer of
-                hackathons across 14 cities.
-              </p>
-            </article>
-
-            <article class="panel">
-              <div class="file-meta">
-                <p class="file-name">creative.product_range</p>
-                <p class="file-status">figma / marketing / smm / drama</p>
-              </div>
-              <h3 data-i18n="trajectory_three_title">Creative and product range</h3>
-              <p data-i18n="trajectory_three_copy">
-                Studied web design at Young Profi School, worked in digital
-                marketing at inUniGlobal, handled SMM roles, and performed in
-                drama club.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="systems-env">
-          <div class="section-terminal">
-            <p class="command">$ uname -a</p>
-            <p class="section-note" data-i18n="sysenv_note">
-              where the linux projects come from
-            </p>
-          </div>
-
-          <div class="section-head">
-            <p class="card-kicker" data-i18n="sysenv_kicker">Linux daily driver</p>
-            <h2 data-i18n="sysenv_title">The machine I debug on every day.</h2>
-          </div>
-
-          <div class="env-grid env-grid-three">
-            <article class="panel">
-              <p class="file-name">os.fedora</p>
-              <p data-i18n="sysenv_one">
-                Fedora 44 KDE on an ASUS TUF A15 next to Windows, including
-                NVIDIA drivers under Secure Boot. The gaps I hit on this
-                laptop turned into Shiftray.
-              </p>
-            </article>
-            <article class="panel">
-              <p class="file-name">infra.vps</p>
-              <p data-i18n="sysenv_two">
-                Run my own services on a VPS: Docker, nginx, systemd units,
-                backups and monitoring for the PrimeTeens bots and platform.
-              </p>
-            </article>
-            <article class="panel">
-              <p class="file-name">diag.hardware</p>
-              <p data-i18n="sysenv_three">
-                Measure before guessing: sensor logs showed a game was
-                CPU-bound, not thermal throttling, and a sleep log showed what
-                kept waking the laptop in a closed bag.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <footer class="site-footer" id="contact">
+        <footer class="site-footer reveal" id="contact">
           <div class="footer-block">
             <p class="command">$ contact --list</p>
+            <h2 data-i18n="contact_title">Let's talk.</h2>
             <p class="footer-copy" data-i18n="footer_one">Open to internships, research and project work.</p>
           </div>
           <div class="contact-row">
-            <a class="contact-link" href="https://github.com/sprinterz5" target="_blank" rel="noopener">GitHub</a>
-            <a class="contact-link" href="https://www.linkedin.com/in/aidar-begotayev-918369239/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="contact-link" href="mailto:begotayeva@coventry.ac.uk">begotayeva@coventry.ac.uk</a>
-            <a class="contact-link" href="CV.pdf" target="_blank" rel="noopener" data-i18n="contact_cv">CV (PDF)</a>
+            <a class="action-btn action-primary" href="mailto:begotayeva@coventry.ac.uk">begotayeva@coventry.ac.uk</a>
+            <a class="action-btn" href="CV.pdf" target="_blank" rel="noopener" data-i18n="contact_cv">CV (PDF)</a>
+            <a class="action-btn" href="https://github.com/sprinterz5" target="_blank" rel="noopener">GitHub</a>
+            <a class="action-btn" href="https://www.linkedin.com/in/aidar-begotayev-918369239/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </footer>
       </main>
@@ -606,17 +513,10 @@
 
     <div class="modal-shell" hidden>
       <div class="modal-backdrop" data-close-modal></div>
-      <section
-        class="modal-panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modal-title"
-      >
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-topbar">
           <p class="command" id="modal-command">$ open /records/summary.log</p>
-          <button class="modal-close" type="button" data-close-modal data-i18n="modal_close">
-            close
-          </button>
+          <button class="modal-close" type="button" data-close-modal data-i18n="modal_close">close</button>
         </div>
         <div class="modal-head">
           <p class="card-kicker" id="modal-kicker"></p>

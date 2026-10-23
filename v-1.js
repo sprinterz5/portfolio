@@ -12,16 +12,10 @@ const translations = {
     stat_four: "notes on how systems work",
     stat_four_action: "read the blog",
     card_action: "open breakdown",
-    focus_one: "focus:: linux tools for real hardware",
-    focus_two: "focus:: backend systems + product builds",
-    focus_three: "focus:: ai workflows + automation",
-    focus_four: "focus:: competition prototypes under pressure",
     nav_projects: "projects",
     nav_highlights: "wins",
     nav_deepdives: "blog",
     nav_study: "study",
-    nav_trajectory: "trajectory",
-    nav_systems: "linux",
     nav_contact: "contact",
     projects_note: "9 entries -- open a card for details and links",
     projects_kicker: "Selected builds",
@@ -34,7 +28,7 @@ const translations = {
     project_primeteens_tag: "Summer school platform",
     project_primeteens_title: "PrimeTeens mentor bot and platform",
     project_primeteens_copy:
-      "A Telegram bot and web platform for a summer intensive for grades 7-11: lesson reminders, a short survey after each lesson with voice answers, online workbooks and homework review.",
+      "A Telegram bot and web platform for a summer intensive: lesson reminders, a short survey after each lesson with voice answers, online workbooks and homework review.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
@@ -126,27 +120,6 @@ const translations = {
     study_four_copy:
       "Pages from my OCW and discrete math notebooks, plus photos of the ChildInfo poster in the hospital and screenshots of the library and Roomly interfaces.",
     link_pdf: "open the PDF",
-    trajectory_note: "3 records -- foundation, leadership, creative range",
-    trajectory_kicker: "Trajectory",
-    trajectory_title: "Signal beyond competitions.",
-    trajectory_one_title: "Early route",
-    trajectory_one_copy:
-      "Started with C++ olympiad problem solving in 5th grade, switched to Python in 7th grade for Discord and Telegram bots, and built a Django site in 8th grade.",
-    trajectory_two_title: "Leadership and service",
-    trajectory_two_copy:
-      "One of two leaders of WeCare, volunteer teacher through UNICEF Kazakhstan and UNESCO club initiatives, and organizer of hackathons across 14 cities.",
-    trajectory_three_title: "Creative and product range",
-    trajectory_three_copy:
-      "Studied web design at Young Profi School, worked in digital marketing at inUniGlobal, handled SMM roles, and performed in drama club.",
-    sysenv_note: "where the linux projects come from",
-    sysenv_kicker: "Linux daily driver",
-    sysenv_title: "The machine I debug on every day.",
-    sysenv_one:
-      "Fedora 44 KDE on an ASUS TUF A15 next to Windows, including NVIDIA drivers under Secure Boot. The gaps I hit on this laptop turned into Shiftray.",
-    sysenv_two:
-      "Run my own services on a VPS: Docker, nginx, systemd units, backups and monitoring for the PrimeTeens bots and platform.",
-    sysenv_three:
-      "Measure before guessing: sensor logs showed a game was CPU-bound, not thermal throttling, and a sleep log showed what kept waking the laptop in a closed bag.",
     footer_one: "Open to internships, research and project work.",
     modal_close: "close",
     modal_links: "Links",
@@ -156,6 +129,66 @@ const translations = {
     contact_cv_hint: "1 page",
     blog_back: "<- back to portfolio",
     blog_kicker: "Blog",
+    nav_experience: "experience",
+    fact_uni: "BSc CS with AI, Coventry University Kazakhstan",
+    fact_langs: "RU / EN / KZ",
+    now_one: "now:: shipping Shiftray, a Linux app for ASUS laptops",
+    now_two: "now:: running the PrimeTeens mentor platform",
+    now_three:
+      "now:: research on RL with Hamilton-Jacobi-Bellman value functions",
+    chip_deployed: "deployed",
+    chip_re: "reverse engineering",
+    exp_note: "work, research and education",
+    exp_kicker: "Experience",
+    exp_title: "Where the work happened.",
+    exp_work: "Work",
+    exp_research: "Research",
+    exp_education: "Education",
+    exp_pt_date: "Jun 2026 - now",
+    exp_pt_role: "Curriculum designer, mentor and platform developer",
+    exp_pt_copy:
+      "Built the platform: site, live student workbook, Telegram bots, PostgreSQL, deployment. Designed and taught a research and portfolio course for grades 7-11 to 6 groups.",
+    exp_lib_date: "Jan 2026 - now",
+    exp_lib_role: "Library automation intern",
+    exp_lib_copy:
+      "QR book issuance as a low-cost alternative to RFID, the library website and a RAG chatbot for it.",
+    exp_as_date: "Sep - Dec 2024",
+    exp_as_role: "Software developer",
+    exp_as_copy:
+      "App for early autism diagnosis, now used in a local hospital: UI/UX and the PostgreSQL database.",
+    exp_unicef_date: "Jan - May 2024",
+    exp_unicef_role: "Volunteer computer science teacher",
+    exp_unicef_copy:
+      "Mentored children from disadvantaged backgrounds through their first programming project.",
+    exp_org_date: "Jan - Aug 2024",
+    exp_org_role: "Main organizer",
+    exp_org_copy:
+      "Two national hackathons across 14 cities, 650+ participants and 175 teams: logistics, rules, tasks, sponsors and marketing.",
+    exp_rl_date: "2026 - now",
+    exp_rl_title: "Supervised research, Coventry University Kazakhstan",
+    exp_rl_role: "Supervisor: Sanzhar Kusdavletov",
+    exp_rl_copy:
+      "Reinforcement learning with Hamilton-Jacobi-Bellman value functions for safety-critical control (UAV interception): V = V_HJB + learned residual, to be tested in simulation.",
+    exp_lomo_title: "Lomonosov-2026 conference",
+    exp_lomo_role: "3rd place of 20 reports, spatial analysis section",
+    exp_lomo_copy:
+      "Regression model of housing prices in Astana from real-estate listings with ArcGIS: location, infrastructure and environment as price drivers.",
+    exp_nu_title: "Nazarbayev University Summer Research Program",
+    exp_nu_copy:
+      "Tested venture hypotheses on data, wrote the final report and pitched it to a panel.",
+    exp_bsc_date: "2025 - now",
+    exp_bsc_title: "BSc Computer Science with AI",
+    exp_bsc_role:
+      "Coventry University Kazakhstan / GPA 3.75/4 / State Scholarship",
+    exp_nis_title: "Nazarbayev Intellectual School of Astana",
+    exp_nis_role: "IB Diploma, Math AA HL / IB 39/45",
+    highlight_nec_title: "3rd place out of 125 teams",
+    highlight_nec_copy:
+      "An AI product that generates practice tests for SAT and IELTS prep.",
+    wins_all: "all 20+ results",
+    read_post: "read",
+    blog_all: "all posts",
+    contact_title: "Let's talk.",
   },
   ru: {
     hero_eyebrow: "строю // отлаживаю // соревнуюсь // выпускаю",
@@ -170,16 +203,10 @@ const translations = {
     stat_four: "заметки о том, как устроены системы",
     stat_four_action: "читать блог",
     card_action: "подробнее",
-    focus_one: "focus:: linux-инструменты для реального железа",
-    focus_two: "focus:: бэкенд-системы + продукты",
-    focus_three: "focus:: ai-процессы + автоматизация",
-    focus_four: "focus:: прототипы на соревнованиях под давлением",
     nav_projects: "проекты",
     nav_highlights: "победы",
     nav_deepdives: "блог",
     nav_study: "учёба",
-    nav_trajectory: "путь",
-    nav_systems: "linux",
     nav_contact: "контакты",
     projects_note:
       "9 записей -- откройте карточку, там подробности и ссылки",
@@ -193,7 +220,7 @@ const translations = {
     project_primeteens_tag: "Платформа летней школы",
     project_primeteens_title: "Бот и платформа для менторов PrimeTeens",
     project_primeteens_copy:
-      "Telegram-бот и веб-платформа для летнего интенсива 7-11 классов: напоминания о занятиях, короткий опрос после каждого урока с голосовыми ответами, онлайн-тетради и проверка домашки.",
+      "Telegram-бот и веб-платформа для летнего интенсива: напоминания о занятиях, короткий опрос после каждого урока с голосовыми ответами, онлайн-тетради и проверка домашки.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
@@ -286,27 +313,6 @@ const translations = {
     study_four_copy:
       "Страницы из тетрадей по OCW и дискретной математике, фото постера ChildInfo в больнице и скриншоты интерфейсов библиотеки и Roomly.",
     link_pdf: "открыть PDF",
-    trajectory_note: "3 записи -- основа, лидерство, творчество",
-    trajectory_kicker: "Путь",
-    trajectory_title: "Не только соревнования.",
-    trajectory_one_title: "Начало",
-    trajectory_one_copy:
-      "Начал с олимпиадных задач на C++ в 5 классе, в 7 классе перешёл на Python ради ботов для Discord и Telegram, в 8 классе сделал сайт на Django.",
-    trajectory_two_title: "Лидерство и волонтёрство",
-    trajectory_two_copy:
-      "Один из двух лидеров WeCare, волонтёр-преподаватель в проектах UNICEF Kazakhstan и клубов ЮНЕСКО, организатор хакатонов с участниками из 14 городов.",
-    trajectory_three_title: "Дизайн и продукт",
-    trajectory_three_copy:
-      "Учился веб-дизайну в Young Profi School, работал в digital-маркетинге в inUniGlobal, вёл SMM и играл в театральном кружке.",
-    sysenv_note: "откуда берутся linux-проекты",
-    sysenv_kicker: "Linux каждый день",
-    sysenv_title: "Машина, на которой я отлаживаю всё.",
-    sysenv_one:
-      "Fedora 44 KDE на ASUS TUF A15 рядом с Windows, включая драйверы NVIDIA с Secure Boot. Из того, чего мне не хватало на этом ноутбуке, вырос Shiftray.",
-    sysenv_two:
-      "Держу свои сервисы на VPS: Docker, nginx, systemd, бэкапы и мониторинг для ботов и платформы PrimeTeens.",
-    sysenv_three:
-      "Сначала измеряю, потом делаю выводы: по логам датчиков игра упиралась в процессор, а не в перегрев, а по журналу сна было видно, что будило ноутбук в закрытом рюкзаке.",
     footer_one: "Открыт к стажировкам, исследованиям и проектной работе.",
     modal_close: "закрыть",
     modal_links: "Ссылки",
@@ -316,6 +322,68 @@ const translations = {
     contact_cv_hint: "1 страница",
     blog_back: "<- назад к портфолио",
     blog_kicker: "Блог",
+    nav_experience: "опыт",
+    fact_uni: "BSc CS with AI, Coventry University Kazakhstan",
+    fact_langs: "RU / EN / KZ",
+    now_one: "now:: выпускаю Shiftray, Linux-приложение для ноутбуков ASUS",
+    now_two: "now:: веду платформу для менторов PrimeTeens",
+    now_three:
+      "now:: исследую RL с функциями ценности Гамильтона-Якоби-Беллмана",
+    chip_deployed: "внедрено",
+    chip_re: "реверс-инжиниринг",
+    exp_note: "работа, исследования и образование",
+    exp_kicker: "Опыт",
+    exp_title: "Где делалась работа.",
+    exp_work: "Работа",
+    exp_research: "Исследования",
+    exp_education: "Образование",
+    exp_pt_date: "июн 2026 - сейчас",
+    exp_pt_role: "Автор программы, ментор и разработчик платформы",
+    exp_pt_copy:
+      "Сделал платформу: сайт, живую тетрадь для учеников, Telegram-ботов, PostgreSQL и деплой. Разработал и провёл курс по исследованиям и портфолио для 7-11 классов, 6 групп.",
+    exp_lib_date: "янв 2026 - сейчас",
+    exp_lib_role: "Стажёр по автоматизации библиотеки",
+    exp_lib_copy:
+      "Выдача книг по QR как дешёвая альтернатива RFID, сайт библиотеки и RAG-чат-бот для него.",
+    exp_as_date: "сен - дек 2024",
+    exp_as_role: "Разработчик",
+    exp_as_copy:
+      "Приложение для ранней диагностики аутизма, сейчас работает в местной больнице: UI/UX и база PostgreSQL.",
+    exp_unicef_date: "янв - май 2024",
+    exp_unicef_role: "Волонтёр-преподаватель информатики",
+    exp_unicef_copy:
+      "Вёл детей из малообеспеченных семей через их первый проект на программировании.",
+    exp_org_date: "янв - авг 2024",
+    exp_org_role: "Главный организатор",
+    exp_org_copy:
+      "Два национальных хакатона в 14 городах, 650+ участников и 175 команд: логистика, правила, задания, спонсоры и маркетинг.",
+    exp_rl_date: "2026 - сейчас",
+    exp_rl_title:
+      "Исследование под руководством, Coventry University Kazakhstan",
+    exp_rl_role: "Руководитель: Санжар Кусдавлетов",
+    exp_rl_copy:
+      "Обучение с подкреплением вместе с функциями ценности Гамильтона-Якоби-Беллмана для критичного к безопасности управления (перехват БПЛА): V = V_HJB + обучаемая поправка, проверка в симуляции.",
+    exp_lomo_title: "Конференция Ломоносов-2026",
+    exp_lomo_role:
+      "3-е место из 20 докладов, секция пространственного анализа",
+    exp_lomo_copy:
+      "Регрессионная модель цен на жильё в Астане по объявлениям, с анализом в ArcGIS: местоположение, инфраструктура и экология как факторы цены.",
+    exp_nu_title: "Летняя исследовательская программа Nazarbayev University",
+    exp_nu_copy:
+      "Проверял гипотезы стартапа на данных, написал итоговый отчёт и защитил его перед комиссией.",
+    exp_bsc_date: "2025 - сейчас",
+    exp_bsc_title: "BSc Computer Science with AI",
+    exp_bsc_role:
+      "Coventry University Kazakhstan / GPA 3.75/4 / государственный грант",
+    exp_nis_title: "Назарбаев Интеллектуальная школа Астаны",
+    exp_nis_role: "IB Diploma, Math AA HL / IB 39/45",
+    highlight_nec_title: "3-е место из 125 команд",
+    highlight_nec_copy:
+      "AI-продукт, который генерирует тренировочные тесты для подготовки к SAT и IELTS.",
+    wins_all: "все 20+ результатов",
+    read_post: "читать",
+    blog_all: "все записи",
+    contact_title: "Давайте поговорим.",
   },
   kz: {
     hero_eyebrow: "жасаймын // түзетемін // жарысамын // шығарамын",
@@ -330,16 +398,10 @@ const translations = {
     stat_four: "жүйелердің қалай жұмыс істейтіні туралы жазбалар",
     stat_four_action: "блогты оқу",
     card_action: "толығырақ",
-    focus_one: "focus:: нақты құрылғыларға арналған linux құралдары",
-    focus_two: "focus:: backend жүйелер + өнімдер",
-    focus_three: "focus:: ai процестері + автоматтандыру",
-    focus_four: "focus:: жарыстағы прототиптер",
     nav_projects: "жобалар",
     nav_highlights: "жеңістер",
     nav_deepdives: "блог",
     nav_study: "оқу",
-    nav_trajectory: "жол",
-    nav_systems: "linux",
     nav_contact: "байланыс",
     projects_note:
       "9 жазба -- толығырақ ақпарат пен сілтемелер карточканың ішінде",
@@ -354,7 +416,7 @@ const translations = {
     project_primeteens_title:
       "PrimeTeens менторларына арналған бот пен платформа",
     project_primeteens_copy:
-      "7-11 сыныптарға арналған жазғы интенсивтің Telegram-боты мен веб-платформасы: сабақ туралы еске салғыштар, әр сабақтан кейін дауыспен жауап беруге болатын қысқа сауалнама, онлайн дәптерлер және үй тапсырмасын тексеру.",
+      "Жазғы интенсивтің Telegram-боты мен веб-платформасы: сабақ туралы еске салғыштар, әр сабақтан кейін дауыспен жауап беруге болатын қысқа сауалнама, онлайн дәптерлер және үй тапсырмасын тексеру.",
     project_autism_tag: "Anisa Spectrum",
     project_autism_title: "Autism Spectrum (ChildInfo)",
     project_autism_copy:
@@ -448,27 +510,6 @@ const translations = {
     study_four_copy:
       "OCW және дискретті математика дәптерлерінен беттер, ауруханадағы ChildInfo постерінің суреті, кітапхана мен Roomly интерфейстерінің скриншоттары.",
     link_pdf: "PDF ашу",
-    trajectory_note: "3 жазба -- негіз, көшбасшылық, шығармашылық",
-    trajectory_kicker: "Жол",
-    trajectory_title: "Тек жарыстар емес.",
-    trajectory_one_title: "Бастауы",
-    trajectory_one_copy:
-      "5-сыныпта C++ тілінде олимпиада есептерінен бастадым, 7-сыныпта Discord пен Telegram боттары үшін Python-ға ауыстым, 8-сыныпта Django-да сайт жасадым.",
-    trajectory_two_title: "Көшбасшылық және еріктілік",
-    trajectory_two_copy:
-      "WeCare клубының екі жетекшісінің бірі, UNICEF Kazakhstan мен ЮНЕСКО клубтарының жобаларында ерікті мұғалім, 14 қаладан қатысушылар келген хакатондардың ұйымдастырушысы.",
-    trajectory_three_title: "Дизайн және өнім",
-    trajectory_three_copy:
-      "Young Profi School-да веб-дизайн оқыдым, inUniGlobal-да digital-маркетингте жұмыс істедім, SMM жүргіздім және театр үйірмесінде ойнадым.",
-    sysenv_note: "linux жобалары қайдан шығады",
-    sysenv_kicker: "Күнделікті Linux",
-    sysenv_title: "Күн сайын бәрін түзететін компьютерім.",
-    sysenv_one:
-      "ASUS TUF A15-те Windows-пен қатар Fedora 44 KDE, оның ішінде Secure Boot кезіндегі NVIDIA драйверлері. Осы ноутбукта жетпей тұрған нәрселерден Shiftray пайда болды.",
-    sysenv_two:
-      "Өз сервистерімді VPS-те ұстаймын: PrimeTeens боттары мен платформасы үшін Docker, nginx, systemd, сақтық көшірмелер және мониторинг.",
-    sysenv_three:
-      "Алдымен өлшеймін, содан кейін қорытынды жасаймын: датчик журналдары ойынның қызып кетуге емес, процессорға тірелгенін көрсетті, ал ұйқы журналы жабық сөмкедегі ноутбукты не оятқанын көрсетті.",
     footer_one: "Тағылымдамаға, зерттеуге және жобалық жұмысқа ашықпын.",
     modal_close: "жабу",
     modal_links: "Сілтемелер",
@@ -478,6 +519,68 @@ const translations = {
     contact_cv_hint: "1 бет",
     blog_back: "<- портфолиоға оралу",
     blog_kicker: "Блог",
+    nav_experience: "тәжірибе",
+    fact_uni: "BSc CS with AI, Coventry University Kazakhstan",
+    fact_langs: "RU / EN / KZ",
+    now_one:
+      "now:: ASUS ноутбуктеріне арналған Linux қосымшасы Shiftray-ді шығарып жатырмын",
+    now_two: "now:: PrimeTeens менторлар платформасын жүргіземін",
+    now_three:
+      "now:: Гамильтон-Якоби-Беллман құндылық функцияларымен RL зерттеймін",
+    chip_deployed: "енгізілген",
+    chip_re: "кері инженерия",
+    exp_note: "жұмыс, зерттеу және білім",
+    exp_kicker: "Тәжірибе",
+    exp_title: "Жұмыс қай жерде жасалды.",
+    exp_work: "Жұмыс",
+    exp_research: "Зерттеу",
+    exp_education: "Білім",
+    exp_pt_date: "2026 маусым - қазір",
+    exp_pt_role: "Бағдарлама авторы, ментор және платформа әзірлеушісі",
+    exp_pt_copy:
+      "Платформаны жасадым: сайт, оқушыларға арналған тірі дәптер, Telegram-боттар, PostgreSQL және орналастыру. 7-11 сыныптарға арналған зерттеу және портфолио курсын әзірлеп, 6 топқа өткіздім.",
+    exp_lib_date: "2026 қаңтар - қазір",
+    exp_lib_role: "Кітапхананы автоматтандыру тағылымдамашысы",
+    exp_lib_copy:
+      "RFID-ке арзан балама ретінде QR арқылы кітап беру, кітапхана сайты және оған арналған RAG чат-бот.",
+    exp_as_date: "2024 қыркүйек - желтоқсан",
+    exp_as_role: "Әзірлеуші",
+    exp_as_copy:
+      "Аутизмді ерте анықтауға арналған қосымша, қазір жергілікті ауруханада қолданылады: UI/UX және PostgreSQL дерекқоры.",
+    exp_unicef_date: "2024 қаңтар - мамыр",
+    exp_unicef_role: "Ерікті информатика мұғалімі",
+    exp_unicef_copy:
+      "Әлеуметтік жағдайы төмен отбасылардың балаларын алғашқы бағдарламалау жобасы арқылы өткіздім.",
+    exp_org_date: "2024 қаңтар - тамыз",
+    exp_org_role: "Бас ұйымдастырушы",
+    exp_org_copy:
+      "14 қаладағы екі ұлттық хакатон, 650+ қатысушы және 175 команда: логистика, ережелер, тапсырмалар, демеушілер және маркетинг.",
+    exp_rl_date: "2026 - қазір",
+    exp_rl_title: "Жетекшімен зерттеу, Coventry University Kazakhstan",
+    exp_rl_role: "Жетекші: Санжар Құсдәулетов",
+    exp_rl_copy:
+      "Қауіпсіздігі маңызды басқаруға (ұшқышсыз аппаратты ұстап алу) арналған Гамильтон-Якоби-Беллман құндылық функцияларымен бірге күшейтілген оқыту: V = V_HJB + үйренілетін түзету, симуляцияда тексеріледі.",
+    exp_lomo_title: "Ломоносов-2026 конференциясы",
+    exp_lomo_role:
+      "20 баяндаманың ішінде 3-орын, кеңістіктік талдау секциясы",
+    exp_lomo_copy:
+      "Хабарландырулар бойынша Астанадағы тұрғын үй бағасының регрессиялық моделі, ArcGIS-те талдау: орналасу, инфрақұрылым және экология баға факторлары ретінде.",
+    exp_nu_title: "Nazarbayev University жазғы зерттеу бағдарламасы",
+    exp_nu_copy:
+      "Стартап гипотезаларын деректермен тексеріп, қорытынды есеп жазып, оны комиссия алдында қорғадым.",
+    exp_bsc_date: "2025 - қазір",
+    exp_bsc_title: "BSc Computer Science with AI",
+    exp_bsc_role:
+      "Coventry University Kazakhstan / GPA 3.75/4 / мемлекеттік грант",
+    exp_nis_title: "Астана қаласындағы Назарбаев Зияткерлік мектебі",
+    exp_nis_role: "IB Diploma, Math AA HL / IB 39/45",
+    highlight_nec_title: "125 команданың ішінде 3-орын",
+    highlight_nec_copy:
+      "SAT және IELTS дайындығына жаттығу тесттерін жасайтын AI өнімі.",
+    wins_all: "барлық 20+ нәтиже",
+    read_post: "оқу",
+    blog_all: "барлық жазбалар",
+    contact_title: "Сөйлесейік.",
   },
 };
 
@@ -1524,5 +1627,46 @@ document.addEventListener("keydown", (event) => {
     trapFocus(event);
   }
 });
+
+// Light / dark theme: follows the system until the visitor picks one.
+const themeButton = document.querySelector(".theme-btn");
+
+function currentTheme() {
+  return (
+    document.documentElement.dataset.theme ||
+    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+  );
+}
+
+themeButton?.addEventListener("click", () => {
+  const next = currentTheme() === "light" ? "dark" : "light";
+  document.documentElement.dataset.theme = next;
+
+  try {
+    window.localStorage.setItem("portfolio-theme", next);
+  } catch {
+    // Storage can be blocked; the choice then lasts until reload.
+  }
+});
+
+// Sections fade in once as they scroll into view.
+const revealed = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px" },
+  );
+  revealed.forEach((node) => observer.observe(node));
+} else {
+  revealed.forEach((node) => node.classList.add("is-visible"));
+}
 
 applyLanguage(currentLanguage);
